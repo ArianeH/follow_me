@@ -9,7 +9,7 @@ class ToursController < ApplicationController
   end
 
   def new
-  	@user = User.find(params[:user_id])
+  	@user = Guide.find(params[:guide_id])
     @tour = Tour.new
   end
 

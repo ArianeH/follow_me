@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
 
   def index
-    @guides = Guides.all
+    @guides = Guide.all
   end
 end
