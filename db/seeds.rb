@@ -25,32 +25,32 @@ user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "
 user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "emma@wagon.com", password: "hellohello", role: "tourist", description: "Text here")
 
 #Tours created by user_1
-tour_1 = Tour.create(city: "Berlin", address: "Here", description: "Food Tour", user: user_1)
+tour_1 = Tour.create(city: "Berlin", address: "Here", description: "Food Tour", guide_id: user_1)
 
-tour_2 = Tour.create(city: "Berlin", address: "There", description: "Alternative Walking Tour", user: user_1)
+tour_2 = Tour.create(city: "Berlin", address: "There", description: "Alternative Walking Tour", guide_id: user_1)
 
-tour_3 = Tour.create(city: "Berlin", address: "Over There", description: "Street Art", user: user_1)
+tour_3 = Tour.create(city: "Berlin", address: "Over There", description: "Street Art", guide_id: user_1)
 
 
 #Tours created by user_2
-tour_4 = Tour.create(city: "Berlin", address: "Close By", description: "Pub Crawl", user: user_2)
-tour_5 = Tour.create(city: "Berlin", address: "Over the river", description: "Cold War Tour", user: user_2)
-tour_6 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  user: user_2)
+tour_4 = Tour.create(city: "Berlin", address: "Close By", description: "Pub Crawl", guide_id: user_2)
+tour_5 = Tour.create(city: "Berlin", address: "Over the river", description: "Cold War Tour", guide_id: user_2)
+tour_6 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  guide_id: user_2)
 
 #Tours created by user_3
-tour_7 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  user: user_3)
-tour_8 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  user: user_3)
-tour_9 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  user: user_3)
+tour_7 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  guide_id: user_3)
+tour_8 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  guide_id: user_3)
+tour_9 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour",  guide_id: user_3)
 
 #Tours created by user_4
-tour_10 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_4)
-tour_11 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_4)
-tour_12 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_4)
+tour_10 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_4)
+tour_11 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_4)
+tour_12 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_4)
 
 #Tours created by user_5
-tour_13 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_5)
-tour_14 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_5)
-tour_15 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", user: user_5)
+tour_13 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_5)
+tour_14 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_5)
+tour_15 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour", guide_id: user_5)
 
 
 # Examples:
