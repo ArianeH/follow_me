@@ -37,3 +37,14 @@ tour_13 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike T
 tour_14 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour")
 tour_15 = Tour.create(city: "Berlin", address: "In a cave", description: "Bike Tour")
 
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+user_1 = [tour_1, tour_2, tour_3]
+user_2 = [tour_4, tour_5, tour_6]
+user_3 = [tour_7, tour_8, tour_8]
+user_4 = [tour_10, tour_11, tour_12]
+user_5 = [tour_13, tour_14, tour_15]
+
