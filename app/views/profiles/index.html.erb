@@ -1,0 +1,12 @@
+
+<!-- for testing purposes -->
+
+
+<h1>All tour guides</h1>
+<ol>
+<% @guides.each do |guide| %>
+<li>
+<%= link_to guide.first_name, profile_tour_path %>
+</li>
+<% end %>
+</ol>
