@@ -1,4 +1,34 @@
 
+<%= render 'profiles/interest_filter' %>
+
+<!-- carousel -->
+<div class="container">
+  <% if action_name == "search" %>
+    <h1>Guides in <%= params[:search][:city].capitalize %></h1>
+  <% else %>
+    <h1>These are your guides</h1>
+  <% end %>
+  <div class="row">
+    <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel-inner">
+        <% @guides.each_with_index do |guide, index| %>
+        <div class="item <%= "active" if index == 0 %>">
+          <div class="col-xs-4">
+
+            <%= link_to guide.first_name, profile_path(guide), class: "img-responsive" %>
+            <img src="http://placehold.it/300/f44336/000000"/>
+
+          </div>
+        </div>
+        <% end %>
+
+      </div>
+      <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+      <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+
 
 <h1>To be changed: Show view for the following guide: <%= @guide.first_name %></h1>
 
