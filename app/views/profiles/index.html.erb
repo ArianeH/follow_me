@@ -1,40 +1,8 @@
 
 <!-- for testing purposes -->
 <!-- filtered navigation bar -->
-<h1></h1>
-<ul>
-  <li><a href="#" class="item">Size <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <li><a href="#">Small</a></li>
-      <li><a href="#">Medium</a></li>
-      <li><a href="#">Large</a></li>
-      <li><a href="#">Extra Large</a></li>
-    </ul>
-  </li>
-  <li><a href="#" class="item">Color <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <li><a href="#">Blue</a></li>
-      <li><a href="#">Black</a></li>
-      <li><a href="#">Orange</a></li>
-      <li><a href="#">Green</a></li>
-      <li><a href="#">Red</a></li>
-      <li><a href="#">Yellow</a></li>
-    </ul>
-  </li>
-  <li><a href="#" class="item">Brand <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <li><a href="#">Nike</a></li>
-      <li><a href="#">Addidas</a></li>
-      <li><a href="#">Newbalance</a></li>
-      <li><a href="#">Vans</a></li>
-    </ul>
-  </li>
-</ul>
 
-<h1>All Tour guides</h1>
+
 <ol>
 <% @guides.each do |guide| %>
 <li>
@@ -46,30 +14,23 @@
 <!-- Tour Guide Profile -->
 
 <div class="container">
-<img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <div class="tour-guide-description">
-    <div class="tour-guide-info">
-      <h1>Garret Smith</h1>
-      <p>27 years old | Berlin </p>
+<img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="row">
+    <div class="tour">
+      <h2>Tour Guide Name</h2>
+      <p>@age | @city</p>
     </div>
 
-    <div class="tour-guide-interest">
+    <div class="interests">
       <h2>Interests</h2>
-      <div class="row-icons">
-        <ul>
-          <li>Icon 1</li>
-          <li>Icon 2</li>
-          <li>Icon 3</li>
-        </ul>
-
-      </div>
+      <p>insert icon1</p>
+      <p>insert icon2</p>
+      <p>insert icon3</p>
     </div>
 
-    <div class="tour-guide-about-me">
-      <h2>About Me</h2>
+    <div class="about-me">
+      <h3>About Me</h3>
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </div>
-  </div>
-
-
+   </div>
 </div>
