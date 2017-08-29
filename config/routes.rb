@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
 
-  resources :profiles do
-    resources :tours do
+  resources :tours, only: [:index, :show, :new, :edit, :update, :destroy] do
       resources :bookings
-    end
+  end
+
+  resources :profiles do
+    resources :tours, only: [:create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
