@@ -1,0 +1,54 @@
+
+<!-- for testing purposes -->
+
+
+<h1>All tour guides</h1>
+<ol>
+<% @guides.each do |guide| %>
+<li>
+<%= link_to guide.first_name, profile_path(guide) %>
+</li>
+<% end %>
+</ol>
+
+<% render guides/carousel %>
+
+<div class="container">
+  <div class="tour-guide-description">
+
+    <div class="tour-guide-info">
+      <h1>Garret Smith</h1>
+      <p>age: 27 years old | Berlin </p>
+    </div>
+
+    <div class="tour-guide-interest">
+          <h2>Interests</h2>
+        <div class="row-icons">
+          <div class="col-xs-12 col-sm-4">
+            <img class="interest-icon" src="#" alt="guitar">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <img class="interest-icon" src="#" alt="shoe">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <img class="interest-icon" src="#" alt="beer">
+          </div>
+        </div>
+    </div>
+
+
+       <div class="tour-guide-about-me">
+        <h2>About me</h2>
+        <p>Insert about me section here</p>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <div class="offered-tours">
+  </div>
+</div>
