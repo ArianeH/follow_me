@@ -2,6 +2,7 @@
     border-right: none;
     border-left: none;
     position: relative;
+    z-index: 100;
 }
 .no-video .video-container video,
 .touch .video-container video {
