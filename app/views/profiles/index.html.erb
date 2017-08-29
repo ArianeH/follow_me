@@ -4,11 +4,14 @@
 
 
 <div class="container">
-	<h1>These are your Tour guides</h1>
+	<% if action_name == "search" %>
+    <h1>Guides in <%= params[:search][:city].capitalize %></h1>
+  <% else %>
+    <h1>These are your guides</h1>
+  <% end %>
 	<div class="row">
 		<div class="carousel slide multi-item-carousel" id="theCarousel">
 			<div class="carousel-inner">
-
 				<% @guides.each_with_index do |guide, index| %>
 				<div class="item <%= "active" if index == 0 %>">
 					<div class="col-xs-4">
