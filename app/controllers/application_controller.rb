@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
 
-
-
   # include Pundit
 
   # # Pundit: white-list approach.
