@@ -27,9 +27,13 @@
       }
     }
   }
-  .carouse-control{
-    &.left, &.right{
-      background-image: none;
+  .carousel-control{
+    &.right{
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgb(244, 244, 244) 100%) !important;
+
+    }
+    &.left{
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgb(244, 244, 244) 100%) !important;
     }
   }
 }
