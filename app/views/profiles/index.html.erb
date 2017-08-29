@@ -3,34 +3,32 @@
 <!-- filtered navigation bar -->
 
 
-<!-- <div class="container">
-  <h1>These are your Tour guides</h1>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner">
+<div class="container">
+	<h1>These are your Tour guides</h1>
+	<div class="row">
+		<div class="carousel slide multi-item-carousel" id="theCarousel">
+			<div class="carousel-inner">
 
-          <% @guides.each do |guide| %>
-            <div class="item active">
-              <div class="col-xs-4">
+				<% @guides.each_with_index do |guide, index| %>
+				<div class="item <%= "active" if index == 0 %>">
+					<div class="col-xs-4">
 
-                <%= link_to guide.first_name, profile_path(guide), class: "img-responsive" %>
-                <img src="http://placehold.it/300/f44336/000000"/>
+						<%= link_to guide.first_name, profile_path(guide), class: "img-responsive" %>
+						<img src="http://placehold.it/300/f44336/000000"/>
 
-              </div>
-            </div>
-          <% end %>
-          <div class="item">
-            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/e91e63/000000" class="img-responsive"></a></div>
-          </div>
+					</div>
+				</div>
+				<% end %>
 
-        </div>
-        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-      </div>
-    </div>
-  </div>
-</div> -->
+			</div>
+			<a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+			<a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+	</div>
+</div>
+
+
+
 
 
 
@@ -52,40 +50,9 @@
 	<% end %>
 </ol>
 
-
-<div class="container">
-	<div class="row">
-
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators"></ol>
-			<!-- Wrapper for slides -->
-
-			<div class="carousel-inner"><div class="col-xs-3"></div></div>
-
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-		</div>
-
-	</div>
-
-
-<ol>
-<% @guides.each do |guide| %>
-<li>
-<%= link_to guide.first_name, profile_path(guide) %>
-</li>
-<% end %>
-</ol>
-
 <!-- Tour Guide Profile -->
 
-<div class="container">
+<!-- <div class="container">
 <img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
   <div class="row">
     <div class="tour">
@@ -106,25 +73,4 @@
     </div>
    </div>
 
-</div>
-
-
-<% content_for :javascript do %>
-<script>
-	var guide_img = ["http://placehold.it/300/f44336/000000", "http://placehold.it/300/e91e63/000000", "http://placehold.it/300/f44500/000000", "http://placehold.it/300/f49000/000000", "http://placehold.it/300/f78336/000000"]
-
-	$(document).ready(function(){
-		for(var i=0 ; i< guide_img.length ; i++) {
-			<% @guides.each do |guide| %>
-			$('<div class="item"><img src="'+guide_img[i]+'"><div class="carousel-caption"><%= guide.first_name %></div></div>').appendTo('.carousel-inner');
-			$('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
-			<% end %>
-		}
-
-		$('.item').first().addClass('active');
-		$('.carousel-indicators > li').first().addClass('active');
-		$('#carousel-example-generic').carousel();
-	});
-</script>
-<% end %>
-
+ </div> -->
