@@ -1,0 +1,12 @@
+<div class="search-bar-wrapper">
+   <div class="search">
+      <%= simple_form_for :search, url: profiles_path, method: :get, html: { class: 'form-inline' } do |f| %>
+        <div class="search-bar-bundle">
+          <%= f.input :city, autofocus: true, placeholder: 'Where would you like to go?', label: false, input_html: { class: 'search-bar-input' } %>
+          <%= button_tag class: 'search-button' do %>
+            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      <% end %>
+   </div>
+</div>
