@@ -17,8 +17,8 @@
 				<div class="item <%= "active" if index == 0 %>">
 					<div class="col-xs-4">
 
-						<%= link_to guide.first_name, profile_path(guide), class: "img-responsive" %>
-						<img src="http://placehold.it/300/f44336/000000"/>
+						<%= link_to guide.first_name, profile_path(guide), class: "img-responsive", remote: true %>
+						<%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-guide" %>
 
 					</div>
 				</div>
@@ -33,6 +33,10 @@
 
 
 
+
+<div id="guide-info">
+	<%= render "guide_show", guide: @guides.first %>
+</div>
 
 
 

@@ -5,8 +5,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @guides = Guide.all
     @guide = Guide.find(params[:id])
+    respond_to do |format|
+      format.js  # <-- will render `app/views/reviews/create.js.erb`
+    end
   end
 
   def edit
@@ -22,7 +24,7 @@ class ProfilesController < ApplicationController
     if params[:search][:city].blank?
       redirect_to profiles_path
     else
-      @guides = Guide.joins(:tours).where(tours: { city: params[:search][:city].capitalize })
+      @guides = Guide.joins(:tours).where(tours: { city: params[:search][:city].capitalize }).uniq
       render :index
     end
   end
@@ -30,7 +32,7 @@ class ProfilesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit()
+    params.require(:guide).permit(:first_name, :last_name, :age, :email, :description, :photo)
   end
 end
 
