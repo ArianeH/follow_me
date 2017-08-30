@@ -1,17 +1,18 @@
-<%= render 'video' %>
+<div class="banner-wrapper">
+  <%= render 'video' %>
 
-<div class="banner" url('https://kitt.lewagon.com/placeholder/cities/berlin');">
-  <div class="banner-content">
-    <h1 id="h1-home-page">Find a guide, make friends.</h1>
-    <p>explore with a local in small tours at affordable prices.</p>
-    <%= render 'shared/searchbar' %>
-    <p id="know-more">scroll down to know more</p>
+  <div class="banner" url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+   <div class="banner-content">
+     <h1 id="h1-home-page">Find a guide, make friends.</h1>
+     <p>explore with a local in small tours at affordable prices.</p>
+     <%= render 'shared/searchbar' %>
+     <p id="know-more">scroll down to know more</p>
+   </div>
   </div>
 </div>
 
 <div class="how-it-works">
   <p id="how-it-works-text">How it works</p>
-    <div class="container">
       <div class="cards-container">
         <div class="row">
           <div class="col-xs-12 col-sm-4" >
@@ -55,11 +56,29 @@
           </div>
       </div>
     </div>
+</div>
+
+<div class="newsletter">
+  <div class="map-background-image">
+    <%= image_tag "map.png", class: "map-image" %>
+  </div>
+
+  <!-- newsletter div -->
+
+  <div class="newsletter-div">
+    <p id="newsletter-p">Subscribe to our newsletter</p>
+    <div class="newsletter-form">
+      <div class="col-xs-3">
+          <input type="text" placeholder="name" id="name-input">
+      </div>
+      <div class="col-xs-9">
+        <input type="text" placeholder="email" id="email-input">
+      </div>
+       <div class="col-xs-12">
+        <a href="#" id="newsletter-button">Keep me updated about what's new</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="map-background-image">
-  <%= image_tag "map.png", class: "map-image" %>
-</div>
 
-<!-- src="../images/choose-a-city.png" alt="icon" -->
