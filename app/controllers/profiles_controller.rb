@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
     if params[:search][:city].blank?
       redirect_to profiles_path
     else
-      @guides = Guide.joins(:tours).where(tours: { city: params[:search][:city].capitalize })
+      @guides = Guide.joins(:tours).where(tours: { city: params[:search][:city].capitalize }).uniq
       render :index
     end
   end

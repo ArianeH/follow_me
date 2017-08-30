@@ -3,6 +3,21 @@
 
   <div class="row">
     <div class="col-xs-8">
+      
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    alert('<%= @alert_message %>');
+  });
+<% end %>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      alert('<%= @alert_message %>');
+    });
+  <% end %>
+<% end %>
+
 
       <p>This tour takes place in: <%= @tour.city %></p>
       <p>The meeting point is:<%= @tour.address %></p>

@@ -6,6 +6,7 @@ class ToursController < ApplicationController
 
   def show
   	@tour = Tour.find(params[:id])
+    @tour_coordinates = {lat: @tour.latitude, lng: @tour.longitude}
   end
 
   def new

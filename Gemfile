@@ -17,6 +17,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'cloudinary'
+gem "geocoder"
 
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
