@@ -1,4 +1,4 @@
 class AddNameToTours < ActiveRecord::Migration[5.0]
   def change
-  end
+    add_column :tours, :name, :string
 end
