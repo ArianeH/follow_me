@@ -2,6 +2,7 @@
 
 .how-it-works {
   margin-top: 60px;
+  margin-bottom: 120px;
 }
 
 #how-it-works-text {
@@ -52,7 +53,7 @@
 
 .map-background-image {
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow:hidden;
   margin-top: -40px;
   background: rgba(0, 0, 0, 0.4);
@@ -62,4 +63,65 @@
   min-width:100%;
 }
 
+.newsletter {
+  position: relative;
+}
 
+.newsletter-form {
+  margin-left: 50px;
+}
+
+#newsletter-p {
+  font-family: 'Raleway', regular;
+  font-size: 25px;
+  font-weight: 400;
+  color: #63bead;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.newsletter-div {
+  background-color: rgba(255,255,255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  width: 700px;
+  height: 280px;
+  position: absolute;
+  top: 100px;
+  left: 280px;
+  border-radius: 2px;
+}
+
+#newsletter-button {
+  color: white;
+  background-color: #00a19a;
+  padding: 15px 129px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+#name-input, #email-input {
+  border: 1px solid #9d9d9c;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+#name-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 140%;
+}
+
+#email-input {
+  width: 80%;
+  margin-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#name-input::placeholder, #email-input::placeholder {
+  color: #9d9d9c;
+  padding-left: 10px;
+}
