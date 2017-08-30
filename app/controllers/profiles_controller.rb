@@ -11,6 +11,15 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def edit
+    @guide = Guide.find(params[:id])
+  end
+
+  def update
+    @guide = Guide.find(params[:id])
+    @guide.update(guide_params)
+  end
+
   def search
     if params[:search][:city].blank?
       redirect_to profiles_path
