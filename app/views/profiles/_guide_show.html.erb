@@ -30,7 +30,7 @@
     <!-- Offered Tours -->
     <p>THESE ARE THE TOURS OFFERED - TO BE ADJUSTED</p>
     <% guide.tours.each do |tour| %>
-    <p><%= tour.description %></p>
+    <p><%= link_to tour.description, tour_path(tour) %></p>
     <% end %>
 
 
