@@ -27,6 +27,8 @@ num += 1
 user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Text here")
 user_5.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
+user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
+num += 1
 
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", age: 27, email: "anna@wagon.com", password: "hellohello", description: "Text here")
 user_7 = User.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
@@ -110,6 +112,10 @@ tour_18.save
 tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15)
 tour_19.guide = user_16
 tour_19.save
+
+interest_1 = Interest.new(category: "hiking")
+interest_2 = Interest.new(category: "food and drink")
+interest_3 = Interest.new(category: "party")
 
 
 # # Examples:
