@@ -13,6 +13,7 @@ user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "
 user_3 = Guide.create(first_name: "Sofia", last_name: "Hanson", age: 32, email: "sofia@wagon.com", password: "hellohello", description: "Text here")
 user_4 = Guide.create(first_name: "Tim", last_name: "Taylor", age: 25, email: "tim@wagon.com", password: "hellohello", description: "Text here")
 user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Text here")
+user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
 
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", age: 27, email: "anna@wagon.com", password: "hellohello", description: "Text here")
 user_7 = User.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
@@ -24,6 +25,7 @@ user_12 = User.create(first_name: "Martha", last_name: "Smith", age: 29, email: 
 user_13 = User.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
 user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "lucas@wagon.com", password: "hellohello", description: "Text here")
 user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "emma@wagon.com", password: "hellohello", description: "Text here")
+
 
 #Tours created by user_1
 tour_1 = Tour.new(city: "Berlin", address: "Here", description: "Food Tour", attendants: 5)
@@ -81,6 +83,20 @@ tour_14.save
 tour_15 = Tour.new(city: "Berlin", address: "In a cave", description: "Bike Tour", attendants: 5)
 tour_15.guide = user_5
 tour_15.save
+
+#Tours created by user_16
+tour_16 = Tour.new(city: "London", address: "At piccadilly", description: "Afternoon tea", attendants: 2)
+tour_16.guide = user_16
+tour_16.save
+tour_17 = Tour.new(city: "London", address: "At piccadilly", description: "Afternoon tea", attendants: 2)
+tour_17.guide = user_16
+tour_17.save
+tour_18 = Tour.new(city: "London", address: "At piccadilly", description: "Afternoon tea", attendants: 2)
+tour_18.guide = user_16
+tour_18.save
+tour_19 = Tour.new(city: "London", address: "At piccadilly", description: "Afternoon tea", attendants: 2)
+tour_19.guide = user_16
+tour_19.save
 
 
 # # Examples:
