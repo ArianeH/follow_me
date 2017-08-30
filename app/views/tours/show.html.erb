@@ -5,22 +5,27 @@
     <div class="col-xs-8">
 
 
-      <p>This tour takes place in: <%= @tour.city %></p>
-      <p>The meeting point is:<%= @tour.address %></p>
-      <p><%= @tour.description %></p>
-    </div>
 
-    <div class="col-xs-4">
+  <p>This tour takes place in: <%= @tour.city %></p>
+  <p>The meeting point is:<%= @tour.address %></p>
+  <p><%= @tour.description %></p>
+</div>
 
-      <h3>Calendar ... to be adjusted later</h3>
+<div class="col-xs-4">
 
-      <div class="calendar">
-        <%= month_calendar do |date| %>
-        <%= date.day %>
-        <% end %>
-      </div>
+  <h3>Calendar ... to be adjusted later</h3>
 
-      <%= link_to "Get in contact with " + @tour.guide.first_name, new_tour_booking_path(@tour) %>
+  <div class="calendar">
+    <%= month_calendar do |date| %>
+    <%= date.day %>
+    <% end %>
+  </div>
+
+  <%= link_to "Get in contact with " + @tour.guide.first_name, new_tour_booking_path(@tour) %>
+
+
+</div>
+</div>
 
       <div id="map" style="width: 100%; height: 600px;"></div>
 
@@ -45,6 +50,7 @@
 
     </div>
   </div>
+
 
 </div>
 

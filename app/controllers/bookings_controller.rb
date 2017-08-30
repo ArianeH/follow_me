@@ -14,7 +14,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.tour = Tour.find(params[:tour_id])
     @booking.save
+    redirect_to booking_path(@booking)
   end
 
   def edit
