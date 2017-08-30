@@ -6,3 +6,5 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require_tree .
+
+alert('Sadly this is static...');
