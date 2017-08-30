@@ -1,0 +1,7 @@
+<h1>Initiate the booking by sending a message to your tour guide</h1>
+
+<%= simple_form_for [@tour, @booking] do |f| %>
+  <%= f.input :start_time %>
+
+  <%= f.button :submit %>
+<% end %>

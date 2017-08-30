@@ -1,9 +1,27 @@
+<div class="container">
+  <h1>TOUR PAGE TO BE ADJUSTED</h1>
 
+  <div class="row">
+    <div class="col-xs-8">
 
-<h1>Calendar ... to be adjusted later</h1>
+      <p>This tour takes place in: <%= @tour.city %></p>
+      <p>The meeting point is:<%= @tour.address %></p>
+      <p><%= @tour.description %></p>
+    </div>
 
-<div class="calendar">
-<%= month_calendar do |date| %>
-  <%= date.day %>
-<% end %>
+    <div class="col-xs-4">
+
+      <h3>Calendar ... to be adjusted later</h3>
+
+      <div class="calendar">
+        <%= month_calendar do |date| %>
+        <%= date.day %>
+        <% end %>
+      </div>
+
+      <%= link_to "Get in contact with " + @tour.guide.first_name, new_tour_booking_path(@tour) %>
+
+    </div>
+
+  </div>
 </div>
