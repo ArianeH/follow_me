@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-xs-8">
-      
+
 <%= javascript_tag do %>
   $(document).ready(function() {
     alert('<%= @alert_message %>');
@@ -37,6 +37,5 @@
       <%= link_to "Get in contact with " + @tour.guide.first_name, new_tour_booking_path(@tour) %>
 
     </div>
-
   </div>
 </div>
