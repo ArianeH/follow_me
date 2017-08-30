@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170830160658) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "price"
+    t.index ["guide_id"], name: "index_tours_on_guide_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
