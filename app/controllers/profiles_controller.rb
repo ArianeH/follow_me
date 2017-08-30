@@ -5,8 +5,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @guides = Guide.all
     @guide = Guide.find(params[:id])
+    respond_to do |format|
+      format.js  # <-- will render `app/views/reviews/create.js.erb`
+    end
   end
 
   def search
@@ -16,6 +18,12 @@ class ProfilesController < ApplicationController
       @guides = Guide.joins(:tours).where(tours: { city: params[:search][:city].capitalize })
       render :index
     end
+  end
+
+  private
+
+  def guide_params
+    params.require(:guide).permit(:first_name, :last_name, :age, :email, :description, :photo)
   end
 end
 
