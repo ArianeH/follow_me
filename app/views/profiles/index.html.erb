@@ -18,8 +18,9 @@
 					<div class="col-xs-4">
 
 						<%= link_to guide.first_name, profile_path(guide), class: "img-responsive", remote: true %>
-						<%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-guide" %>
-
+            <% if guide.photo %>
+              <%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-guide" %>
+            <% end %>
 					</div>
 				</div>
 				<% end %>
