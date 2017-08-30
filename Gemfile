@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'figaro'
 gem 'cloudinary'
+gem "geocoder"
 
 gem "pundit"
 

@@ -1,4 +1,17 @@
 
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    alert('<%= @alert_message %>');
+  });
+<% end %>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      alert('<%= @alert_message %>');
+    });
+  <% end %>
+<% end %>
 
 <h1>Calendar ... to be adjusted later</h1>
 
