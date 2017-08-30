@@ -1,6 +1,10 @@
+.banner-wrapper {
+  position: relative;
+}
 .banner {
   color: white;
   text-align: center;
+  width: 80%;
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
@@ -8,8 +12,9 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 80px;
-  right: 20%;
+  top: -20px;
+  left: 50%;
+  margin-left: -40%;
   z-index: 200;
 }
 #h1-home-page {
