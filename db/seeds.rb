@@ -29,6 +29,8 @@ num += 1
 user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Text here")
 user_5.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
+user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
+num += 1
 
 user_6 = User.create(first_name: "Kevin", last_name: "Miller", age: 27, email: "anna@wagon.com", password: "hellohello", description: "Text here")
 user_7 = User.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
@@ -43,75 +45,79 @@ user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "e
 
 
 #Tours created by user_1
-tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germany", description: "Food Tour", attendants: 5, price: 15)
+tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germany", description: "Food Tour", attendants: 5, price: 15, name: "Foodie Tour")
 tour_1.guide = user_1
 tour_1.save
 
-tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany", description: "Alternative Walking Tour", attendants: 5, price: 15)
+tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany", description: "Walking Tour", attendants: 5, price: 15, name: "Alternative Walking Tour")
 tour_2.guide = user_1
 tour_2.save
 
-tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany", description: "Street Art", attendants: 5, price: 15)
+tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany", description: "Street Art", attendants: 5, price: 15, name: "Street Art Walking Tour")
 tour_3.guide = user_1
 tour_3.save
 
 #Tours created by user_2
-tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany", description: "Pub Crawl", attendants: 5, price: 15)
+tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany", description: "Pub Crawl", attendants: 5, price: 15, name: "Berlin Pub Crawl")
 tour_4.guide = user_2
 tour_4.save
-tour_5 = Tour.new(city: "Berlin", address: "Over the river", description: "Cold War Tour", attendants: 5, price: 15)
+tour_5 = Tour.new(city: "Berlin", address: "Over the river", description: "Cold War Tour", attendants: 5, price: 15, name: "Cold War Tour")
 tour_5.guide = user_2
 tour_5.save
-tour_6 = Tour.new(city: "Berlin", address: "Warschauer Platz 18 10245 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_6 = Tour.new(city: "Berlin", address: "Warschauer Platz 18 10245 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15, name: "Cycle in Berlin")
 tour_6.guide = user_2
 tour_6.save
 
 #Tours created by user_3
-tour_7 = Tour.new(city: "Berlin", address: "Neue Bahnhofstr. 29 10245 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_7 = Tour.new(city: "Berlin", address: "Neue Bahnhofstr. 29 10245 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15, name: "Best of Berlin Bike Tour")
 tour_7.guide = user_3
 tour_7.save
-tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15, name: "Free Bike Tour")
 tour_8.guide = user_3
 tour_8.save
-tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Food Tour", attendants: 5, price: 15, name: "Eat with Me")
 tour_9.guide = user_3
 tour_9.save
 
 #Tours created by user_4
-tour_10 = Tour.new(city: "Berlin", address: "Gertraudenstr. 10 - 12 10178 Berlin,Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_10 = Tour.new(city: "Berlin", address: "Gertraudenstr. 10 - 12 10178 Berlin,Germany", description: "History Tour", attendants: 5, price: 15, name: "The Story of Berlin")
 tour_10.guide = user_4
 tour_10.save
-tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany", description: "Walking Tour", attendants: 5, price: 15, name: "Walk along the Berlin Wall")
 tour_11.guide = user_4
 tour_11.save
-tour_12 = Tour.new(city: "Berlin", address: "Langhansstr. 12 13086 Berlin,Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_12 = Tour.new(city: "Berlin", address: "Langhansstr. 12 13086 Berlin,Germany", description: "Bike Tour", attendants: 5, price: 15, name: "Bicycle Rentals")
 tour_12.guide = user_4
 tour_12.save
 
 #Tours created by user_5
-tour_13 = Tour.new(city: "Berlin", address: "Neue Roßstr. 11-12 10179 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_13 = Tour.new(city: "Berlin", address: "Neue Roßstr. 11-12 10179 Berlin, Germany", description: "History Tour", attendants: 5, price: 15, name: "Let's see the Brandenburg Gate")
 tour_13.guide = user_5
 tour_13.save
-tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Segway Tour", attendants: 5, price: 15, name: "Berling tour with Segway" )
 tour_14.guide = user_5
 tour_14.save
-tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, Germany", description: "Bike Tour", attendants: 5, price: 15)
+tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, Germany", description: "Historical Tour", attendants: 5, price: 15, name: "Berlin Tower")
 tour_15.guide = user_5
 tour_15.save
 
 #Tours created by user_16
-tour_16 = Tour.new(city: "London", address: "29 Greek Street London W1D 5DH, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15)
+tour_16 = Tour.new(city: "London", address: "29 Greek Street London W1D 5DH, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15, name: "London Afternoon Tea Tour")
 tour_16.guide = user_16
 tour_16.save
-tour_17 = Tour.new(city: "London", address: "St John St London EC1V 4NR, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15)
+tour_17 = Tour.new(city: "London", address: "St John St London EC1V 4NR, United Kingdom", description: "Walking Tour", attendants: 2, price: 15, name: "The Spirit of London")
 tour_17.guide = user_16
 tour_17.save
-tour_18 = Tour.new(city: "London", address: "114 Tottenham Court Road London W1T 5AQ, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15)
+tour_18 = Tour.new(city: "London", address: "114 Tottenham Court Road London W1T 5AQ, United Kingdom", description: "Food Tour", attendants: 2, price: 15, name: "London Eats")
 tour_18.guide = user_16
 tour_18.save
-tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, United Kingdom", description: "Afternoon tea", attendants: 2, price: 15)
+tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, United Kingdom", description: "Pub Crawl", attendants: 2, price: 15, name:"London Pub Crawl" )
 tour_19.guide = user_16
 tour_19.save
+
+interest_1 = Interest.new(category: "hiking")
+interest_2 = Interest.new(category: "food and drink")
+interest_3 = Interest.new(category: "party")
 
 
 # # Examples:
