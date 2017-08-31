@@ -8,13 +8,13 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @tour = Tour.find(params[:tour_id])
+    @visit = Visit.find(params[:visit_id])
     @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking.tour = Tour.find(params[:tour_id])
+    @booking = Booking.new
+    @booking.visit = Visit.find(params[:visit_id])
     @booking.save
     redirect_to booking_path(@booking)
   end
@@ -33,7 +33,4 @@ class BookingsController < ApplicationController
     @booking.destroy
   end
 
-  def booking_params
-    params.require(:booking).permit(:start_time)
-  end
 end

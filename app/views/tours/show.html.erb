@@ -21,7 +21,15 @@
     <% end %>
   </div>
 
-  <%= link_to "Get in contact with " + @tour.guide.first_name, new_tour_booking_path(@tour) %>
+  <p>This tour occurs on the following dates!</p>
+  <% if @tour.visits.first %>
+    <% @tour.visits.each do |visit| %>
+      <%= visit.start_time %>
+      <%= link_to "Sign up for this tour!", visit_booking_path(visit), method: :post  %>
+    <% end %>
+  <% else %>
+    <p>We don't offer any tours at the moment</p>
+  <% end %>
 
 </div>
 </div>
