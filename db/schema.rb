@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20170831104807) do
-
+ActiveRecord::Schema.define(version: 20170830172502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,9 +87,9 @@ ActiveRecord::Schema.define(version: 20170831104807) do
     t.datetime "updated_at",  null: false
     t.integer  "attendants"
     t.integer  "guide_id"
-    t.integer  "price"
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "price"
     t.string   "name"
   end
 
