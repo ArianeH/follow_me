@@ -4,6 +4,8 @@ class MessagesController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @message.booking = @booking
     @message.user = current_user
+
+
     if @message.save
       respond_to do |format|
         format.html { redirect_to booking_path(@booking) }
