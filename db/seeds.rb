@@ -50,6 +50,9 @@ tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germa
 tour_1.guide = user_1
 tour_1.save
 
+visit_1 = Visit.create(start_time: Time.now, tour_id: tour_1.id)
+visit_2 = Visit.create(start_time: Time.now, tour_id: tour_1.id)
+
 tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany", description: "Walking Tour", attendants: 5, price: 15, name: "Alternative Walking Tour")
 tour_2.guide = user_1
 tour_2.save
@@ -62,6 +65,10 @@ tour_3.save
 tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany", description: "Pub Crawl", attendants: 5, price: 15, name: "Berlin Pub Crawl")
 tour_4.guide = user_2
 tour_4.save
+
+visit_1 = Visit.create(start_time: Time.now, tour_id: tour_4.id)
+visit_2 = Visit.create(start_time: Time.now, tour_id: tour_4.id)
+
 tour_5 = Tour.new(city: "Berlin", address: "Over the river", description: "Cold War Tour", attendants: 5, price: 15, name: "Cold War Tour")
 tour_5.guide = user_2
 tour_5.save

@@ -1,7 +1,15 @@
 <h1>LIST OF PENDING BOOKINGS TO BE FIXED</h1>
 
 <ol>
-<% @bookings.each do |booking| %>
-<li><%= link_to booking.tour.description, booking_path(booking) %></li>
-<% end %>
+  <% @bookings.each do |booking| %>
+  <li>
+    <%= link_to booking.visit.tour.description, booking_path(booking) %>
+    <p>
+      Confirmation to join tour:
+      <% if booking.confirmed == false %>
+      Pending
+      <% end %>
+    </p>
+  </li>
+  <% end %>
 </ol>
