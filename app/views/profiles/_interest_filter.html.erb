@@ -1,30 +1,41 @@
+
 <ul>
+  <%= simple_form_for :tours do |f| %>
+      <li><a href="#" class="item">Interests <i class="fa fa-chevron-down"></i></a>
+        <span class="accent"></span>
+        <ul class="drop-down">
+        <%= f.association :interest %>
+          <% Interest.all.each do |interest| %>
+            <li><%= interest.name %></a></li>
+          <% end %>
+        </ul>
+      </li>
+      <li><a href="#" class="item">N. of people <i class="fa fa-chevron-down"></i></a>
+        <span class="accent"></span>
+        <ul class="drop-down">
+          <% count = 1 %>
+          <% 5.times do |count| %>
+            <li><a href="#"><%= count + 1%></a></li>
+          <% end %>
+        </ul>
+      </li>
+      <li><a href="#" class="item">Price <i class="fa fa-chevron-down"></i></a>
+        <span class="accent"></span>
+        <ul class="drop-down">
+          <li><a href="#">Free</a></li>
+          <li><a href="#">up to $10</a></li>
+          <li><a href="#">up to $50</a></li>
+          <li><a href="#">up to $100</a></li>
+        </ul>
+      </li>
+    <% end %>
 
-
-  <li><a href="#" class="item">Interests <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <% Interest.all.each do |interest| %>
-        <li><a href="#">  <%= interest.name %></a></li>
-      <% end %>
-    </ul>
-  </li>
-  <li><a href="#" class="item">N. of people <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <% count = 1 %>
-      <% 5.times do |count| %>
-        <li><a href="#"><%= count + 1%></a></li>
-      <% end %>
-    </ul>
-  </li>
-  <li><a href="#" class="item">Price <i class="fa fa-chevron-down"></i></a>
-    <span class="accent"></span>
-    <ul class="drop-down">
-      <li><a href="#">Free</a></li>
-      <li><a href="#">up to $10</a></li>
-      <li><a href="#">up to $50</a></li>
-      <li><a href="#">up to $100</a></li>
-    </ul>
-  </li>
+      <li>
+      <%= simple_form_for :search, url: profiles_path, method: :get, html: { class: 'form-inline' } do |f| %>
+        <%= button_tag class: 'search-button' do %>
+          <i aria-hidden="true">Find guide</i>
+          <% end %>
+      </li>
+  <% end %>
 </ul>
+

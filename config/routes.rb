@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 
   resources :profiles do
     resources :tours, only: [:create]
+      collection do
+      get :search
+    end
     collection do
       get :search
     end
