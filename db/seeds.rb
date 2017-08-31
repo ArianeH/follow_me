@@ -115,9 +115,15 @@ tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, U
 tour_19.guide = user_16
 tour_19.save
 
-interest_1 = Interest.new(category: "hiking")
-interest_2 = Interest.new(category: "food and drink")
-interest_3 = Interest.new(category: "party")
+interest_1 = Interest.create(name: "hiking")
+interest_2 = Interest.create(name: "food and drink")
+interest_3 = Interest.create(name: "party")
+
+
+interest_1.tours << tour_1
+interest_2.tours << tour_1
+interest_3.tours << tour_1
+tour_2.interests << interest_3
 
 
 # # Examples:
