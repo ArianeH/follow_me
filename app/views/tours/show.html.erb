@@ -15,11 +15,17 @@
 
   <h3>Calendar ... to be adjusted later</h3>
 
-  <div class="calendar">
-    <%= month_calendar do |date| %>
-    <%= date.day %>
+
+    <%= month_calendar events: @tour.visits do |date, tour_visits| %>
+      <%= date.day %>
+
+      <% tour_visits.each do |one_visit| %>
+        <div>
+          <%= link_to one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post  %>
+        </div>
+      <% end %>
     <% end %>
-  </div>
+
 
   <p>This tour occurs on the following dates!</p>
   <% if @tour.visits.first %>
