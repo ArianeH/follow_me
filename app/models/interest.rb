@@ -1,3 +1,3 @@
 class Interest < ApplicationRecord
-  has_many :tours, through: :tour_interests
+  has_and_belongs_to_many :tours
 end
