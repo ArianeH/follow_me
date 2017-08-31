@@ -3,13 +3,23 @@
 <ol>
   <% @bookings.each do |booking| %>
   <li>
-    <%= link_to booking.visit.tour.description, booking_path(booking) %>
+    <%= link_to booking.visit.tour.description + " with " + booking.visit.tour.guide.first_name, booking_path(booking) %>
+
     <p>
       Confirmation to join tour:
       <% if booking.confirmed == false %>
+
       Pending
+
+        <% if current_user.type == "guide" %>
+          <%= link_to "Accept", booking_path(booking), method: :patch %>
+        <% end %>
+
+      <% else %>
+      Accepted
       <% end %>
     </p>
+
   </li>
   <% end %>
 </ol>

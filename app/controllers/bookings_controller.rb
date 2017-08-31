@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    if current_user.type == "guide"
+      #some code to get all the bookings associated with tours that this guide runs
+      @bookings = Booking.joins(:user).where(:users => {:type => "guide"})
+    else
+      @bookings = Booking.where(user_id: current_user.id)
+    end
   end
 
   def show
@@ -27,12 +32,16 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
+    @booking.confirmed = true
+    @booking.save
+    redirect_to bookings_path
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
   end
+
+  private
 
 end
