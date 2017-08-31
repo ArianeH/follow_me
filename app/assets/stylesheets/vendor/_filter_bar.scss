@@ -9,32 +9,32 @@
 $abs:absolute;
 $rel:relative;
 
-h1{
-  font:100 50px Open Sans;
-  text-align:center;
-  margin:50px 0px 50px 0px;
+.filter-bar {
+  margin: 50px 0 0 0;
+  float: left;
 }
 
 ul{
 margin:0 auto;
 width:620px;
+padding: 0;
   li{
     list-style:none;
     float:left;
     margin-right:10px;
     position:$rel;
     a{
-      font:700 15px Open Sans;
-      text-transform:uppercase;
+      font:400 13px Raleway;
       position:$rel;
-      color:#333;
+      color:#00a19a;
       text-decoration:none;
-      border:3px solid #000;
+      border:1px solid #00a19a;
       letter-spacing:1px;
       padding:10px 15px 10px 25px;
       display:block;
       width:150px;
       z-index:5000;
+      border-radius: 3px;
       i{
         font-size:12px !important;
         position:$abs;
@@ -48,16 +48,18 @@ width:620px;
       display:none;
       margin:0;
       left:0;
-      z-index:0;
+      z-index: 5000;
       li{
         position:$rel;
         float:none;
         a{
           border-top:none;
           width:150px;
+          background-color: white;
           &:hover{
-            background:#000;
-            color:#FFF;
+            background:#00a19a;
+            color: white;
+            text-decoration: none;
           }
         }
       }
@@ -71,7 +73,7 @@ width:620px;
 .accent{
   width:0%;
   height:100%;
-  background:#000;
+  background:#00a19a;
   position:$abs;
   top:0;
   left:0;
@@ -84,5 +86,6 @@ width:620px;
 }
 
 .item:hover{
-  color:#FFF;
+  color:#00a19a;
+  text-decoration: none;
 }

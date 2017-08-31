@@ -2,10 +2,10 @@
 $("li").mouseover(function(){
  $(this).find(".drop-down").slideDown(300);
  $(this).find(".accent").addClass("animate");
- $(this).find(".item").css("color","#FFF");
+ $(this).find(".item").css("color","white");
 }).mouseleave(function(){
   $(this).find(".drop-down").slideUp(300);
    $(this).find(".accent").removeClass("animate");
-   $(this).find(".item").css("color","#000");
+   $(this).find(".item").css("color","#00a19a");
 });
 
