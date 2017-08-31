@@ -1,28 +1,44 @@
-<h1>To be changed: This is where the SHOW-VIEW for the following guide: starts </h1>
-<!-- for testing purposes -->
-<!-- filtered navigation bar -->
-<%= render 'profiles/interest_filter' %>
-
 <!-- carousel -->
 <div class="container">
-	<% if action_name == "search" %>
-    <h1>Guides in <%= params[:search][:city].capitalize %></h1>
-  <% else %>
-    <h1>These are your guides</h1>
-  <% end %>
+  <div class="row">
+    <div class="filter-bar">
+      <%= render 'profiles/interest_filter' %>
+    </div>
+  </div>
+  <div class="row">
+  	<% if action_name == "search" %>
+      <h1>Guides in <%= params[:search][:city].capitalize %></h1>
+    <% else %>
+      <h1>These are your guides</h1>
+    <% end %>
+  </div>
 	<div class="row">
 		<div class="carousel slide multi-item-carousel" id="theCarousel">
 			<div class="carousel-inner">
 				<% @guides.each_with_index do |guide, index| %>
-				<div class="item <%= "active" if index == 0 %>">
-					<div class="col-xs-4">
 
-						<%= link_to guide.first_name, profile_path(guide), class: "img-responsive", remote: true %>
-            <% if guide.photo? %>
-              <%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-guide" %>
-            <% end %>
-					</div>
-				</div>
+  				<div class="item <%= "active" if index == 0 %>">
+
+  					<div class="col-xs-3 small-padding no-margin">
+              <div class="card card-carousel">
+                <div class="card-image-wrapper">
+                <% if guide.photo? %>
+                  <%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image" %>
+                <% end %>
+                </div>
+                <div class="offered-tours">
+                  <h1 class="offered-tours-h1"><b>OFFERED TOURS</b></h1>
+                  <div class="offered-tours-text">
+                  <% guide.tours.each do |tour| %>
+                    <p class="card-text"> <%= tour.name %> </p>
+                  <% end %>
+                  </div>
+                </div>
+              </div>
+  					</div>
+
+  				</div>
+
 				<% end %>
 
 			</div>
@@ -42,25 +58,7 @@
 
 <!-- geocode map -->
 
-<div id="map" style="width: 100%; height: 600px;"></div>
 
-<%= content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(<%= raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
-      });
-    });
-  <% end %>
-<% end %>
 
 
 

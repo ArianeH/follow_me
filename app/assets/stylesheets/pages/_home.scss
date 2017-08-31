@@ -13,43 +13,6 @@
   margin-bottom: 30px;
 }
 
-.cards-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 25px auto;
-}
-
-.card {
-  height: 200px;
-  margin-bottom: 10px;
-  background-color: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
-  position: relative;
-  align-items: center;
-}
-
-.icon {
-  height: 50px;
-  margin: 20px;
-}
-
-.card-content {
-  padding: 10px 40px;
-}
-
-.card-content p {
-  font-size: 12px;
-  color: #575756;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-}
-
-.card-content .cards-header {
-  color: #00a19a;
-}
 
 .map-background-image {
   width: 100%;
@@ -66,7 +29,6 @@
 .newsletter {
   height: 500px;
 }
-
 
 #newsletter-p {
   font-family: 'Raleway', regular;
@@ -102,7 +64,6 @@
   display: inline-block;
   margin-top: -20px;
 }
-
 
 #name-input, #email-input {
   border: 1px solid #9d9d9c;
