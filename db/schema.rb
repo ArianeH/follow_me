@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20170831114854) do
     t.integer  "age"
     t.text     "description"
     t.string   "type"
+    t.string   "interest1"
     t.string   "interest2"
     t.string   "interest3"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
