@@ -1,7 +1,7 @@
 <div class="message <%= user_is_messages_author ? "right" : "" %>">
 
  <% if message.user.photo? %>
- <%= cl_image_tag message.user.photo_url, width: 400, height: 300, crop: :fit, class: "avatar" %>
+ <%= cl_image_tag message.user.photo.path, width: 40, height: 40, crop: :fit, class: "avatar" %>
  <% else %>
  <%= image_tag "default_avatar", width: 40, height: 40, crop: :fit, class: "avatar" %>
  <% end %>
