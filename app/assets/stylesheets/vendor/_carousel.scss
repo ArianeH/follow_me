@@ -5,17 +5,17 @@
     }
     .active{
       &.left{
-        left:-33%;
+        left:-25%;
       }
       &.right{
-        left:33%;
+        left:25%;
       }
     }
     .next{
-      left: 33%;
+      left: 25%;
     }
     .prev{
-      left: -33%;
+      left: -25%;
     }
     @media all and (transform-3d), (-webkit-transform-3d) {
       > .item{
@@ -36,5 +36,10 @@
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgb(244, 244, 244) 100%) !important;
     }
   }
+}
+
+.carousel-control {
+  margin: -90px;
+  color: #00a19a;
 }
 
