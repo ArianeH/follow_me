@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(version: 20170831104807) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "start_time"
     t.integer  "user_id"
-    t.integer  "tour_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tour_id"], name: "index_bookings_on_tour_id", using: :btree
+    t.integer  "visit_id"
+    t.boolean  "confirmed"
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+    t.index ["visit_id"], name: "index_bookings_on_visit_id", using: :btree
   end
 
   create_table "interests", force: :cascade do |t|
@@ -105,17 +105,27 @@ ActiveRecord::Schema.define(version: 20170831104807) do
     t.integer  "age"
     t.text     "description"
     t.string   "type"
+    t.string   "interest1"
     t.string   "interest2"
     t.string   "interest3"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "visits", force: :cascade do |t|
+    t.datetime "start_time"
+    t.integer  "tour_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_visits_on_tour_id", using: :btree
+  end
+
   add_foreign_key "booking_confirmations", "bookings"
-  add_foreign_key "bookings", "tours"
   add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "visits"
   add_foreign_key "messages", "bookings"
   add_foreign_key "messages", "users"
   add_foreign_key "tour_interests", "interests"
   add_foreign_key "tour_interests", "tours"
+  add_foreign_key "visits", "tours"
 end

@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
 
   resources :tours, only: [:index, :show, :new, :edit, :update, :destroy] do
-      resources :bookings, only: [:create, :new]
+    resources :visits, only: [:create, :new]
+  end
+
+  resources :visits, except: [:create, :new] do
+    resources :bookings, only: [:create, :new]
   end
 
   resources :bookings, except: [:create, :new] do
-        resources :messages, only: [:create]
-    end
+    resources :messages, only: [:create]
+  end
 
   resources :profiles do
     resources :tours, only: [:create]
