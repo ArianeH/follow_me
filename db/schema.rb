@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20170830172502) do
     t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
   end
 
+  create_table "booking_confirmations", force: :cascade do |t|
+    t.integer  "booking_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "participants"
+    t.index ["booking_id"], name: "index_booking_confirmations_on_booking_id", using: :btree
+  end
+
   create_table "bookings", force: :cascade do |t|
     t.datetime "start_time"
     t.integer  "user_id"
@@ -40,10 +48,25 @@ ActiveRecord::Schema.define(version: 20170830172502) do
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
   end
 
-  create_table "interests", force: :cascade do |t|
-    t.string   "category"
+  create_table "chat_rooms", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interests_tours", force: :cascade do |t|
+    t.integer  "tour_id"
+    t.integer  "interest_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["interest_id"], name: "index_interests_tours_on_interest_id", using: :btree
+    t.index ["tour_id"], name: "index_interests_tours_on_tour_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -54,15 +77,6 @@ ActiveRecord::Schema.define(version: 20170830172502) do
     t.datetime "updated_at", null: false
     t.index ["booking_id"], name: "index_messages_on_booking_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
-  end
-
-  create_table "tour_interests", force: :cascade do |t|
-    t.integer  "tour_id"
-    t.integer  "interest_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["interest_id"], name: "index_tour_interests_on_interest_id", using: :btree
-    t.index ["tour_id"], name: "index_tour_interests_on_tour_id", using: :btree
   end
 
   create_table "tours", force: :cascade do |t|
@@ -97,14 +111,17 @@ ActiveRecord::Schema.define(version: 20170830172502) do
     t.integer  "age"
     t.text     "description"
     t.string   "type"
+    t.string   "interest2"
+    t.string   "interest3"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "booking_confirmations", "bookings"
   add_foreign_key "bookings", "tours"
   add_foreign_key "bookings", "users"
+  add_foreign_key "interests_tours", "interests"
+  add_foreign_key "interests_tours", "tours"
   add_foreign_key "messages", "bookings"
   add_foreign_key "messages", "users"
-  add_foreign_key "tour_interests", "interests"
-  add_foreign_key "tour_interests", "tours"
 end
