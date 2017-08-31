@@ -38,12 +38,6 @@ class ToursController < ApplicationController
   	@tour.destroy
   end
 
-  def search
-      @guides = Guide.joins(:tours).where(tours: { attendants: params[:search][:attendants] } && { price: params[:search][:price] }).uniq
-      render :index
-    end
-  end
-
   private
 
   def tour_params

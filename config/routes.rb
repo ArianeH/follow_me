@@ -18,13 +18,11 @@ Rails.application.routes.draw do
   end
 
   resources :profiles do
-    resources :tours, only: [:create]
-      collection do
-      get :search
-    end
     collection do
       get :search
+      get :search_filter
     end
+    resources :tours, only: [:create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,41 +1,14 @@
-
-<ul>
-  <%= simple_form_for :tours do |f| %>
-      <li><a href="#" class="item">Interests <i class="fa fa-chevron-down"></i></a>
-        <span class="accent"></span>
-        <ul class="drop-down">
-        <%= f.association :interest %>
-          <% Interest.all.each do |interest| %>
-            <li><%= interest.name %></a></li>
-          <% end %>
-        </ul>
-      </li>
-      <li><a href="#" class="item">N. of people <i class="fa fa-chevron-down"></i></a>
-        <span class="accent"></span>
-        <ul class="drop-down">
-          <% count = 1 %>
-          <% 5.times do |count| %>
-            <li><a href="#"><%= count + 1%></a></li>
-          <% end %>
-        </ul>
-      </li>
-      <li><a href="#" class="item">Price <i class="fa fa-chevron-down"></i></a>
-        <span class="accent"></span>
-        <ul class="drop-down">
-          <li><a href="#">Free</a></li>
-          <li><a href="#">up to $10</a></li>
-          <li><a href="#">up to $50</a></li>
-          <li><a href="#">up to $100</a></li>
-        </ul>
-      </li>
+<%= simple_form_for :search_filter, url: search_filter_profiles_path, method: :get, html: { class: 'form-inline' } do |f| %>
+<%= f.input :interests, collection: Interest.order(:name), input_html: { multiple: true }  %>
+<%= f.input :price, label: "Price", prompt: "Select a price", collection: [ [ "Free", 0 ], [ "Up to $10", 10 ], [ "Up to $20", 20 ] , ["Up to $50", 50], ["$50 and above", 50] ] %>
+<%= f.input :attendants, label: "Number of people", prompt: "How many travellers?", collection: 1..5 %>
+  <%= button_tag class: 'search-button' do %>
+      <i aria-hidden="true">Find your guide</i>
     <% end %>
+<% end %>
 
-      <li>
-      <%= simple_form_for :search, url: profiles_path, method: :get, html: { class: 'form-inline' } do |f| %>
-        <%= button_tag class: 'search-button' do %>
-          <i aria-hidden="true">Find guide</i>
-          <% end %>
-      </li>
-  <% end %>
-</ul>
+
+
+
+
 
