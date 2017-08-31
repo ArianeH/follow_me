@@ -7,6 +7,7 @@ Booking.destroy_all
 User.destroy_all
 Guide.destroy_all
 Tour.destroy_all
+Interest.destroy_all
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
@@ -118,12 +119,25 @@ tour_19.save
 interest_1 = Interest.create(name: "hiking")
 interest_2 = Interest.create(name: "food and drink")
 interest_3 = Interest.create(name: "party")
+interest_4 = Interest.create(name: "walking")
+interest_5 = Interest.create(name: "sports")
+interest_6 =  Interest.create(name: "history")
+interest_7 = Interest.create(name: "art")
+interest_8 = Interest.create(name: "adventure")
+interest_9 = Interest.create(name: "beach")
+interest_10 = Interest.create(name: "nature")
+interest_10 = Interest.create(name: "alternative")
 
-
-interest_1.tours << tour_1
 interest_2.tours << tour_1
-interest_3.tours << tour_1
-tour_2.interests << interest_3
+interest_2.tours << tour_5
+interest_2.tours << tour_9
+interest_2.tours << tour_19
+interest_2.tours << tour_18
+interest_2.tours << tour_16
+
+interest_4.tours << tour_2
+interest_4.tours << tour_3
+tour_15.interests << interest_6
 
 
 # # Examples:

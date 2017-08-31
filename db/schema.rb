@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+
 ActiveRecord::Schema.define(version: 20170831104807) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +108,7 @@ ActiveRecord::Schema.define(version: 20170831104807) do
     t.integer  "age"
     t.text     "description"
     t.string   "type"
+
     t.string   "interest1"
     t.string   "interest2"
     t.string   "interest3"
