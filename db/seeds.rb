@@ -21,6 +21,7 @@ num += 1
 user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Text here", interest1: "beer", interest2: "film", interest3: "bicycle")
 user_2.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
+
 user_3 = Guide.create(first_name: "Sofia", last_name: "Hanson", age: 32, email: "sofia@wagon.com", password: "hellohello", description: "Text here", interest1: "coffee", interest2: "glass", interest3: "cutlery")
 user_3.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
@@ -30,6 +31,7 @@ num += 1
 user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Text here", interest1: "glass", interest2: "music", interest3: "film")
 user_5.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Text here", interest1: "bicycle", interest2: "music", interest3: "glass")
+
 user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
 
@@ -54,18 +56,29 @@ tour_1.save
 visit_1 = Visit.create(start_time: Time.now, tour_id: tour_1.id)
 visit_2 = Visit.create(start_time: Time.now, tour_id: tour_1.id)
 
+
 tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany", description: "Go on an exciting tour of the government quarter and the Reichstag in Berlin. Learn more about history, architecture and political life in the government district and visit the plenary hall as well as the Reichstag dome.", attendants: 5, price: 15, name: "Alternative Walking Tour")
 #tour_2.guide = user_1
 tour_2.photo_url = "https://static.pexels.com/photos/53146/brandenburg-gate-potsdam-place-night-clouds-53146.jpeg"
 tour_2.save
 
-tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany", description: "Discover alternative Berlin at a city tour. See a city between tradition and trend. Discover countercultures, street art, protest movements, alternative lifestyle and a variety of cultures.", attendants: 5, price: 15, name: "Street Art Walking Tour")
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_2.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_2.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_2.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_2.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_2.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_2.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_2.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_2.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_2.id)
+
+tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany", description: "Discover alternative Berlin at a city tour. See a city between tradition and trend. Discover countercultures, street art, protest movements, alternative lifestyle and a variety of cultures.", attendants: 5, price: 0, name: "Street Art Walking Tour")
 tour_3.guide = user_2
 tour_3.photo_url = "https://static.pexels.com/photos/315191/pexels-photo-315191.jpeg"
 tour_3.save
 
 #Tours created by user_2
-tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany", description: "Go on a pub crawl of Berlin and explore its exciting nightlife with an enthusiastic party guide. Visit 5 cool bars, and get VIP entry into nightclubs as you make new friends and see the city like a party-loving local.", attendants: 5, price: 15, name: "Berlin Pub Crawl")
+tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany", description: "Go on a pub crawl of Berlin and explore its exciting nightlife with an enthusiastic party guide. Visit 5 cool bars, and get VIP entry into nightclubs as you make new friends and see the city like a party-loving local.", attendants: 5, price: 0, name: "Berlin Pub Crawl")
 tour_4.guide = user_2
 tour_4.photo_url = "https://static.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg"
 tour_4.save
@@ -88,11 +101,23 @@ tour_7 = Tour.new(city: "Berlin", address: "Neue Bahnhofstr. 29 10245 Berlin, Ge
 tour_7.guide = user_3
 tour_7.photo_url = "https://static.pexels.com/photos/170379/pexels-photo-170379.jpeg"
 tour_7.save
-tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "This tour offers a mixture of the most beautiful sights, the history of the Third Reich and the last remains of the Berlin Wall. See Berlin wake up", attendants: 5, price: 15, name: "Free Bike Tour")
+
+tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "This tour offers a mixture of the most beautiful sights, the history of the Third Reich and the last remains of the Berlin Wall. See Berlin wake up", attendants: 5, price: 0, name: "Free Bike Tour")
 tour_8.guide = user_3
 tour_8.photo_url = "https://static.pexels.com/photos/86456/berlin-reichstag-government-glass-dome-86456.jpeg"
 tour_8.save
-tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Taste Berlienr food and discover a lively city where past and future await you. Let yourself be guided by dedicated employees to take away food and restaurants. Enjoy tasting and learn the history.", attendants: 5, price: 15, name: "Eat with Me")
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_8.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_8.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_8.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_8.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_8.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_8.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_8.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_8.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_8.id)
+
+tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Taste Berlienr food and discover a lively city where past and future await you. Let yourself be guided by dedicated employees to take away food and restaurants. Enjoy tasting and learn the history.", attendants: 5, price: 0, name: "Eat with Me")
 tour_9.guide = user_3
 tour_9.photo_url = "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg"
 tour_9.save
@@ -114,7 +139,7 @@ tour_12.save
 #Tours created by user_5
 tour_13 = Tour.new(city: "Berlin", address: "Neue Roßstr. 11-12 10179 Berlin, Germany", description: "Get an insider’s look at Berlin, the capital and cultural centerpiece of Germany, on this guided, 4-hour walking tour. Visit some of Berlin’s most popular attractions — like the Berlin Wall, Brandenburg Gate and Checkpoint Charlie — as well as a few lesser-known locations that many group sightseeing tours miss
 
-", attendants: 5, price: 15, name: "Let's see the Brandenburg Gate")
+", attendants: 5, price: 0, name: "Let's see the Brandenburg Gate")
 tour_13.guide = user_5
 tour_13.photo_url = "https://static.pexels.com/photos/53146/brandenburg-gate-potsdam-place-night-clouds-53146.jpeg"
 tour_13.save
@@ -130,6 +155,16 @@ tour_15.guide = user_5
 tour_15.photo_url = "https://static.pexels.com/photos/179942/pexels-photo-179942.jpeg"
 tour_15.save
 
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_15.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_15.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_15.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_15.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_15.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_15.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_15.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_15.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15.id)
+
 #Tours created by user_16
 tour_16 = Tour.new(city: "London", address: "29 Greek Street London W1D 5DH, United Kingdom", description: "Take the afternoon tea on the Thames during a 1.5 hour boat trip to London. Enjoy the urbrit tradition of tea with cakes and sandwiches, and take a boat trip through the center of London", attendants: 2, price: 15, name: "English Afternoon Tea")
 tour_16.guide = user_16
@@ -143,6 +178,17 @@ tour_17.save
 #tour_18.guide = user_16
 #tour_18.photo_url = "https://static.pexels.com/photos/132694/pexels-photo-132694.jpeg"
 #tour_18.save
+
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_18.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_18.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_18.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_18.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_18.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_18.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_18.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_18.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_18.id)
+
 tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, United Kingdom", description: "The best way to experience London after hours is to go along with somebody that can help introduce you to the hottest spots in town, put you in touch with other fun-seeking travelers…and give you a discount on entry costs and drinks!", attendants: 2, price: 15, name:"London Pub Crawl" )
 tour_19.guide = user_16
 tour_19.photo_url = "https://static.pexels.com/photos/110472/pexels-photo-110472.jpeg"
@@ -167,20 +213,14 @@ tour_2.interests << interest_11
 tour_3.interests << interest_4
 tour_4.interests << interest_2
 tour_4.interests << interest_3
-#tour_5.interests << interest_4
-#tour_5.interests << interest_6
 tour_6.interests << interest_5
 tour_7.interests << interest_5
 tour_8.interests << interest_5
 tour_9.interests << interest_2
-#tour_10.interests << interest_6
-#tour_10.interests << interest_11
-#tour_10.interests << interest_10
 tour_11.interests << interest_6
 tour_11.interests << interest_4
 tour_12.interests << interest_11
 tour_13.interests << interest_6
-#tour_14.interests << interest_5
 tour_15.interests << interest_12
 
 # interest_2.tours << tour_1

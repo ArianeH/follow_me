@@ -19,7 +19,6 @@ gem 'uglifier'
 gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
 gem "geocoder"
-gem 'pg_search'
 
 gem 'jquery-fileupload-rails'
 gem "coffee-rails"

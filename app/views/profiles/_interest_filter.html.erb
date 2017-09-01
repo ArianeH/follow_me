@@ -1,8 +1,8 @@
 <%= simple_form_for :search_filter, url: search_filter_profiles_path, method: :get, html: { class: 'form-inline' } do |f| %>
-<%= f.input :interests, collection: Interest.order(:name), input_html: { multiple: true }, label: false  %>
+<%= f.input :interests, collection: Interest.order(:name), input_html: { multiple: true }, label: false %>
 <%= f.input :price, label: "", prompt: "Select a price", collection: [ [ "Free", 0 ], [ "Up to $10", 10 ], [ "Up to $20", 20 ] , ["Up to $50", 50], ["$50 and above", 50] ] %>
 <%= f.input :attendants, label: "", prompt: "How many travellers?", collection: 1..5 %>
-  <%= button_tag class: 'search-button' do %>
+  <%= button_tag class: 'search-button-filter-bar' do %>
       <i aria-hidden="true">Find your guide</i>
     <% end %>
 <% end %>

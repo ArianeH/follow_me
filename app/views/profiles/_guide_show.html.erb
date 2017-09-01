@@ -22,6 +22,9 @@
           <p class="tour-guide-text"><%= guide.description %></p>
         </div>
       </div>
+      <div class="col-xs-3">
+        <%= cl_image_tag guide.photo.path, class: "guide-image-show", width: 150, height: 200, crop: :fill, gravity: :face %>
+      </div>
     </div>
 
     <div class="offered-tours-div">
@@ -31,7 +34,8 @@
           <!-- Offered Tours -->
 
             <div class="col-xs-1">
-              <%= cl_image_tag tour.photo.path, class: 'tour-image', width: 100, height: 100, crop: :fill, radius: :max %>
+
+              <%= cl_image_tag tour.photo.path, class: 'tour-image' %>
             </div>
             <div class="col-xs-7">
               <div class="offered-tours-content">
