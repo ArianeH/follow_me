@@ -1,13 +1,13 @@
 #tour-guide-wrapper {
   background-color: white;
-  margin-top: 10px;
-  margin-left: 95px;
-  margin-right: 95px;
+  margin: 10px 95px 50px 95px;
+  padding-bottom: 100px;
 }
 
 .wrapper-tour-guide-inner {
   margin: auto;
   width: 90%;
+  padding-top: 30px;
 }
 
 #tour-guide-name {
@@ -36,6 +36,26 @@
 
 .btn-secondary {
   max-width: 172px;
+  font-size: 13px;
+  padding: 10px 15px;
+  background-color: #82bf6a;
+  color: white;
+  border-radius: 2px;
 }
 
+.guide-titles {
+  font-size: 15px;
+  color: #706f6f;
+  margin-top: 30px;
+}
 
+.tour-guide-text {
+  font-size: 13px;
+  color: #706f6f;
+}
+
+.interest-icon {
+  margin-right: 10px;
+  text-width: 50px;
+  color: #b2b2b2;
+}
