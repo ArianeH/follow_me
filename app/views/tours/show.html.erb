@@ -29,7 +29,7 @@
       <% end %>
       </div>
       <div class="col-xs-4" id="calendar">
-        <h3>Calendar ... to be adjusted later</h3>
+        <h3>Offered dates for this tour:</h3>
           <%= month_calendar events: @tour.visits do |date, tour_visits| %>
             <%= date.day %>
             <% tour_visits.each do |one_visit| %>
@@ -38,21 +38,10 @@
               </div>
             <% end %>
           <% end %>
-        <p>This tour occurs on the following dates!</p>
-        <% if @tour.visits.first %>
-          <% @tour.visits.each do |visit| %>
-            <%= visit.start_time %>
-            <%= link_to "Sign up for this tour!", visit_bookings_path(visit), method: :post  %>
-          <% end %>
-        <% else %>
-          <p>We don't offer any tours at the moment</p>
-        <% end %>
         </div>
       </div>
     </div>
   </div>
-
-  <h2>Reviews</h2>
 </div>
 
 

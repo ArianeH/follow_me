@@ -1,0 +1,66 @@
+.simple-calendar {
+  text-align: center;
+
+  .calendar-heading a {
+    font-family: "Open Sans", "Helvetica", "sans-serif";
+    font-weight: lighter;
+    font-size: 15px;
+  }
+
+  .calendar-title {
+    font-family: "Open Sans", "Helvetica", "sans-serif";
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+
+  }
+  .next-month {}
+  .current-month {}
+
+  .has-events {}
+}
+
+.calendar-heading {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.calendar-heading a:hover {
+  text-decoration: none;
+}
+
+.table-striped thead tr th {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.table-striped tbody tr td {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.table-striped tbody tr td a:hover {
+  text-decoration: none;
+}
+
