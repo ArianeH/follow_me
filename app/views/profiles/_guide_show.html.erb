@@ -4,22 +4,22 @@
     <div class="row">
       <div class="col-xs-9">
         <div class="tour">
-          <h2 id="tour-guide-name"><%= guide.first_name %> <%= guide.last_name %></h2>
-          <p><%= guide.age %> years old | <%= guide.tours.first.city %></p>
+          <h2 id="tour-guide-name"><b><%= guide.first_name %> <%= guide.last_name %></b></h2>
+          <p class="tour-guide-text"><%= guide.age %> years old | <%= guide.tours.first.city %></p>
         </div>
 
         <div class="interests">
-          <h2>Interests</h2>
+          <h2 class="guide-titles">Interests</h2>
           <hr>
-          <i class="fa fa-<%= guide.interest1 %>"></i>
-          <i class="fa fa-<%= guide.interest2 %>"></i>
-          <i class="fa fa-<%= guide.interest3 %>"></i>
+          <i class="fa fa-<%= guide.interest1 %> interest-icon"></i>
+          <i class="fa fa-<%= guide.interest2 %> interest-icon"></i>
+          <i class="fa fa-<%= guide.interest3 %> interest-icon"></i>
         </div>
 
         <div class="about-me">
-          <h3>About Me</h3>
+          <h3 class="guide-titles">About Me</h3>
           <hr>
-          <p><%= guide.description %></p>
+          <p class="tour-guide-text"><%= guide.description %></p>
         </div>
       </div>
     </div>
@@ -35,13 +35,13 @@
             </div>
             <div class="col-xs-7">
               <div class="offered-tours-content">
-                <p><b><%= tour.name %></b></p>
-                <p><%= tour.description %></p>
+                <p class="tour-guide-text"><b><%= tour.name %></b></p>
+                <p class="tour-guide-text"><%= tour.description %></p>
               </div>
             </div>
             <div class="col-xs-4 wrapper-details-link">
 
-              <%= link_to 'See more details', tour_path(tour), class: "btn btn-success btn-secondary" %>
+              <%= link_to 'See more details', tour_path(tour), class: "btn-secondary" %>
 
 
           </div>
