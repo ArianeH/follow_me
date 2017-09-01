@@ -1,9 +1,11 @@
-<h1>LIST OF PENDING BOOKINGS TO BE FIXED</h1>
 
-<ol>
+<div class="container">
+  <h1>LIST OF PENDING BOOKINGS</h1>
+
+
   <% @bookings.each do |booking| %>
-  <li>
-    <%= link_to booking.visit.tour.description + " with " + booking.visit.tour.guide.first_name, booking_path(booking) %>
+  <p>
+    <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
 
     <p>
       Confirmation to join tour:
@@ -11,15 +13,17 @@
 
       Pending
 
-        <% if current_user.type == "Guide" %>
-          <%= link_to "Accept", booking_path(booking), method: :patch %>
-        <% end %>
+      <% if current_user.type == "Guide" %>
+      <%= link_to "Accept", booking_path(booking), method: :patch %>
+      <% end %>
 
       <% else %>
       Accepted
       <% end %>
     </p>
 
-  </li>
+  </p>
   <% end %>
-</ol>
+
+</div>
+
