@@ -15,8 +15,11 @@ Interest.destroy_all
 num = 3
 url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 
-user_1 = Guide.create(first_name: "Christina", last_name: "Baker", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Bacon geek. Friendly analyst. Friend of animals everywhere. Food trailblazer. Coffee junkie. Infuriatingly humble zombie ninja. Travel nerd.", interest1: "beer", interest2: "music", interest3: "cutlery")
-user_1.photo_url = "https://static.pexels.com/photos/59552/pexels-photo-59552.png"
+
+#user_1 = Guide.create(first_name: "Christina", last_name: "Baker", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Text here", interest1: "beer", interest2: "music", interest3: "cutlery")
+#user_1.photo_url = "https://static.pexels.com/photos/59552/pexels-photo-59552.png"
+
+
 num += 1
 user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Professional communicator. Unapologetic writer. Alcohol trailblazer. Freelance internet specialist. Food scholar. Coffee fanatic.", interest1: "beer", interest2: "film", interest3: "bicycle")
 user_2.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
@@ -47,7 +50,7 @@ user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "e
 
 #Tours created by user_1
 tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germany", description: "Relaxing, nicely-paced, and fun, this tour is the perfect addition to any day in Berlin. Some of the great sites on this tour include:  three great restaurants, Berlin Wall Memorial and Museum Island", attendants: 5, price: 15, name: "Foodie Tour")
-tour_1.guide = user_1
+#tour_1.guide = user_1
 tour_1.photo_url = "https://static.pexels.com/photos/326789/pexels-photo-326789.jpeg"
 tour_1.save
 
@@ -62,7 +65,7 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_1.
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_1.id)
 
 tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany", description: "Go on an exciting tour of the government quarter and the Reichstag in Berlin. Learn more about history, architecture and political life in the government district and visit the plenary hall as well as the Reichstag dome.", attendants: 5, price: 15, name: "Alternative Walking Tour")
-tour_2.guide = user_1
+#tour_2.guide = user_1
 tour_2.photo_url = "https://static.pexels.com/photos/109628/pexels-photo-109628.jpeg"
 tour_2.save
 
@@ -77,8 +80,8 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_2.
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_2.id)
 
 tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany", description: "Discover alternative Berlin at a city tour. See a city between tradition and trend. Discover countercultures, street art, protest movements, alternative lifestyle and a variety of cultures.", attendants: 5, price: 15, name: "Street Art Walking Tour")
-tour_3.guide = user_1
-tour_3.photo_url = "https://static.pexels.com/photos/34967/pexels-photo.jpg"
+tour_3.guide = user_2
+tour_3.photo_url = "https://static.pexels.com/photos/315191/pexels-photo-315191.jpeg"
 tour_3.save
 
 visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_3.id)
@@ -107,22 +110,21 @@ visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_4.
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_4.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_4.id)
 
-tour_5 = Tour.new(city: "Berlin", address: "Over the river", description: "Get an insider’s look at the Cold War on a walking tour around Berlin. Discover how it came about, what life was like behind the wall, how it crumbled down, and much more on a fascinating journey into one of the most intriguing episodes in history.", attendants: 5, price: 15, name: "Cold War Tour")
-tour_5.guide = user_2
-tour_5.photo_url = "https://static.pexels.com/photos/1915/black-and-white-art-berlin-germany.jpg"
-tour_5.save
 
+#tour_5 = Tour.new(city: "Berlin", address: "Over the river", description: "Get an insider’s look at the Cold War on a walking tour around Berlin. Discover how it came about, what life was like behind the wall, how it crumbled down, and much more on a fascinating journey into one of the most intriguing episodes in history.", attendants: 5, price: 15, name: "Cold War Tour")
+#tour_5.guide = user_2
+#tour_5.photo_url = "https://static.pexels.com/photos/1915/black-and-white-art-berlin-germany.jpg"
+#tour_5.save
 
-
-visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_5.id)
-visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_5.id)
-visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_5.id)
-visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_5.id)
-visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_5.id)
-visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_5.id)
-visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_5.id)
-visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_5.id)
-visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_5.id)
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_5.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_5.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_5.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_5.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_5.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_5.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_5.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_5.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_5.id)
 
 
 tour_6 = Tour.new(city: "Berlin", address: "Warschauer Platz 18 10245 Berlin, Germany", description: "Take a trip through the history of Berlin and take in many of the most famous sights of the city, from the Prenzlauer Berg, the Museumsinsel, along the wall to the government quarter.", attendants: 5, price: 15, name: "Cycle in Berlin")
@@ -187,20 +189,23 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_9.
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_9.id)
 
 #Tours created by user_4
-tour_10 = Tour.new(city: "Berlin", address: "Gertraudenstr. 10 - 12 10178 Berlin,Germany", description: "Visit the Pergamon Museum, the most famous part of the Berlin Museum Island, with 3 impressive collections. See pieces from antiquity, discover the Middle East Museum and the Islamic Art Museum.", attendants: 5, price: 15, name: "The Story of Berlin")
-tour_10.guide = user_4
-tour_10.photo_url = "https://static.pexels.com/photos/65567/pexels-photo-65567.jpeg"
-tour_10.save
 
-visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_10.id)
-visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_10.id)
-visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_10.id)
-visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_10.id)
-visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_10.id)
-visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_10.id)
-visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_10.id)
-visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_10.id)
-visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_10.id)
+#tour_10 = Tour.new(city: "Berlin", address: "Gertraudenstr. 10 - 12 10178 Berlin,Germany", description: "Visit the Pergamon Museum, the most famous part of the Berlin Museum Island, with 3 impressive collections. See pieces from antiquity, discover the Middle East Museum and the Islamic Art Museum.", attendants: 5, price: 15, name: "The Story of Berlin")
+#tour_10.guide = user_4
+#tour_10.photo_url = "https://static.pexels.com/photos/65567/pexels-photo-65567.jpeg"
+#tour_10.save
+
+
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_10.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_10.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_10.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_10.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_10.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_10.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_10.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_10.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_10.id)
+
 
 tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany", description: "Explore Berlin on a comprehensive 3.5 to 4-hour walking tour, starting from our meeting point in central Berlin. See all the major sights, from the Brandenburg Gate to Museum Island, and hear stories of the city’s residents from enthusiastic guides.", attendants: 5, price: 15, name: "Walk along the Berlin Wall")
 tour_11.guide = user_4
@@ -251,21 +256,21 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_13
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_13.id)
 
 
-tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Discover the capital on a one-hour Segway tour along the banks of the River Spree and admire the impressive buildings of Berlin. See the Reichstag, the famous Brandenburg Gate and go through the Tiergarten.", attendants: 5, price: 15, name: "Berlin tour with Segway" )
+#tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Discover the capital on a one-hour Segway tour along the banks of the River Spree and admire the impressive buildings of Berlin. See the Reichstag, the famous Brandenburg Gate and go through the Tiergarten.", attendants: 5, price: 15, name: "Berlin tour with Segway" )
+#tour_14.guide = user_5
+#tour_14.photo_url = "https://static.pexels.com/photos/383/summer-sport-bikes-bicycles.jpg"
+#tour_14.save
 
-tour_14.guide = user_5
-tour_14.photo_url = "https://static.pexels.com/photos/383/summer-sport-bikes-bicycles.jpg"
-tour_14.save
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_14.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_14.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_14.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_14.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_14.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_14.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_14.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_14.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_14.id)
 
-visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_14.id)
-visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_14.id)
-visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_14.id)
-visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_14.id)
-visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_14.id)
-visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_14.id)
-visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_14.id)
-visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_14.id)
-visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_14.id)
 
 
 tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, Germany", description: "Visit the Berlin Tower! Without the Queue", attendants: 5, price: 15, name: "Berlin Tower")
@@ -314,20 +319,25 @@ visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_17
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_17.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_17.id)
 
-tour_18 = Tour.new(city: "London", address: "114 Tottenham Court Road London W1T 5AQ, United Kingdom", description: "Experience our passion by eating traditional British food (such as award-winning Cumberland sausages, freshly cooked breads and amazing fish and chips), sample chocolates/English fudges, taste English desserts and cheeses, drink London brewed beers, ciders and ales, and sip refreshing teas.", attendants: 2, price: 15, name: "London Eats")
-tour_18.guide = user_16
-tour_18.photo_url = "https://static.pexels.com/photos/132694/pexels-photo-132694.jpeg"
-tour_18.save
 
-visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_18.id)
-visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_18.id)
-visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_18.id)
-visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_18.id)
-visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_18.id)
-visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_18.id)
-visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_18.id)
-visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_18.id)
-visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_18.id)
+#tour_18 = Tour.new(city: "London", address: "114 Tottenham Court Road London W1T 5AQ, United Kingdom", description: "Experience our passion by eating traditional British food (such as award-winning Cumberland sausages, freshly cooked breads and amazing fish and chips), sample chocolates/English fudges, taste English desserts and cheeses, drink London brewed beers, ciders and ales, and sip refreshing teas.", attendants: 2, price: 15, name: "London Eats")
+#tour_18.guide = user_16
+#tour_18.photo_url = "https://static.pexels.com/photos/132694/pexels-photo-132694.jpeg"
+#tour_18.save
+
+
+
+
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_18.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_18.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_18.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_18.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_18.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_18.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_18.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_18.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_18.id)
+
 
 tour_19 = Tour.new(city: "London", address: "96A Leather Lane London EC1N 7TX, United Kingdom", description: "The best way to experience London after hours is to go along with somebody that can help introduce you to the hottest spots in town, put you in touch with other fun-seeking travelers…and give you a discount on entry costs and drinks!", attendants: 2, price: 15, name:"London Pub Crawl" )
 tour_19.guide = user_16
@@ -364,20 +374,20 @@ tour_2.interests << interest_11
 tour_3.interests << interest_4
 tour_4.interests << interest_2
 tour_4.interests << interest_3
-tour_5.interests << interest_4
-tour_5.interests << interest_6
+#tour_5.interests << interest_4
+#tour_5.interests << interest_6
 tour_6.interests << interest_5
 tour_7.interests << interest_5
 tour_8.interests << interest_5
 tour_9.interests << interest_2
-tour_10.interests << interest_6
-tour_10.interests << interest_11
-tour_10.interests << interest_10
+#tour_10.interests << interest_6
+#tour_10.interests << interest_11
+#tour_10.interests << interest_10
 tour_11.interests << interest_6
 tour_11.interests << interest_4
 tour_12.interests << interest_11
 tour_13.interests << interest_6
-tour_14.interests << interest_5
+#tour_14.interests << interest_5
 tour_15.interests << interest_12
 
 # interest_2.tours << tour_1
