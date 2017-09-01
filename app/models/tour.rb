@@ -1,7 +1,5 @@
 class Tour < ApplicationRecord
-  include PgSearch
   has_attachment :photo
-  pg_search_scope :search_by_category, against: [ :price, :attendants ]
   belongs_to :guide
 
   has_many :visits, dependent: :destroy
@@ -12,4 +10,5 @@ class Tour < ApplicationRecord
   validates_presence_of :city, :description, :attendants, :price
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+
 end

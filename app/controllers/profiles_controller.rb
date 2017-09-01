@@ -30,10 +30,12 @@ class ProfilesController < ApplicationController
   end
 
   def search_filter
-    # if params[:search_filter][:price].blank? &&
-    @guides = Guide.joins(:tours).where(tours: { attendants: params[:search_filter][:attendants] }).uniq
+    @guides = Guide.joins(:tours).where('attendants <= ? AND price <= ?', params[:search_filter][:attendants], params[:search_filter][:price]).uniq
     render :index
+    # @guides = Guide.joins(:tours).where(
+    # tours: { attendants: params[:search_filter][:attendants], price: params[:search_filter][:price] }).uniq
   end
+
 
   private
 
