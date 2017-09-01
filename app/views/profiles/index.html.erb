@@ -9,7 +9,7 @@
   	<% if action_name == "search" %>
       <h1>Guides in <%= params[:search][:city].capitalize %></h1>
     <% else %>
-      <h1>These are your <%=@guides.count %></h1>
+      <h1>Your search gave <%= @guides.count %> results</h1>
     <% end %>
   </div>
 	<div class="row">
