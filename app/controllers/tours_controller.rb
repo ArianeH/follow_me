@@ -6,6 +6,7 @@ class ToursController < ApplicationController
 
   def show
   	@tour = Tour.find(params[:id])
+
     @tours = Tour.where.not(latitude: nil, longitude: nil)
 
     # @hash = Gmaps4rails.build_marks(@tours) do |tour, marker|
