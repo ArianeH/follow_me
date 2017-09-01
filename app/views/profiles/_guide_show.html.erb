@@ -1,45 +1,52 @@
 <div id="tour-guide-wrapper">
-  <div class="container">
+  <div class="container wrapper-tour-guide-inner">
     <!-- <img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> -->
     <div class="row">
       <div class="col-xs-9">
         <div class="tour">
-          <h2 id="tour-guide-name">Tour Guide Name</h2>
-          <p><%= guide.age %> years old | Tour Guide city</p>
+          <h2 id="tour-guide-name"><b><%= guide.first_name %> <%= guide.last_name %></b></h2>
+          <p class="tour-guide-text"><%= guide.age %> years old | <%= guide.tours.first.city %></p>
         </div>
 
         <div class="interests">
-          <h2>Interests</h2>
+          <h2 class="guide-titles">Interests</h2>
+          <hr>
+          <i class="fa fa-<%= guide.interest1 %> interest-icon"></i>
+          <i class="fa fa-<%= guide.interest2 %> interest-icon"></i>
+          <i class="fa fa-<%= guide.interest3 %> interest-icon"></i>
         </div>
 
         <div class="about-me">
-          <h3>About Me</h3>
-          <p><%= guide.description %></p>
+          <h3 class="guide-titles">About Me</h3>
+          <hr>
+          <p class="tour-guide-text"><%= guide.description %></p>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <!-- Offered Tours -->
-      <div class="offered-tours-div">
-        <p id="offered-tours-heading"><b>OFFERED TOURS</b></p>
-        <div class="col-xs-1">
-          <img>
-        </div>
-        <div class="col-xs-9">
-          <div class="offered-tours-content">
-            <% guide.tours.each do |tour| %>
-            <p><%= link_to tour.description, tour_path(tour) %></p>
-            <p>tour description</p>
-            <% end %>
+    <div class="offered-tours-div">
+      <h1 id="offered-tours-heading"><b>OFFERED TOURS</b></h1>
+      <% guide.tours.each do |tour| %>
+        <div class="row wrapper-offered-tours">
+          <!-- Offered Tours -->
+
+            <div class="col-xs-1">
+              <%= image_tag 'your.photo_url', class: 'tour-image' %>
+            </div>
+            <div class="col-xs-7">
+              <div class="offered-tours-content">
+                <p class="tour-guide-text"><b><%= tour.name %></b></p>
+                <p class="tour-guide-text"><%= tour.description %></p>
+              </div>
+            </div>
+            <div class="col-xs-4 wrapper-details-link">
+
+              <%= link_to 'See more details', tour_path(tour), class: "btn-secondary" %>
+
+
           </div>
         </div>
-        <div class="col-xs-2">
-          <% guide.tours.each do |tour| %>
-            <a href="#" class="btn btn-success">See more details</a>
-          <% end %>
-        </div>
-      <div>
+      <% end %>
     </div>
   </div>
 </div>

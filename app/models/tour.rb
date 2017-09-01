@@ -1,4 +1,5 @@
 class Tour < ApplicationRecord
+  has_attachment :photo
   belongs_to :guide
 
   has_many :visits, dependent: :destroy

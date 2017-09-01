@@ -1,4 +1,7 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
+
+
   def index
     if current_user.type == "Guide"
       @bookings = Booking.where(visit_id: Visit.select(:id).where(tour_id: Tour.select(:id).where(guide_id: current_user.id)))
