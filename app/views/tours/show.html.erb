@@ -40,57 +40,10 @@
             <% end %>
           <% end %>
 
-        
-<!-- Button to trigger modal -->
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#chatbox">Send Request to Join the Tour</button>
-<!-- End Button to trigger modal -->
-        <% if @tour.visits.first %>
-          <% @tour.visits.each do |visit| %>
-            <%= visit.start_time %>
-            <%= link_to "Sign up for this tour!", visit_bookings_path(visit), method: :post  %>
-          <% end %>
-        <% else %>
-          <!-- <p>We don't offer any tours at the moment</p> -->
-        <% end %>
-
         </div>
       </div>
     </div>
-  </div>
 
-
-  <div class="modal fade" id="chatbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Say something nice to your Tour Guide :D</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Your Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-        </form>
-
-
-
-
-
-       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
 
 
 
