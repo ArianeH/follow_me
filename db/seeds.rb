@@ -106,7 +106,7 @@ tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany"
 tour_11.guide = user_4
 tour_11.photo_url = "https://www.pexels.com/photo/alexanderplatz-architecture-berlin-blue-220777/"
 tour_11.save
-tour_12 = Tour.new(city: "Berlin", address: "Langhansstr. 12 13086 Berlin,Germany", description: "This popular tour takes you from the square of 9th November 1989, where the Berlin Wall fell, on the former death row across the Mauerpark to Checkpoint Charlie. ", attendants: 5, price: 15, name: "Bicycle Rentals")
+tour_12 = Tour.new(city: "Berlin", address: "Langhansstr. 12 13086 Berlin,Germany", description: "This popular tour takes you from the square of 9th November 1989, where the Berlin Wall fell, on the former death row across the Mauerpark to Checkpoint Charlie. ", attendants: 5, price: 15, name: "Mauertour")
 tour_12.guide = user_4
 tour_12.photo_url = "https://static.pexels.com/photos/326789/pexels-photo-326789.jpeg"
 tour_12.save
@@ -119,7 +119,10 @@ tour_13.guide = user_5
 tour_13.photo_url = "https://static.pexels.com/photos/53146/brandenburg-gate-potsdam-place-night-clouds-53146.jpeg"
 tour_13.save
 
-tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Discover the capital on a one-hour Segway tour along the banks of the River Spree and admire the impressive buildings of Berlin. See the Reichstag, the famous Brandenburg Gate and go through the Tiergarten.", attendants: 5, price: 15, name: "Berling tour with Segway" )
+
+
+tour_14 = Tour.new(city: "Berlin", address: "Scharnweberstr. 160 13405 Berlin, Germany", description: "Discover the capital on a one-hour Segway tour along the banks of the River Spree and admire the impressive buildings of Berlin. See the Reichstag, the famous Brandenburg Gate and go through the Tiergarten.", attendants: 5, price: 15, name: "Berlin tour with Segway" )
+
 tour_14.guide = user_5
 tour_14.photo_url = "https://static.pexels.com/photos/383/summer-sport-bikes-bicycles.jpg"
 tour_14.save
@@ -130,7 +133,7 @@ tour_15.photo_url = "https://static.pexels.com/photos/179942/pexels-photo-179942
 tour_15.save
 
 #Tours created by user_16
-tour_16 = Tour.new(city: "London", address: "29 Greek Street London W1D 5DH, United Kingdom", description: "Take the afternoon tea on the Thames during a 1.5 hour boat trip to London. Enjoy the urbrit tradition of tea with cakes and sandwiches, and take a boat trip through the center of London", attendants: 2, price: 15, name: "London Afternoon Tea Tour")
+tour_16 = Tour.new(city: "London", address: "29 Greek Street London W1D 5DH, United Kingdom", description: "Take the afternoon tea on the Thames during a 1.5 hour boat trip to London. Enjoy the urbrit tradition of tea with cakes and sandwiches, and take a boat trip through the center of London", attendants: 2, price: 15, name: "English Afternoon Tea")
 tour_16.guide = user_16
 tour_16.photo_url = "https://static.pexels.com/photos/209438/pexels-photo-209438.jpeg"
 tour_16.save
@@ -157,18 +160,33 @@ interest_7 = Interest.create(name: "art")
 interest_8 = Interest.create(name: "adventure")
 interest_9 = Interest.create(name: "beach")
 interest_10 = Interest.create(name: "nature")
-interest_10 = Interest.create(name: "alternative")
+interest_11 = Interest.create(name: "alternative")
+interest_12 = Interest.create(name: "must-see")
 
-interest_2.tours << tour_1
-interest_2.tours << tour_5
-interest_2.tours << tour_9
-interest_2.tours << tour_19
-interest_2.tours << tour_18
-interest_2.tours << tour_16
+tour_1.interests << interest_2
+tour_2.interests << interest_4
+tour_2.interests << interest_11
+tour_3.interests << interest_4
+tour_4.interests << interest_2
+tour_4.interests << interest_3
+tour_5.interests << interest_4
+tour_5.interests << interest_6
+tour_6.interests << interest_5
+tour_7.interests << interest_5
+tour_8.interests << interest_5
+tour_9.interests << interest_2
+tour_10.interests << interest_6
+tour_10.interests << interest_11
+tour_10.interests << interest_10
+tour_11.interests << interest_6
+tour_11.interests << interest_4
+tour_12.interests << interest_11
+tour_13.interests << interest_6
+tour_14.interests << interest_5
+tour_15.interests << interest_12
 
-interest_4.tours << tour_2
-interest_4.tours << tour_3
-tour_15.interests << interest_6
+# interest_2.tours << tour_1
+# interest_2.tours << tour_5
 
 
 # # Examples:

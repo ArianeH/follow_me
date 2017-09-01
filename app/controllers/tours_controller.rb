@@ -6,6 +6,7 @@ class ToursController < ApplicationController
 
   def show
   	@tour = Tour.find(params[:id])
+
     @tours = Tour.where.not(latitude: nil, longitude: nil)
 
     @hash = Gmaps4rails.build_markers(@tours) do |tour, marker|
@@ -45,5 +46,4 @@ class ToursController < ApplicationController
   def tour_params
     params.require(:tour).permit(:city, :address, :description, :attendants, :price)
   end
-
 end
