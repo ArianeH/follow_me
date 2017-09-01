@@ -161,7 +161,7 @@ visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_8.
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_8.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_8.id)
 
-tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Taste Berlienr food and discover a lively city where past and future await you. Let yourself be guided by dedicated employees to take away food and restaurants. Enjoy tasting and learn the history.", attendants: 5, price: 0, name: "Eat with Me")
+tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany", description: "Taste Berlienr food and discover a lively city where past and future await you. Let yourself be guided by dedicated employees to take away food and restaurants. Enjoy tasting and learn the history.", attendants: 5, price: 5, name: "Eat with Me")
 tour_9.guide = user_3
 tour_9.photo_url = "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg"
 tour_9.save
@@ -235,7 +235,7 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_13
 #tour_14.photo_url = "https://static.pexels.com/photos/383/summer-sport-bikes-bicycles.jpg"
 #tour_14.save
 
-tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, Germany", description: "Visit the Berlin Tower! Without the Queue", attendants: 5, price: 15, name: "Berlin Tower")
+tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, Germany", description: "Visit the Berlin Tower! Without the Queue", attendants: 5, price: 0, name: "Berlin Tower")
 tour_15.guide = user_5
 tour_15.photo_url = "https://static.pexels.com/photos/179942/pexels-photo-179942.jpeg"
 tour_15.save
