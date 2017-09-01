@@ -8,11 +8,13 @@ class ToursController < ApplicationController
   	@tour = Tour.find(params[:id])
     @tours = Tour.where.not(latitude: nil, longitude: nil)
 
-    # @hash = Gmaps4rails.build_marks(@tours) do |tour, marker|
-    #   marker.lat tour.latitude
-    #   marker.lng flat.longitude
-    # end
+    @hash = Gmaps4rails.build_markers(@tours) do |tour, marker|
+      marker.lat tour.latitude
+      marker.lng tour.longitude
+    end
   end
+
+
 
   def new
   	@user = Guide.find(params[:guide_id])
