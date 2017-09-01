@@ -23,7 +23,10 @@
               <div class="card card-carousel">
                 <div class="card-image-wrapper">
                 <% if guide.photo? %>
-                  <%= cl_image_tag guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image" %>
+
+                  <%= link_to cl_image_tag(guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image"), profile_path(guide), class: "img-responsive", remote: true %>
+
+
                 <% end %>
                 </div>
                 <div class="offered-tours">
