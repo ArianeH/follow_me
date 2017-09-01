@@ -7,7 +7,7 @@
   <p class="booking_index">
     <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
 
-    <p>
+    <p class="booking_index">
       Confirmation to join tour:
       <% if booking.confirmed == false %>
 
