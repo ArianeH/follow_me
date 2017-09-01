@@ -1,5 +1,13 @@
 #tour-guide-wrapper {
   background-color: white;
+  margin-top: 10px;
+  margin-left: 95px;
+  margin-right: 95px;
+}
+
+.wrapper-tour-guide-inner {
+  margin: auto;
+  width: 90%;
 }
 
 #tour-guide-name {
@@ -12,3 +20,22 @@
 #offered-tours-heading {
   color: #00a19a;
 }
+
+
+.wrapper-offered-tours {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper-details-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-secondary {
+  max-width: 172px;
+}
+
+

@@ -1,8 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    if current_user.type == "guide"
-      #some code to get all the bookings associated with tours that this guide runs
-      @bookings = Booking.joins(:user).where(:users => {:type => "guide"})
+    if current_user.type == "Guide"
+      @bookings = Booking.where(visit_id: Visit.select(:id).where(tour_id: Tour.select(:id).where(guide_id: current_user.id)))
     else
       @bookings = Booking.where(user_id: current_user.id)
     end

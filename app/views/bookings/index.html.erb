@@ -11,7 +11,7 @@
 
       Pending
 
-        <% if current_user.type == "guide" %>
+        <% if current_user.type == "Guide" %>
           <%= link_to "Accept", booking_path(booking), method: :patch %>
         <% end %>
 

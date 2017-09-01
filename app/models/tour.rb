@@ -1,5 +1,6 @@
 class Tour < ApplicationRecord
   include PgSearch
+  has_attachment :photo
   pg_search_scope :search_by_category, against: [ :price, :attendants ]
   belongs_to :guide
 
