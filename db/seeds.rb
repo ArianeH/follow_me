@@ -15,21 +15,21 @@ Interest.destroy_all
 num = 3
 url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 
-user_1 = Guide.create(first_name: "Christina", last_name: "Baker", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Text here", interest1: "beer", interest2: "music", interest3: "cutlery")
+user_1 = Guide.create(first_name: "Christina", last_name: "Baker", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Bacon geek. Friendly analyst. Friend of animals everywhere. Food trailblazer. Coffee junkie. Infuriatingly humble zombie ninja. Travel nerd.", interest1: "beer", interest2: "music", interest3: "cutlery")
 user_1.photo_url = "https://static.pexels.com/photos/59552/pexels-photo-59552.png"
 num += 1
-user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Text here", interest1: "beer", interest2: "film", interest3: "bicycle")
+user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Professional communicator. Unapologetic writer. Alcohol trailblazer. Freelance internet specialist. Food scholar. Coffee fanatic.", interest1: "beer", interest2: "film", interest3: "bicycle")
 user_2.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
-user_3 = Guide.create(first_name: "Sofia", last_name: "Hanson", age: 32, email: "sofia@wagon.com", password: "hellohello", description: "Text here", interest1: "coffee", interest2: "glass", interest3: "cutlery")
+user_3 = Guide.create(first_name: "Sofia", last_name: "Hanson", age: 32, email: "sofia@wagon.com", password: "hellohello", description: "Professional food practitioner. Web maven. Hardcore bacon lover. Lifelong writer. Travel enthusiast. Zombie nerd. Pop culture fan.", interest1: "coffee", interest2: "glass", interest3: "cutlery")
 user_3.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
-user_4 = Guide.create(first_name: "Tim", last_name: "Taylor", age: 25, email: "tim@wagon.com", password: "hellohello", description: "Text here", interest1: "shopping-bag", interest2: "camera", interest3: "music")
+user_4 = Guide.create(first_name: "Tim", last_name: "Taylor", age: 25, email: "tim@wagon.com", password: "hellohello", description: "Zombie scholar. Entrepreneur. Hardcore internet fanatic. Total music evangelist. Unable to type with boxing gloves on.", interest1: "shopping-bag", interest2: "camera", interest3: "music")
 user_4.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
-user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Text here", interest1: "glass", interest2: "music", interest3: "film")
+user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "max@wagon.com", password: "hellohello", description: "Falls down a lot. General food fanatic. Tvaholic. Twitter geek. Reader. Internet buff. Hardcore beer evangelist.", interest1: "glass", interest2: "music", interest3: "film")
 user_5.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
-user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Text here", interest1: "bicycle", interest2: "music", interest3: "glass")
+user_16 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Professional web scholar. Award-winning food lover. Total music maven. Nature enthusiast.", interest1: "bicycle", interest2: "music", interest3: "glass")
 user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/#{num}.jpg"
 num += 1
 
