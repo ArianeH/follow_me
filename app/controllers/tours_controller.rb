@@ -46,5 +46,4 @@ class ToursController < ApplicationController
   def tour_params
     params.require(:tour).permit(:city, :address, :description, :attendants, :price)
   end
-
 end
