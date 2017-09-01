@@ -150,7 +150,7 @@ tour_7.photo_url = "https://static.pexels.com/photos/170379/pexels-photo-170379.
 tour_7.save
 
 
-tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "This tour offers a mixture of the most beautiful sights, the history of the Third Reich and the last remains of the Berlin Wall. See Berlin wake up", attendants: 5, price: 0, name: "Free Bike Tour"
+tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berlin, Germany", description: "This tour offers a mixture of the most beautiful sights, the history of the Third Reich and the last remains of the Berlin Wall. See Berlin wake up", attendants: 5, price: 0, name: "Free Bike Tour")
 tour_8.guide = user_3
 tour_8.photo_url = "https://static.pexels.com/photos/86456/berlin-reichstag-government-glass-dome-86456.jpeg"
 tour_8.save
