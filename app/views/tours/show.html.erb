@@ -29,6 +29,8 @@
       <% end %>
       </div>
       <div class="col-xs-4" id="calendar">
+
+        <h3>Offered dates for this tour:</h3>
           <%= month_calendar events: @tour.visits do |date, tour_visits| %>
             <%= date.day %>
             <% tour_visits.each do |one_visit| %>
@@ -37,6 +39,8 @@
               </div>
             <% end %>
           <% end %>
+
+        
 <!-- Button to trigger modal -->
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#chatbox">Send Request to Join the Tour</button>
 <!-- End Button to trigger modal -->
@@ -48,10 +52,12 @@
         <% else %>
           <!-- <p>We don't offer any tours at the moment</p> -->
         <% end %>
+
         </div>
       </div>
     </div>
   </div>
+
 
   <div class="modal fade" id="chatbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -83,6 +89,7 @@
     </div>
   </div>
 </div>
+
 </div>
 
 
