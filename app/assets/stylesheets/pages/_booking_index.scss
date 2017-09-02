@@ -3,3 +3,63 @@
   font-weight: lighter;
   font-size: 17px;
 }
+
+
+
+#offered-tours-heading {
+  color: #00a19a;
+}
+
+.wrapper-offered-tours {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper-details-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-secondary {
+  max-width: 172px;
+  font-size: 13px;
+  padding: 10px 15px;
+  background-color: #82bf6a;
+  color: white;
+  border-radius: 2px;
+}
+
+.btn-secondary:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+.guide-titles {
+  font-size: 15px;
+  color: #706f6f;
+  margin-top: 30px;
+}
+
+.tour-guide-text {
+  font-size: 13px;
+  color: #706f6f;
+}
+
+.interest-icon {
+  margin-right: 10px;
+  text-width: 50px;
+  color: #b2b2b2;
+}
+
+.tour-image {
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+}
+
+.guide-image-show {
+  margin-top: 30px;
+}

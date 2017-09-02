@@ -1,29 +1,74 @@
-
 <div class="container">
-  <h1>LIST OF PENDING BOOKINGS</h1>
+<!-- start profile of user -->
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <!--insert image of user-->
+      <h2>Profile Name of User</h2>
+      <h5>Age | location</h5>
+      <h3>About me</h3>
+      <p>Insert text here</p>
+    </div>
+  </div>
+<!-- end profile of user -->
 
-
-  <% @bookings.each do |booking| %>
-  <p class="booking_index">
-    <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
-
-    <p class="booking_index">
-      Confirmation to join tour:
-      <% if booking.confirmed == false %>
-
-      Pending
-
-      <% if current_user.type == "Guide" %>
-      <%= link_to "Accept", booking_path(booking), method: :patch %>
-      <% end %>
-
-      <% else %>
-      Accepted
-      <% end %>
-    </p>
-
-  </p>
-  <% end %>
-
+<!-- start base nav -->
+<div class="col-xs-12 col-xs-offset-2">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Accepted Requests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pending Requests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Booked Tours</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
 </div>
+
+<!-- end base nav -->
+
+<!-- Start Bookings -->
+  <div class="tour-bookings-section">
+    <h1 id="tour-bookings-heading"><b>Your Bookings</b></h1>
+     <div class="col-xs-1">
+          <!-- insert image of user -->
+      </div>
+      <div class="col-xs-8">
+      <ol>
+        <li>
+          <% @bookings.each do |booking| %>
+          <p class="booking_index">
+            <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%m-%d-%Y")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
+
+            <p class="booking_index">
+              Confirmation to join tour:
+              <% if booking.confirmed == false %>
+
+              Pending
+
+              <% if current_user.type == "Guide" %>
+              <%= link_to "Accept", booking_path(booking), method: :patch %>
+              <% end %>
+
+              <% else %>
+              Accepted
+              <% end %>
+            </p>
+
+          </p>
+          <% end %>
+          <!-- 'Request Payment or Proceed with Payment' -->
+          <%= link_to 'Request Payment', '#' %>
+        </li>
+      </ol>
+     </div>
+    </div>
+  </div>
+<!-- End Bookings -->
+</div>
+
 

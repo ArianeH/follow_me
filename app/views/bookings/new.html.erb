@@ -1,8 +1,27 @@
-
-<h1>Initiate the booking by sending a message to your tour guide</h1>
-
-<%= simple_form_for [@tour, @booking] do |f| %>
-
-
-  <%= f.button :submit %>
-<% end %>
+<!-- Start Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="list-of-bookings">Initiate the booking by sending a message to your tour guide</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!-- Start Modal -->
+<!-- Start Simple Form -->
+  <%= simple_form_for [@tour, @booking] do |f| %>
+   <%= f.button :submit %>
+    <% end %>
+<!-- End Simple Form -->
+<!-- End Modal -->
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
