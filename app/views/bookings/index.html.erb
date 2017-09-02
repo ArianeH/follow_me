@@ -2,7 +2,8 @@
 <!-- start profile of user -->
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
-      <h2>Name of user</h2>
+      <!--insert image of user-->
+      <h2>Profile Name of User</h2>
       <h5>Age | location</h5>
       <h3>About me</h3>
       <p>Insert text here</p>
@@ -31,34 +32,41 @@
 <!-- end base nav -->
 
 <!-- Start Bookings -->
-  <div class="row">
-    <div class="col-xs-8">
-    <ol>
-      <li>
-        <% @bookings.each do |booking| %>
-        <p class="booking_index">
-          <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%m-%d-%Y")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
-
+  <div class="tour-bookings-section">
+    <h1 id="tour-bookings-heading"><b>Your Bookings</b></h1>
+     <div class="col-xs-1">
+          <!-- insert image of user -->
+      </div>
+      <div class="col-xs-8">
+      <ol>
+        <li>
+          <% @bookings.each do |booking| %>
           <p class="booking_index">
-            Confirmation to join tour:
-            <% if booking.confirmed == false %>
+            <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%m-%d-%Y")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
 
-            Pending
+            <p class="booking_index">
+              Confirmation to join tour:
+              <% if booking.confirmed == false %>
 
-            <% if current_user.type == "Guide" %>
-            <%= link_to "Accept", booking_path(booking), method: :patch %>
-            <% end %>
+              Pending
 
-            <% else %>
-            Accepted
-            <% end %>
+              <% if current_user.type == "Guide" %>
+              <%= link_to "Accept", booking_path(booking), method: :patch %>
+              <% end %>
+
+              <% else %>
+              Accepted
+              <% end %>
+            </p>
+
           </p>
-
-        </p>
-        <% end %>
-      </li>
-    </ol>
-   </div>
+          <% end %>
+          <!-- 'Request Payment or Proceed with Payment' -->
+          <%= link_to 'Request Payment', '#' %>
+        </li>
+      </ol>
+     </div>
+    </div>
   </div>
 <!-- End Bookings -->
 </div>

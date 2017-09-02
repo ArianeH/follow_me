@@ -1,10 +1,9 @@
 <div class="container">
-
   <div class="row">
-
     <div class="col-sm-6 col-sm-offset-3">
+      <!-- insert circle image of user -->
 
-      <div class="chat header"><h4></h4></div>
+      <div class="chat header"><h4>Say something nice to your guide :)</h4></div>
       <div class="messages">
         <% @booking.messages.each do |message| %>
         <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
@@ -15,7 +14,6 @@
         <%= f.input :content, label: false %>
         <%= f.submit  %>
         <% end %>
-
       </div>
     </div>
   </div>
