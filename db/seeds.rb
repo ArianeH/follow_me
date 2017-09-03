@@ -286,15 +286,15 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15
 # tour_17.photo_url = "https://static.pexels.com/photos/326807/pexels-photo-326807.jpeg"
 # tour_17.save
 
-visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_17.id)
-visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_17.id)
-visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_17.id)
-visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_17.id)
-visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_17.id)
-visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_17.id)
-visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_17.id)
-visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_17.id)
-visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_17.id)
+# visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_17.id)
+# visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_17.id)
+# visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_17.id)
+# visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_17.id)
+# visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_17.id)
+# visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_17.id)
+# visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_17.id)
+# visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_17.id)
+# visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_17.id)
 
 # visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_18.id)
 # visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_18.id)
