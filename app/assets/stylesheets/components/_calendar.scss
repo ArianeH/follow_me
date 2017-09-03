@@ -63,3 +63,18 @@
 .table-striped tbody tr td a:hover {
   text-decoration: none;
 }
+
+
+.radio-input {
+  visibility: hidden;
+}
+
+.radio-label {
+  cursor: pointer;
+}
+
+input:checked + label {
+    background: grey;
+}
+
+

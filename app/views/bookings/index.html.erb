@@ -1,11 +1,16 @@
 
 <div class="container">
+<div class="row">
+<div class="col-xs-4">
   <h1>LIST OF PENDING BOOKINGS</h1>
 
 
   <% @bookings.each do |booking| %>
   <p class="booking_index">
-    <%= booking.visit.tour.name + " with " %><%= link_to booking.visit.tour.guide.first_name, booking_path(booking) %> - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at <%= booking.visit.start_time.strftime("%H:%M") %>
+    <%= booking.visit.tour.name + " with " %>
+    <%= link_to booking.visit.tour.guide.first_name, booking_path(booking), remote: true %>
+     - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at
+     <%= booking.visit.start_time.strftime("%H:%M") %>
 
     <p class="booking_index">
       Confirmation to join tour:
@@ -24,6 +29,13 @@
 
   </p>
   <% end %>
+  </div>
 
+  <div class="col-xs-8" id="single-message">
+
+  <%= render "message_show", booking: @bookings.first %>
+
+  </div>
+</div>
 </div>
 
