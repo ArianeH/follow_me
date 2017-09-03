@@ -12,13 +12,12 @@ class ToursController < ApplicationController
       end
       amount_of_bookings < @tour.attendants
     end
+
     @hash = Gmaps4rails.build_markers(@tour) do |tour, marker|
       marker.lat tour.latitude
       marker.lng tour.longitude
     end
   end
-
-
 
   def new
   	@user = Guide.find(params[:guide_id])
