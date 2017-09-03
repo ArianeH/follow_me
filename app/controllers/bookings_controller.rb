@@ -12,6 +12,9 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    # respond_to do |format|
+    #   format.js  # <-- will render `app/views/reviews/create.js.erb`
+    # end
   end
 
   def new

@@ -30,7 +30,25 @@ class ProfilesController < ApplicationController
   end
 
   def search_filter
-    @guides = Guide.joins(:tours).where('attendants <= ? AND price <= ?', params[:search_filter][:attendants], params[:search_filter][:price]).uniq
+    filters = filter_params
+
+    scope = Tour.joins(:interests)
+    if filters[:attendants].present?
+      scope = scope.where("tours.attendants >= ?", filters[:attendants])
+    end
+
+    if filters[:price].present?
+      scope =  scope.where("tours.price <= ?", filters[:price])
+    end
+
+    if filters[:interests].present?
+      scope = scope.where("interests.id IN (?)", filters[:interests])
+    end
+
+    tours = scope.distinct
+    @guide_tours = tours.group_by { |i| i.guide_id }
+    @guides = Guide.where(id: tours.pluck(:guide_id).uniq)
+
     render :index
     # @guides = Guide.joins(:tours).where(
     # tours: { attendants: params[:search_filter][:attendants], price: params[:search_filter][:price] }).uniq
@@ -38,6 +56,15 @@ class ProfilesController < ApplicationController
 
 
   private
+
+  def filter_params
+    filters = params[:search_filter]
+    {
+      attendants: filters[:attendants],
+      price: filters[:price],
+      interests: filters[:interests].reject(&:empty?)
+    }
+  end
 
   def guide_params
     params.require(:guide).permit(:first_name, :last_name, :age, :email, :description, :photo)

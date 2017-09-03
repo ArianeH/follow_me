@@ -1,64 +1,65 @@
 <!-- carousel -->
 <div class="container">
+
   <div class="row">
     <div class="filter-bar">
       <%= render 'profiles/interest_filter' %>
     </div>
   </div>
+
   <div class="row">
     <% if action_name == "search" %>
       <h1>Guides in <%= params[:search][:city].capitalize %></h1>
+    <% elsif action_name == "search_filter" %>
+      <h1>Your search gave <%= @guides.count %> results</h1>
     <% else %>
-
-    <h1>Your search gave <%= @guides.count %> results</h1>
-
+      <h1> Guides ( <%= @guides.count %> ) </h1>
     <% end %>
   </div>
-  <div class="row">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-      <div class="carousel-inner">
-        <% @guides.each_with_index do |guide, index| %>
 
-          <div class="item <%= "active" if index == 0 %>">
+  <% if @guides.any? %>
 
-            <div class="col-xs-3 small-padding no-margin">
-              <div class="card card-carousel">
-                <div class="card-image-wrapper">
-                <% if guide.photo? %>
+    <div class="row">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
 
-                  <%= link_to cl_image_tag(guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image"), profile_path(guide), class: "img-responsive", remote: true %>
-
-
-                <% end %>
-                </div>
-                <div class="offered-tours">
-                  <h1 class="offered-tours-h1"><b>OFFERED TOURS</b></h1>
-                  <div class="offered-tours-text">
-                  <% guide.tours.each do |tour| %>
-                    <p class="card-text"> <%= tour.name %> </p>
-                  <% end %>
+          <% @guides.each_with_index do |guide, index| %>
+            <div class="item <%= "active" if index == 0 %>">
+              <div class="col-xs-3 small-padding no-margin">
+                <div class="card card-carousel">
+                  <div class="card-image-wrapper">
+                    <% if guide.photo? %>
+                    <%= link_to cl_image_tag(guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image"), profile_path(guide), class: "img-responsive", remote: true %>
+                    <% end %>
+                  </div>
+                  <div class="offered-tours">
+                    <h1 class="offered-tours-h1"><b>OFFERED TOURS</b></h1>
+                    <div class="offered-tours-text">
+                      <% guide_tours = @guide_tours.present? ? @guide_tours[guide.id] : guide.tours %>
+                      <% guide_tours.each do |tour| %>
+                        <p class="card-text"> <%= tour.name %> </p>
+                      <% end %>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-          </div>
+          <% end %>
 
-        <% end %>
-
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
       </div>
-      <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-      <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
+  <% end %>
+</div>
+
+<% if @guides.any? %>
+  <div id="guide-info">
+    <%= render "guide_show", guide: @guides.first %>
   </div>
-</div>
-
-
-
-
-<div id="guide-info">
-  <%= render "guide_show", guide: @guides.first %>
-</div>
+<% end %>
 
 
 <!-- geocode map -->
