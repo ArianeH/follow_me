@@ -32,15 +32,20 @@
 
       <div class="col-xs-4" id="calendar">
 
-      <h5>Amount of travellers attending the tour</h5>
+      <h5>Amount of travellers attending the tour:</h5>
+
+      ______NEW FORM GOES HERE
+
 
         <h5>Offered dates for this tour:</h5>
-          <%= month_calendar events: @tour.visits do |date, tour_visits| %>
+          <%= month_calendar events: @available_visits do |date, tour_visits| %>
             <%= date.day %>
             <% tour_visits.each do |one_visit| %>
               <div>
                 <%= link_to one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post  %>
+                Spots left: <%= @tour.attendants - one_visit.bookings.count %>
               </div>
+
             <% end %>
           <% end %>
 
