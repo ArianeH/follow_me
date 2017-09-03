@@ -43,7 +43,7 @@
             <% tour_visits.each do |one_visit| %>
               <div>
                 <%= link_to one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post  %>
-                Spots left: <%= @tour.attendants - one_visit.bookings.count %>
+                Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).count %>
               </div>
 
             <% end %>
@@ -52,9 +52,5 @@
         </div>
       </div>
     </div>
-
-
-
-
 
 
