@@ -28,24 +28,36 @@
       <% end %>
       <% end %>
       </div>
+
+
       <div class="col-xs-4" id="calendar">
 
-        <h3>Offered dates for this tour:</h3>
-          <%= month_calendar events: @tour.visits do |date, tour_visits| %>
-            <%= date.day %>
-            <% tour_visits.each do |one_visit| %>
-              <div>
-                <%= link_to one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post  %>
-              </div>
+        <%= form_for(:booking) do |f| %>
+
+          <h5>Amount of travelers attending the tour:</h5>
+
+          <%= f.label :number_of_travelers %>:
+          <%= f.text_field :number_of_travelers %> <br>
+
+          <h3>Offered dates for this tour:</h3>
+            <%= month_calendar events: @tour.visits do |date, tour_visits| %>
+              <%= date.day %>
+              <% tour_visits.each do |one_visit| %>
+                <div>
+
+                  <%= radio_button(one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post, class: "radio-input") %>
+                  Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).count %>
+                                     <label for=<%=date.day%> class="radio-label"><%=one_visit.start_time.strftime("%H:%M")%> </label>
+                </div>
+              <% end %>
             <% end %>
+
+              <%= f.submit %>
+
           <% end %>
 
         </div>
       </div>
     </div>
-
-
-
-
 
 
