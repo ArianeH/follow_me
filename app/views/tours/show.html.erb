@@ -28,9 +28,13 @@
       <% end %>
       <% end %>
       </div>
+
+
       <div class="col-xs-4" id="calendar">
 
-        <h3>Offered dates for this tour:</h3>
+      <h5>Amount of travellers attending the tour</h5>
+
+        <h5>Offered dates for this tour:</h5>
           <%= month_calendar events: @tour.visits do |date, tour_visits| %>
             <%= date.day %>
             <% tour_visits.each do |one_visit| %>

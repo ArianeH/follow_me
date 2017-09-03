@@ -26,7 +26,7 @@
         <% if current_user.photo? %>
         <%= cl_image_tag current_user.photo.path, width: 40, height: 40, crop: :fit, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"  %>
         <% else %>
-        <%= image_tag "default_avatar", width: 40, height: 40, crop: :fit, class: "avatardropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"  %>
+        <%= image_tag "default_avatar", width: 40, height: 40, crop: :fit, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"  %>
         <% end %>
 
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
