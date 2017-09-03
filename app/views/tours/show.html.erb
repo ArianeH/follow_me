@@ -40,13 +40,15 @@
           <%= f.text_field :number_of_travelers %> <br>
 
           <h3>Offered dates for this tour:</h3>
-            <%= month_calendar events: @tour.visits do |date, tour_visits| %>
+            <%= month_calendar events: @available_visits do |date, tour_visits| %>
               <%= date.day %>
               <% tour_visits.each do |one_visit| %>
                 <div>
 
                   <%= radio_button(one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post, class: "radio-input") %>
-                  Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).count %>
+
+                  <!-- UPDATE seed data for bookings with participants. Otherwise controller operation wont work.-->
+                  Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %>
                                      <label for=<%=date.day%> class="radio-label"><%=one_visit.start_time.strftime("%H:%M")%> </label>
                 </div>
               <% end %>
