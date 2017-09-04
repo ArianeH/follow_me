@@ -40,43 +40,86 @@
 
 .card.card-carousel {
   height: 250px;
-  width: 100%;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  margin: 0px 10px 0px 2px;
-  color: black;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
 }
-
-.card-image {
-  height: 100%;
-  width: 110%;
+.card-user {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  // width: 40px;
+  // height: 40px;
+  border-radius: 50%;
+  background: transparent;
 }
-
-.card-image-wrapper {
-  height: 160px;
-  min-width: 160px ;
-  overflow: hidden;
+.card-description {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    width: 60px;
 }
-
-.offered-tours {
-  width: 100%;
-  height: 50px;
-  margin-top: -35px;
-}
-
-.offered-tours-h1 {
-  font-size: 12px;
-  text-align: left;
-  margin-left: 20px;
-  font-weight: 700px;
-  font-family: "Raleway", regular;
-  color: #00a19a;
-}
-
-.offered-tours-text {
-  color: #b2b2b2;
-  font-size: 12px;
-  line-height: 2px;
-  margin-left: 20px;
-  margin-top: -15px;
+.card-description h2 {
+  font-size: 24px;
   font-family: "Raleway", regular;
 }
+.card-link:hover {
+  color: white !important;
+}
+.card-link {
+  color: white !important;
+}
+
+.card-avatar-description {
+  width: 20%;
+  height: 5%;
+}
+
+.card-active {
+  border-bottom: 5px solid #00a19a;
+}
+
+// .card.card-carousel {
+//   height: 250px;
+//   width: 100%;
+//   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+//   margin: 0px 10px 0px 2px;
+//   color: black;
+// }
+
+// .card-image {
+//   height: 100%;
+//   width: 110%;
+// }
+
+// .card-image-wrapper {
+//   height: 100%;
+//   min-width: 100%;
+//   overflow: hidden;
+// }
+
+// .offered-tours {
+//   width: 100%;
+//   height: 50px;
+//   margin-top: -35px;
+// }
+
+// .offered-tours-h1 {
+//   font-size: 12px;
+//   text-align: left;
+//   margin-left: 20px;
+//   font-weight: 700px;
+//   font-family: "Raleway", regular;
+//   color: #00a19a;
+// }
+
+// .offered-tours-text {
+//   color: #b2b2b2;
+//   font-size: 12px;
+//   line-height: 2px;
+//   margin-left: 20px;
+//   margin-top: -15px;
+//   font-family: "Raleway", regular;
+// }

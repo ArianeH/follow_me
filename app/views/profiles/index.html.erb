@@ -24,27 +24,23 @@
         <div class="carousel-inner">
 
           <% @guides.each_with_index do |guide, index| %>
-            <div class="item <%= "active" if index == 0 %>">
-              <div class="col-xs-3 small-padding no-margin">
-                <div class="card card-carousel">
-                  <div class="card-image-wrapper">
-                    <% if guide.photo? %>
-                    <%= link_to cl_image_tag(guide.photo.path, width: 400, height: 300, crop: :fit, class: "card-image"), profile_path(guide), class: "img-responsive", remote: true %>
+            <% if guide.tours.first %>
+              <div class="item <%= "active" if index == 0 %>">
+                <div class="col-xs-3 small-padding no-margin">
+                  <div class="<%= "card-active" if index == 0 %> card card-carousel" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("<%= cl_image_path guide.tours.first.photo.path %>");'>
+                    <%= link_to profile_path(guide), class: "card-link", remote: true do %>
+                      <div class="card-description">
+                        <h2><%= guide.tours.first.name %></h2>
+                      </div>
+                      <div class="card-avatar">
+                      <%= cl_image_tag guide.photo.path, width: 40, height: 40, radius: :max, crop: :fill, class: "card-user" %>
+                        <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
+                      </div>
                     <% end %>
-                  </div>
-                  <div class="offered-tours">
-                    <h1 class="offered-tours-h1"><b>OFFERED TOURS</b></h1>
-                    <div class="offered-tours-text">
-                      <% guide_tours = @guide_tours.present? ? @guide_tours[guide.id] : guide.tours %>
-                      <% guide_tours.each do |tour| %>
-                        <p class="card-text"> <%= tour.name %> </p>
-                      <% end %>
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
+            <% end %>
           <% end %>
 
         </div>
@@ -61,5 +57,13 @@
   </div>
 <% end %>
 
+<%= content_for :after_js do %>
+  <script>
+    $(".card-carousel").on("click", function(e) {
+      $(".card-carousel").removeClass('card-active');
+      $(this).addClass("card-active");
+    });
+  </script>
+<% end %>
 
 <!-- geocode map -->
