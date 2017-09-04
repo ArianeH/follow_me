@@ -36,7 +36,8 @@
 
           <h5>Amount of travelers attending the tour:</h5>
 
-          <%= f.input :participants %><br>
+          <%= f.input :participants, label: false, selected: :participants, collection: 1..10 %>
+          <br>
 
           <h3>Offered dates for this tour:</h3>
             <%= month_calendar events: @available_visits do |date, tour_visits| %>
