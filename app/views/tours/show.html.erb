@@ -1,12 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-8">
-        <h1><%= @tour.name %></h1>
-        <p>This tour takes place in: <%= @tour.city %></p>
-        <p>The meeting point is: <%= @tour.address %></p>
-      <h5>Description</h5>
-        <p><%= @tour.description %></p>
+    <div class="tour-guide-div">
+    </br>
+      <div class="guide-image">
+        <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
+      </div>
+      <div class="guide-information">
+          <h1><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
+          <p><%= @tour.guide.age %> | <%= @tour.city %></p>
+          <h1>About Me</h1>
+          <p><%= @tour.guide.description %></p>
+      </div>
     </div>
+  </div>
+
+
+
+
 
 <div id="wrapper">
   <div id="map" style="width: 50%; height: 400px;"></div>
