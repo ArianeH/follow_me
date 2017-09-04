@@ -11,7 +11,7 @@
 <div id="wrapper">
   <div id="map" style="width: 50%; height: 400px;"></div>
       <%= content_for(:after_js) do %>
-        <%= javascript_tag do %>
+        <script>
           $(document).ready(function() {
             var handler = Gmaps.build('Google');
             handler.buildMap({ internal: { id: 'map' } }, function() {
@@ -25,32 +25,52 @@
               }
             });
           });
-      <% end %>
+        </script>
       <% end %>
       </div>
 
 
       <div class="col-xs-4" id="calendar">
 
-      <h5>Amount of travellers attending the tour:</h5>
+        <%= simple_form_for @booking do |f| %>
 
-      ______NEW FORM GOES HERE
+          <h5>Amount of travelers attending the tour:</h5>
 
+          <%= f.input :participants %><br>
 
-        <h5>Offered dates for this tour:</h5>
-          <%= month_calendar events: @available_visits do |date, tour_visits| %>
-            <%= date.day %>
-            <% tour_visits.each do |one_visit| %>
-              <div>
-                <%= link_to one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post  %>
-                Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).count %>
-              </div>
+          <h3>Offered dates for this tour:</h3>
+            <%= month_calendar events: @available_visits do |date, tour_visits| %>
+              <%= date.day %>
+              <% tour_visits.each do |one_visit| %>
+                <div data-id="<%= one_visit.id %>" class="visit-selector">
 
+                  <%= one_visit.start_time.strftime("%H:%M") %>
+
+                  Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %>
+
+                </div>
+              <% end %>
             <% end %>
+            <%= f.input :visit_id, as: :hidden %>
+            <%= f.button :submit %>
+
           <% end %>
 
         </div>
       </div>
     </div>
 
+
+<%= content_for(:after_js) do %>
+  <script>
+   $(document).ready(function() {
+    $('.visit-selector').on("click", function(){
+      var chosen_visit = $(this).data("id");
+      $('#booking_visit_id').val(chosen_visit);
+      console.log(chosen_visit);
+    });
+   });
+
+  </script>
+<% end %>
 

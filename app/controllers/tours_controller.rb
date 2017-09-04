@@ -5,11 +5,18 @@ class ToursController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   	@tour = Tour.find(params[:id])
     @available_visits = @tour.visits.select do |visit|
-      amount_of_bookings = visit.bookings.count do |b|
+      confirmed_bookings = visit.bookings.select do |b|
         b.confirmed == true
       end
+
+       amount_of_bookings = 0
+       confirmed_bookings.each do |b|
+          amount_of_bookings += b.participants
+       end
+
       amount_of_bookings < @tour.attendants
     end
 

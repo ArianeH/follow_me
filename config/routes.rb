@@ -10,10 +10,9 @@ Rails.application.routes.draw do
   end
 
   resources :visits, except: [:create, :new] do
-    resources :bookings, only: [:create, :new]
   end
 
-  resources :bookings, except: [:create, :new] do
+  resources :bookings do
     resources :messages, only: [:create]
   end
 

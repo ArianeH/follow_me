@@ -6,7 +6,7 @@
 
 
   <% @bookings.each do |booking| %>
-  <p class="booking_index">
+  <div class="booking_index tab">
     <%= booking.visit.tour.name + " with " %>
     <%= link_to booking.visit.tour.guide.first_name, booking_path(booking), remote: true %>
      - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at
@@ -27,7 +27,7 @@
       <% end %>
     </p>
 
-  </p>
+  </div>
   <% end %>
   </div>
 
