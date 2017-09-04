@@ -1,24 +1,29 @@
 <div class="container">
   <div class="row">
     <div class="tour-guide-div">
-    </br>
-      <div class="guide-image">
+      <div class="guide-image col-xs-2">
         <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
       </div>
-      <div class="guide-information">
-          <h1><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
+      <div class="guide-information col-xs-8">
+          <h1 class="tour-guide-name"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
           <p><%= @tour.guide.age %> | <%= @tour.city %></p>
-          <h1>About Me</h1>
+          <h1 class="about-me">About Me</h1>
           <p><%= @tour.guide.description %></p>
       </div>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-xs-6">
+      <h1 style="color:#00a19a;"><%= @tour.name %></h1>
+      <h1>Price - $<%= @tour.price %> per person <h1>
+      <h1 style="color:#00a19a;">Description</h1>
+        <p><%= @tour.description %></p>
+      </br>
+    </div>
+  </div>
 
 
-
-
-<div id="wrapper">
   <div id="map" style="width: 50%; height: 400px;"></div>
       <%= content_for(:after_js) do %>
         <script>
@@ -37,7 +42,7 @@
           });
         </script>
       <% end %>
-      </div>
+  </div>
 
 
       <div class="col-xs-6" id="calendar">
@@ -70,7 +75,7 @@
 
         </div>
       </div>
-    </div>
+
 
 
 <%= content_for(:after_js) do %>
