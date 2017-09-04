@@ -23,6 +23,7 @@ class ToursController < ApplicationController
     @hash = Gmaps4rails.build_markers(@tour) do |tour, marker|
       marker.lat tour.latitude
       marker.lng tour.longitude
+      marker.infowindow tour.address
     end
   end
 
