@@ -30,13 +30,24 @@ user_5.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v150419074
 user_6 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Writer. Subtly charming organizer. Musicaholic. Twitter maven. Infuriatingly humble bacon expert. Lifelong travel trailblazer.")
 user_6.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
 
-# user_6 = User.create(first_name: "Kevin", last_name: "Miller", age: 27, email: "anna@wagon.com", password: "hellohello", description: "Text here")
-# user_7 = User.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Text here")
-# user_8 = User.create(first_name: "Michael", last_name: "Walker", age: 19, email: "mia@wagon.com", password: "hellohello", description: "Text here")
-# user_9 = User.create(first_name: "Susan", last_name: "Adams", age: 23, email: "susan@wagon.com", password: "hellohello", description: "Text here")
-# user_10 = User.create(first_name: "Carol", last_name: "Allen", age: 37, email: "carol@wagon.com", password: "hellohello", description: "Text here")
-# user_11 = User.create(first_name: "Katrin", last_name: "Miller", age: 34, email: "katrin@wagon.com", password: "hellohello", description: "Text here")
-# user_12 = User.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Text here")
+user_7 = Guide.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Reader. Professional alcohol buff. Devoted music guru. Award-winning coffee aficionado.")
+user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
+user_8 = Guide.create(first_name: "Michael", last_name: "Walker", age: 19, email: "mia@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
+user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
+user_9 = Guide.create(first_name: "Susan", last_name: "Adams", age: 23, email: "susan@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
+user_9.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
+user_10 = Guide.create(first_name: "Carol", last_name: "Allen", age: 37, email: "carol@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
+user_10.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
+user_11 = Guide.create(first_name: "Katrin", last_name: "Miller", age: 34, email: "katrin@wagon.com", password: "hellohello", description: "Gamer. Social media nerd. Hipster-friendly entrepreneur. Travel expert and bitcoin enthusiast.")
+user_11.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
+user_12 = Guide.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
+user_12.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+
 # user_13 = User.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
 # user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "lucas@wagon.com", password: "hellohello", description: "Text here")
 # user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "emma@wagon.com", password: "hellohello", description: "Text here")
@@ -47,7 +58,7 @@ tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germa
   description: "Experience Berlin's culture and history through its fascinating and varied craft beer.
   Visit the best breweries in town together with a local. Taste 4 different beers paired with 1 delicious
   German and make your stay in Berlin unforgettable!",
-  attendants: 5, price: 15, name: "Berlin's Craft Beer")
+  attendants: 5, price: 15, name: "Berlin's Best Craft Beer")
 tour_1.guide = user_1
 tour_1.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453514/drink-beer_jgpxtd.jpg"
 tour_1.save
@@ -165,7 +176,7 @@ tour_8 = Tour.new(city: "Berlin", address: "Willibald-Alexis Str. 27 10965 Berli
   description: "Sift through some of Berlin's best Vintage clothes stores and markets to
   find some gems you'll be boasting about for years to come!",
   attendants: 5, price: 0, name: "Vintage Shopping Safari")
-tour_8.guide = user_3
+tour_8.guide = user_7
 tour_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453517/82e933d9afc9c15c49b2151699221c40_wmlufq.jpg"
 tour_8.save
 
@@ -182,7 +193,7 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_8.
 tour_9 = Tour.new(city: "Berlin", address: "Uhlandstr. 61 10719 Berlin, Germany",
   description: "Try the best Asian food in Berlin! Explore Prenzlauer Berg and get to try out food
   in an Indochine restaurant, and also an Asian burger place!", attendants: 5, price: 5, name: "Asian food")
-tour_9.guide = user_2
+tour_9.guide = user_8
 tour_9.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453516/asian-chic-stir-fry_gyuxzt.jpg"
 tour_9.save
 
@@ -205,7 +216,7 @@ tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany"
   description: "Did you know that Berlin is filled with beautiful metro stations? Let's hop on the
   subway and explore the amazing history and vibe of one of the worlds most puzzling subway systems.", attendants: 5, price: 15,
   name: "Metro Tour")
-tour_11.guide = user_4
+tour_11.guide = user_9
 tour_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504453511/40574921_2cfbfcaaca-1_sc0fhu.jpg"
 tour_11.save
 
@@ -222,7 +233,7 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_11
 tour_12 = Tour.new(city: "Berlin", address: "Langhansstr. 12 13086 Berlin,Germany",
   description: "Enjoy a selection of German wine during a private tasting session. ", attendants: 5, price: 15,
   name: "Wine Tasting")
-tour_12.guide = user_4
+tour_12.guide = user_10
 tour_12.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453520/wine_vngqk7.jpg"
 tour_12.save
 
@@ -241,7 +252,7 @@ tour_13 = Tour.new(city: "Berlin", address: "Neue Roßstr. 11-12 10179 Berlin, G
   description: "Delve into the history of the capital German, with a local. Learn about the facts that shaped
   this city's past and gain insights into Berlin's rich culture and heritage.",
   attendants: 5, price: 0, name: "Berlin history")
-tour_13.guide = user_5
+tour_13.guide = user_11
 tour_13.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453513/History_Kennedy_Responds_to_Berlin_Wall_reSF_HD_1104x622-16x9_z6oyin.jpg"
 tour_13.save
 
@@ -266,7 +277,7 @@ tour_15 = Tour.new(city: "Berlin", address: "Grünberger Str. 52 10245 Berlin, G
   refugees in the home of a Berliner and the money you spend will help them sustain their families.
   Impactful life-stories included, and a cozy atmosphere guaranteed!", attendants: 5, price: 0,
   name: "Refugee Dinner")
-tour_15.guide = user_5
+tour_15.guide = user_12
 tour_15.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504453513/10HEADS5-blog427_uige2y.jpg"
 tour_15.save
 
