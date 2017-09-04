@@ -30,7 +30,9 @@
       </div>
 
 
-      <div class="col-xs-4" id="calendar">
+      <div class="col-xs-6" id="calendar">
+
+      <h4>Book this tour now!</h4>
 
         <%= simple_form_for @booking do |f| %>
 
@@ -38,21 +40,21 @@
 
           <%= f.input :participants %><br>
 
-          <h3>Offered dates for this tour:</h3>
+          <h5>Select your prefered date below:</h5>
             <%= month_calendar events: @available_visits do |date, tour_visits| %>
-              <%= date.day %>
+              <div class="one-day"><%= date.day %></div>
               <% tour_visits.each do |one_visit| %>
                 <div data-id="<%= one_visit.id %>" class="visit-selector">
 
-                  <%= one_visit.start_time.strftime("%H:%M") %>
+                  <p><%= one_visit.start_time.strftime("%H:%M") %></p>
 
-                  Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %>
+                  <p>Spots: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %></p>
 
                 </div>
               <% end %>
             <% end %>
             <%= f.input :visit_id, as: :hidden %>
-            <%= f.button :submit %>
+            <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary" %>
 
           <% end %>
 
@@ -64,13 +66,14 @@
 <%= content_for(:after_js) do %>
   <script>
    $(document).ready(function() {
-    $('.visit-selector').on("click", function(){
+    $(".visit-selector").on("click", function(){
+      $(".visit-selector").removeClass("selector-active")
+      $(this).addClass("selector-active")
       var chosen_visit = $(this).data("id");
-      $('#booking_visit_id').val(chosen_visit);
+      $("#booking_visit_id").val(chosen_visit);
       console.log(chosen_visit);
     });
    });
 
   </script>
 <% end %>
-

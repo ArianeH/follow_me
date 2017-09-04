@@ -1,17 +1,16 @@
 .simple-calendar {
   text-align: center;
 
-  .calendar-heading a {
-    font-family: "Open Sans", "Helvetica", "sans-serif";
-    font-weight: lighter;
-    font-size: 15px;
-  }
-
   .calendar-title {
     font-family: "Open Sans", "Helvetica", "sans-serif";
     font-weight: lighter;
-    font-size: 20px;
-    margin: 20px;
+    font-size: 18px;
+    margin: 40px;
+  }
+
+  .one-day {
+    font-size: 15px;
+    font-weight: bolder;
   }
 
   .day {}
@@ -40,8 +39,18 @@
 }
 
 .calendar-heading {
-  margin-bottom: 10px;
+  font-size: 15px;
+  padding-bottom: 10px;
   margin-top: 0px;
+  color: #63bead;
+  background-color: white;
+}
+
+.calendar-heading a {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
+  color: #575756;
+  font-size: 15px;
 }
 
 .calendar-heading a:hover {
@@ -52,29 +61,33 @@
   font-family: "Open Sans", "Helvetica", "sans-serif";
   font-weight: lighter;
   font-size: 15px;
+  background-color: white;
 }
 
 .table-striped tbody tr td {
   font-family: "Open Sans", "Helvetica", "sans-serif";
   font-weight: lighter;
-  font-size: 15px;
+  font-size: 12px;
+  background-color: white;
+  // min-width: 50px;
+  // max-width: 60px;
 }
 
 .table-striped tbody tr td a:hover {
   text-decoration: none;
 }
 
-
-.radio-input {
-  visibility: hidden;
+.selector-active {
+  background-color: #63bead;
+  color: white;
 }
 
-.radio-label {
+.visit-selector {
   cursor: pointer;
+  border-radius: 3px;
+  padding: 5px 2px 4px 2px;
 }
 
-input:checked + label {
-    background: grey;
+.visit-selector p {
+  margin: 0 0 2px;
 }
-
-
