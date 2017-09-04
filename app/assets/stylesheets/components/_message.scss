@@ -1,5 +1,5 @@
 .messages {
-  font-size: 14px;
+  font-size: 15px;
   color: #868686;
   background-color: #ffffff;
   padding: 20px;
@@ -48,16 +48,16 @@ input.form-control {
   color: #868686;
   &:focus {
     outline: none;
-    border: 1px solid blue;
+    border: 1px solid #868686;
     box-shadow: none;
   }
 }
-.chat-header {
-  background-color: #4F2F4C;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  h4 {
-    margin: 0;
-  }
-}
+// .chat-header {
+//   background-color: #4F2F4C;
+//   color: white;
+//   padding: 10px 20px;
+//   margin-top: 10px;
+//   h4 {
+//     margin: 0;
+//   }
+// }

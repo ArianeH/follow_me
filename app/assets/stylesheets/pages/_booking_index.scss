@@ -1,7 +1,32 @@
+.message-avatar {
+  border-radius: 50px;
+  max-height: 50px;
+}
+
+.message-img {
+  margin-right: 20px;
+}
+
+.message-heading {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #868686;
+}
+
+.message-heading {
+  text-decoration: none;
+}
+
 .booking_index {
+  display: flex;
   font-family: "Open Sans", "Helvetica", "sans-serif";
   font-weight: lighter;
   font-size: 17px;
+  color: #868686;
+}
+
+.booking_content a:hover {
+  text-decoration: none;
 }
 
 .tab-active {
