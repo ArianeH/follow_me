@@ -26,20 +26,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.confirmed = false
     @booking.user = current_user
-
-    spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
-
-      if spots_left >= @booking.participants
-
-        @booking.save
-    redirect_to booking_path(@booking)
-
-      else
-
-        redirect_to tour_path(@booking.visit.tour)
-
-      end
-
+    check_participants
   end
 
   def edit
@@ -63,4 +50,15 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:participants, :visit_id)
   end
 
+  def check_participants
+    spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
+
+    if spots_left >= @booking.participants
+      @booking.save
+      redirect_to booking_path(@booking)
+    else
+      flash[:alert] = "The number of participants exceed the spots left"
+      redirect_to tour_path(@booking.visit.tour)
+    end
+  end
 end
