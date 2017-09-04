@@ -11,7 +11,7 @@
 <div id="wrapper">
   <div id="map" style="width: 50%; height: 400px;"></div>
       <%= content_for(:after_js) do %>
-        <%= javascript_tag do %>
+        <script>
           $(document).ready(function() {
             var handler = Gmaps.build('Google');
             handler.buildMap({ internal: { id: 'map' } }, function() {
@@ -25,36 +25,34 @@
               }
             });
           });
-      <% end %>
+        </script>
       <% end %>
       </div>
 
 
       <div class="col-xs-4" id="calendar">
 
-        <%= form_for(:booking) do |f| %>
+        <%= simple_form_for @booking do |f| %>
 
           <h5>Amount of travelers attending the tour:</h5>
 
-          <%= f.label :number_of_travelers %>:
-          <%= f.text_field :number_of_travelers %> <br>
+          <%= f.input :participants %><br>
 
           <h3>Offered dates for this tour:</h3>
             <%= month_calendar events: @available_visits do |date, tour_visits| %>
               <%= date.day %>
               <% tour_visits.each do |one_visit| %>
-                <div>
+                <div data-id="<%= one_visit.id %>" class="visit-selector">
 
-                  <%= radio_button(one_visit.start_time.strftime("%H:%M"), visit_bookings_path(one_visit), method: :post, class: "radio-input") %>
+                  <%= one_visit.start_time.strftime("%H:%M") %>
 
-                  <!-- UPDATE seed data for bookings with participants. Otherwise controller operation wont work.-->
                   Spots left: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %>
-                                     <label for=<%=date.day%> class="radio-label"><%=one_visit.start_time.strftime("%H:%M")%> </label>
+
                 </div>
               <% end %>
             <% end %>
-
-              <%= f.submit %>
+            <%= f.input :visit_id, as: :hidden %>
+            <%= f.button :submit %>
 
           <% end %>
 
@@ -62,4 +60,17 @@
       </div>
     </div>
 
+
+<%= content_for(:after_js) do %>
+  <script>
+   $(document).ready(function() {
+    $('.visit-selector').on("click", function(){
+      var chosen_visit = $(this).data("id");
+      $('#booking_visit_id').val(chosen_visit);
+      console.log(chosen_visit);
+    });
+   });
+
+  </script>
+<% end %>
 

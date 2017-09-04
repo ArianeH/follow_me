@@ -23,12 +23,23 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new
-    @booking.visit = Visit.find(params[:visit_id])
+    @booking = Booking.new(booking_params)
     @booking.confirmed = false
     @booking.user = current_user
-    @booking.save
+
+    spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
+
+      if spots_left >= @booking.participants
+
+        @booking.save
     redirect_to booking_path(@booking)
+
+      else
+
+        redirect_to tour_path(@booking.visit.tour)
+
+      end
+
   end
 
   def edit
@@ -48,5 +59,8 @@ class BookingsController < ApplicationController
   end
 
   private
+  def booking_params
+    params.require(:booking).permit(:participants, :visit_id)
+  end
 
 end

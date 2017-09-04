@@ -5,9 +5,9 @@ class ToursController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   	@tour = Tour.find(params[:id])
     @available_visits = @tour.visits.select do |visit|
-
       confirmed_bookings = visit.bookings.select do |b|
         b.confirmed == true
       end
