@@ -47,7 +47,7 @@ tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germa
   description: "Experience Berlin's culture and history through its fascinating and varied craft beer.
   Visit the best breweries in town together with a local. Taste 4 different beers paired with 1 delicious
   German and make your stay in Berlin unforgettable!",
-  attendants: 5, price: 15, name: "Berlin's Best Craft Beer")
+  attendants: 5, price: 15, name: "Berlin's Craft Beer")
 tour_1.guide = user_1
 tour_1.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453514/drink-beer_jgpxtd.jpg"
 tour_1.save
