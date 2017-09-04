@@ -4,7 +4,7 @@
       <div class="guide-image col-xs-2">
         <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
       </div>
-      <div class="guide-information col-xs-8">
+      <div class="guide-information col-xs-6">
           <h1 class="tour-guide-name"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
           <p><%= @tour.guide.age %> | <%= @tour.city %></p>
           <h1 class="about-me">About Me</h1>
@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-
+<hr>
   <div class="row">
     <div class="col-xs-6">
       <h1 style="color:#00a19a;"><%= @tour.name %></h1>
@@ -20,62 +20,52 @@
       <h1 style="color:#00a19a;">Description</h1>
         <p><%= @tour.description %></p>
       </br>
-    </div>
-  </div>
-
-
-  <div id="map" style="width: 50%; height: 400px;"></div>
-      <%= content_for(:after_js) do %>
-        <script>
-          $(document).ready(function() {
-            var handler = Gmaps.build('Google');
-            handler.buildMap({ internal: { id: 'map' } }, function() {
-              markers = handler.addMarkers(<%= raw @hash.to_json %>);
-              handler.bounds.extendWith(markers);
-              handler.fitMapToBounds();
-              if (markers.length == 0) {
-                handler.getMap().setZoom(2);
-              } else if (markers.length == 1) {
-                handler.getMap().setZoom(14);
-              }
+      <div id="map" style="width: 100%; height: 400px;"></div>
+        <%= content_for(:after_js) do %>
+          <script>
+            $(document).ready(function() {
+              var handler = Gmaps.build('Google');
+              handler.buildMap({ internal: { id: 'map' } }, function() {
+                markers = handler.addMarkers(<%= raw @hash.to_json %>);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                if (markers.length == 0) {
+                  handler.getMap().setZoom(2);
+                } else if (markers.length == 1) {
+                  handler.getMap().setZoom(14);
+                }
+              });
             });
-          });
-        </script>
-      <% end %>
+          </script>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 
 
-      <div class="col-xs-6" id="calendar">
 
+ <div class="col-xs-6" id="calendar">
       <h4>Book this tour now!</h4>
-
         <%= simple_form_for @booking do |f| %>
-
           <h5>Amount of travelers attending the tour:</h5>
-
           <%= f.input :participants %><br>
-
           <h5>Select your prefered date below:</h5>
             <%= month_calendar events: @available_visits do |date, tour_visits| %>
               <div class="one-day"><%= date.day %></div>
               <% tour_visits.each do |one_visit| %>
                 <div data-id="<%= one_visit.id %>" class="visit-selector">
-
                   <p><%= one_visit.start_time.strftime("%H:%M") %></p>
-
                   <p>Spots: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %></p>
-
                 </div>
               <% end %>
             <% end %>
             <%= f.input :visit_id, as: :hidden %>
             <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary" %>
-
           <% end %>
-
         </div>
       </div>
-
+  </div>
 
 
 <%= content_for(:after_js) do %>
