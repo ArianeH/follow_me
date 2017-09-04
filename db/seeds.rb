@@ -30,23 +30,23 @@ user_5.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v150419074
 user_6 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Writer. Subtly charming organizer. Musicaholic. Twitter maven. Infuriatingly humble bacon expert. Lifelong travel trailblazer.")
 user_6.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
 
-user_7 = Guide.create(first_name: "John", last_name: "Anderson", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Reader. Professional alcohol buff. Devoted music guru. Award-winning coffee aficionado.")
-user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_7 = Guide.create(first_name: "Adam", last_name: "Lewis", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Reader. Professional alcohol buff. Devoted music guru. Award-winning coffee aficionado.")
+user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-211050_fshn6q.jpg"
 
-user_8 = Guide.create(first_name: "Michael", last_name: "Walker", age: 19, email: "mia@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
-user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_8 = Guide.create(first_name: "Michael", last_name: "Walker", age: 32, email: "mia@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
+user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-220453_c45gah.jpg"
 
 user_9 = Guide.create(first_name: "Susan", last_name: "Adams", age: 23, email: "susan@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
-user_9.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_9.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-371168_wi4ih8.jpg"
 
 user_10 = Guide.create(first_name: "Carol", last_name: "Allen", age: 37, email: "carol@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
-user_10.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_10.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-295821_f5ajmd.jpg"
 
 user_11 = Guide.create(first_name: "Katrin", last_name: "Miller", age: 34, email: "katrin@wagon.com", password: "hellohello", description: "Gamer. Social media nerd. Hipster-friendly entrepreneur. Travel expert and bitcoin enthusiast.")
-user_11.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_11.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-295564_dwvixc.jpg"
 
 user_12 = Guide.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
-user_12.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_12.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537871/pexels-photo-227335_jwkpvq.jpg"
 
 # user_13 = User.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
 # user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "lucas@wagon.com", password: "hellohello", description: "Text here")
