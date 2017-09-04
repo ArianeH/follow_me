@@ -54,6 +54,10 @@
   // height: 40px;
   border-radius: 50%;
   background: transparent;
+  &.avatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 .card-description {
     position: absolute;
