@@ -2,7 +2,7 @@
   <div class="row">
     <div class="tour-guide-div">
       <div class="guide-image col-xs-2">
-        <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
+        <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", height: 125, width: 125, gravity: :face %>
       </div>
       <div class="guide-information col-xs-6">
           <h1 class="tour-guide-name"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
