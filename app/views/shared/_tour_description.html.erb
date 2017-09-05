@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container tour-details-wrapper">
   <div class="row">
     <div class="tour-guide-div">
       <div class="guide-image col-xs-2">
         <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
       </div>
-      <div class="guide-information col-xs-6">
+      <div class="guide-information col-xs-7">
           <h1 class="tour-guide-name"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
           <p><%= @tour.guide.age %> | <%= @tour.city %></p>
           <h1 class="about-me">About Me</h1>
@@ -17,9 +17,10 @@
 
   <div class="row">
     <div class="col-xs-6">
-      <h1 style="color:#00a19a;"><%= @tour.name %></h1>
-      <h1>Price - $<%= @tour.price %> per person <h1>
-      <h1 style="color:#00a19a;">Description</h1>
+      <h2 style="color:#00a19a;"><%= @tour.name %></h2>
+      <h2 id="price-text">Price</h2>
+        <p>$<%= @tour.price %> per person</p>
+      <h2 style="color:#00a19a;">Description</h2>
         <p><%= @tour.description %></p>
       </br>
 <!-- Map inserted here -->
@@ -44,7 +45,7 @@
   </div>
 <!-- Map ends here -->
 <!-- Calendar starts here -->
-<!-- Calendar ends here -->
+
 <div class="col-xs-6" id="calendar">
       <h4 style="color:#00a19a;">Book this tour now!</h4>
         <%= simple_form_for @booking do |f| %>
@@ -68,6 +69,7 @@
             </br>
         </div>
     </div>
+    <!-- Calendar ends here -->s
   </div>
 
 <%= content_for(:after_js) do %>
