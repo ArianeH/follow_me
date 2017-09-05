@@ -1,18 +1,37 @@
 .avatar {
-  width: 150px;
+  width: 100px;
   border-radius: 50%;
   margin-top: 45px;
+  float: left;
+}
+
+.tour-details-wrapper{
+  background-color: white;
 }
 
 .guide-image{
 
 }
 
+#price-text {
+  margin-top: 20px;
+}
+
 .guide-information{
+  float: left;
+  position: relative;
+  margin-left: 10px;
   margin-top: 55px;
   h1 {
-    margin: 0;}
+    margin: 0;
+    font-size: 20px;}
+  p{
+    font-size: 15px;}
   }
+
+.guide-information {
+  margin-left: 0 45px;
+}
 
 
 
