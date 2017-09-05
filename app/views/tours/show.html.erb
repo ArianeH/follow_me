@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="tour-guide-div">
-      <div class="guide-image col-xs-2">
-        <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", height: 200, width: 150, gravity: :face %>
+      <div class="guide-image">
+        <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", gravity: :face %>
       </div>
       <div class="guide-information col-xs-6">
           <h1 class="tour-guide-name padding-bottom"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>

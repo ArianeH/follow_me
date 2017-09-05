@@ -1,43 +1,13 @@
 <div id="tour-guide-wrapper">
   <div class="container wrapper-tour-guide-inner">
     <!-- <img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> -->
-    <div class="row">
-      <div class="col-xs-9">
-        <div class="tour">
-          <h2 id="tour-guide-name"><b><%= guide.first_name %> <%= guide.last_name %></b></h2>
-          <p class="tour-guide-text"><%= guide.age %> years old | <%= guide.tours.first.city %></p>
-        </div>
-
-        <div class="interests">
-          <h2 class="guide-titles">Interests</h2>
-          <hr>
-          <i class="fa fa-<%= guide.interest1 %> interest-icon"></i>
-          <i class="fa fa-<%= guide.interest2 %> interest-icon"></i>
-          <i class="fa fa-<%= guide.interest3 %> interest-icon"></i>
-        </div>
-
-        <div class="about-me">
-          <h3 class="guide-titles">About Me</h3>
-          <hr>
-          <p class="tour-guide-text"><%= guide.description %></p>
-        </div>
-      </div>
-      <div class="col-xs-3">
-        <%= cl_image_tag guide.photo.path, class: "guide-image-show", width: 150, height: 200, crop: :fill, gravity: :face %>
-      </div>
-    </div>
 
     <div class="offered-tours-div">
-      <h1 id="offered-tours-heading"><b>OFFERED TOURS</b></h1>
       <% guide.tours.each do |tour| %>
         <div class="row wrapper-offered-tours">
           <!-- Offered Tours -->
 
-            <div class="col-xs-1">
-
-              <%= cl_image_tag tour.photo.path, class: 'tour-image' %>
-            </div>
-            <div class="col-xs-7">
+            <div class="col-xs-8">
               <div class="offered-tours-content">
                 <p class="tour-guide-text"><b><%= tour.name %></b></p>
                 <p class="tour-guide-text"><%= tour.description %></p>

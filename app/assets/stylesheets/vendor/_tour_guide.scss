@@ -6,16 +6,27 @@
   margin-top: 30px !important;
 }
 
-.avatar-guide {
+.guide-image{
+  overflow: hidden;
+  height: 200px;
+  width: 180px;
   margin-top: 45px;
   float: left;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
+
+// .avatar-guide {
+//   height: 200px;
+//   width: 180px;
+//   margin-top: 45px;
+//   float: left;
+// }
 
 .tour-details-wrapper{
   background-color: white;
-}
-
-.guide-image{
 }
 
 #price-text {
