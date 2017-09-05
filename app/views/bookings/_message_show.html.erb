@@ -1,6 +1,7 @@
-  <h1>Your message with <%= booking.visit.tour.guide.first_name %></h1>
+<div id="single-message">
+    <h1 class="chat-header">YOUR MESSAGE WITH <%= booking.visit.tour.guide.first_name.upcase %></h1>
 
-      <div class="chat header"><h4></h4></div>
+      <!-- <div class="chat header"><h4>YOUR MESSAGE WITH <%= booking.visit.tour.guide.first_name.upcase %></h4></div> -->
       <div class="messages">
         <% booking.messages.each do |message| %>
         <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
@@ -12,6 +13,7 @@
         <%= f.submit "Send!", class: "btn-primary" %>
         <% end %>
 
+      </div>
       </div>
 
 
