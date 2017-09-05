@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="message-box">
-  <div class="row">
+    <div class="row">
       <div class="col-xs-4">
 
         <h1 class="pending-booking-header">PENDING BOOKINGS</h1>
@@ -10,36 +10,37 @@
 
           <% @bookings.each do |booking| %>
 
-
           <%= link_to(booking_path(booking), remote: true, class: "message-link") do %>
 
           <div class="booking-list booking-tab">
-            <div class="message-heading">Your tour with <%= booking.visit.tour.guide.first_name + " " + booking.visit.tour.guide.last_name %></div>
+            <div class="message-heading"><%= booking.visit.tour.name %></div>
             <div class="booking-index">
               <div class="message-img"> <%= cl_image_tag booking.visit.tour.guide.photo.path, width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %></div>
               <div class="booking-content">
-                <%= booking.visit.tour.name %>
+                With <%= booking.visit.tour.guide.first_name + " " + booking.visit.tour.guide.last_name %> <br>
 
-                - booking for <%= booking.visit.start_time.strftime("%Y-%d-%m")  %> at
+                booking for <%= booking.visit.start_time.strftime("%A %b %l %Y ")  %> at
                 <%= booking.visit.start_time.strftime("%H:%M") %>
 
+
                 <p class="booking_index">
-                  Confirmation to join tour:
                   <% if booking.confirmed == false %>
 
-                  Pending
+                  <span>Confirmation: </span><span class="pending">Pending</span>
 
                   <% if current_user.type == "Guide" %>
                   <%= link_to "Accept", booking_path(booking), method: :patch %>
                   <% end %>
 
                   <% else %>
-                  Accepted
+                  <span>Confirmation: </span><span class="accepted">Accepted</span>
                   <% end %>
                 </p>
+
               </div>
             </div>
           </div>
+          <div class="cancel-booking"><%= link_to "Cancel booking", booking_path(booking), method: :delete %></div>
 
           <% end %>
 
