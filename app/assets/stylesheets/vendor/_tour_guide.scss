@@ -1,5 +1,12 @@
+.padding-bottom {
+  padding-bottom: 10px !important;
+}
+
+.margin-top {
+  margin-top: 30px !important;
+}
+
 .avatar-guide {
-  border-radius: 50%;
   margin-top: 45px;
   float: left;
 }
@@ -9,7 +16,6 @@
 }
 
 .guide-image{
-
 }
 
 #price-text {
@@ -51,18 +57,18 @@
   // width: 60%;
 }
 
-    hr {
-       display: block;
-       position: relative;
-       padding: 0;
-       margin: 8px auto;
-       height: 0;
-       width: 100%;
-       max-height: 0;
-       font-size: 1px;
-       line-height: 0;
-       clear: both;
-       border: none;
-       border-top: 1px solid #aaaaaa;
-       border-bottom: 1px solid #ffffff;
-    }
+    // hr {
+    //    display: block;
+    //    position: relative;
+    //    margin: 20px auto;
+    //    height: 0;
+    //    width: 100%;
+    //    max-height: 0;
+    //    font-size: 1px;
+    //    line-height: 0;
+    //    clear: both;
+    //    border: none;
+    //    border-top: 1px solid #aaaaaa;
+    //    border-bottom: 1px solid #ffffff;
+    //    color: #D3D3D3;
+    // }
