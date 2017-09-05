@@ -62,7 +62,7 @@ class ProfilesController < ApplicationController
     {
       attendants: filters[:attendants],
       price: filters[:price],
-      interests: filters[:interests].reject(&:empty?)
+      interests: filters[:interests]
     }
   end
 

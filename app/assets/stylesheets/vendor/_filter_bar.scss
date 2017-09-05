@@ -1,20 +1,31 @@
 .form-control {
   color: #00a19a;
-  font-size: 12px;
   font-family: "Raleway", regular;
+  border: none;
+}
+
+.filter-bar {
+  margin-left: 18px;
 }
 
 .search-button-filter-bar {
   background-color: #00a19a;
-  padding: 12px 20px;
+  padding: 7px 20px;
   color: white;
-  border-radius: 2px;
-  font-size: 12px;
-  font-family: "Raleway", regular;
+  border-radius: 3px;
+  border: none !important;
+  margin-left: 5px;
 }
 
 .simple_form {
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+#search-button-filter-bar-text {
+  font-size: 12px;
+  font-family: "Raleway", regular;
+  font-size: 16px;
+  margin: 0 0 !important;
 }
 
 // @mixin transition{

@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container tour-details-wrapper">
   <div class="row">
     <div class="tour-guide-div">
       <div class="guide-image col-xs-2">
-        <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", height: 125, width: 125, gravity: :face %>
+        <img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
       </div>
-      <div class="guide-information col-xs-6">
+      <div class="guide-information col-xs-7">
           <h1 class="tour-guide-name"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
           <p><%= @tour.guide.age %> | <%= @tour.city %></p>
           <h1 class="about-me">About Me</h1>
@@ -16,11 +16,11 @@
 
 
   <div class="row">
-    <div class="col-xs-6" id="tour-information">
-      <h3 style="color:#00a19a;"><%= @tour.name %></h3>
-      <h5>Price - $<%= @tour.price %> per person <h5>
-        </br>
-      <h4 style="color:#00a19a;">Description</h4>
+    <div class="col-xs-6">
+      <h2 style="color:#00a19a;"><%= @tour.name %></h2>
+      <h2 id="price-text">Price</h2>
+        <p>$<%= @tour.price %> per person</p>
+      <h2 style="color:#00a19a;">Description</h2>
         <p><%= @tour.description %></p>
       </br>
 <!-- Map inserted here -->
@@ -45,7 +45,7 @@
   </div>
 <!-- Map ends here -->
 <!-- Calendar starts here -->
-<!-- Calendar ends here -->
+
 <div class="col-xs-6" id="calendar">
       <h4 style="color:#00a19a;">Book this tour now!</h4>
         <%= simple_form_for @booking do |f| %>
@@ -63,33 +63,26 @@
                 </div>
                 <% end %>
               <% end %>
-            <%= f.input :visit_id, as: :hidden %>
-            <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary", id: "button-b" %>
-          <% end %>
-
-        </br>
+                <%= f.input :visit_id, as: :hidden %>
+                <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary" %>
+            <% end %>
+            </br>
         </div>
     </div>
+    <!-- Calendar ends here -->s
   </div>
 
+<%= content_for(:after_js) do %>
+  <script>
+   $(document).ready(function() {
+    $(".visit-selector").on("click", function(){
+      $(".visit-selector").removeClass("selector-active")
+      $(this).addClass("selector-active")
+      var chosen_visit = $(this).data("id");
+      $("#booking_visit_id").val(chosen_visit);
+      console.log(chosen_visit);
+    });
+   });
 
-    <%= content_for(:after_js) do %>
-      <script>
-        $(document).ready(function() {
-          $("#button-b").prop("disabled", true);
-
-          $(".visit-selector").on("click", function(){
-            $(".visit-selector").removeClass("selector-active")
-            $(this).addClass("selector-active")
-            var chosen_visit = $(this).data("id");
-            if (chosen_visit == null) {}
-            else {
-              $("#booking_visit_id").val(chosen_visit);
-              console.log(chosen_visit);
-              $("#button-b").prop("disabled", false);
-            }
-          });
-        });
-      </script>
-    <% end %>
-          
+  </script>
+<% end %>
