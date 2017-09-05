@@ -1,1 +1,4 @@
 $('#guide-info').html("<%= j render 'guide_show', guide: @guide %>");
+$('html, body').animate({
+  scrollTop: $("#tour-guide-wrapper").offset().top
+}, 1000);

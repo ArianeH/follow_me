@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
   def show
     @guide = Guide.find(params[:id])
     respond_to do |format|
-      format.js  # <-- will render `app/views/reviews/create.js.erb`
+      format.js  # <-- will render `app/views/profiles/show.js.erb`
     end
   end
 
