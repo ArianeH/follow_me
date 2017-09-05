@@ -16,10 +16,11 @@
 
 
   <div class="row">
-    <div class="col-xs-6">
-      <h1 style="color:#00a19a;"><%= @tour.name %></h1>
-      <h1>Price - $<%= @tour.price %> per person <h1>
-      <h1 style="color:#00a19a;">Description</h1>
+    <div class="col-xs-6" id="tour-information">
+      <h3 style="color:#00a19a;"><%= @tour.name %></h3>
+      <h5>Price - $<%= @tour.price %> per person <h5>
+        </br>
+      <h4 style="color:#00a19a;">Description</h4>
         <p><%= @tour.description %></p>
       </br>
 <!-- Map inserted here -->
