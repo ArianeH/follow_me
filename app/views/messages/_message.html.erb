@@ -1,11 +1,14 @@
-<div class="message <%= user_is_messages_author ? "right" : "" %>">
+<div class="message <%= user_is_messages_author ? "message-grey" : "message-white" %>">
 
- <% if message.user.photo? %>
- <%= cl_image_tag message.user.photo.path, width: 40, height: 40, crop: :fit, class: "avatar" %>
- <% else %>
- <%= image_tag "default_avatar", width: 40, height: 40, crop: :fit, class: "avatar" %>
- <% end %>
-
- <%= message.user.first_name %>
- <div class="message-content"><%= message.content %></div>
+  <div class="message-img">
+   <% if message.user.photo? %>
+   <%= cl_image_tag message.user.photo.path, width: 50, height: 50, crop: :fit, class: "avatar" %>
+   <% else %>
+   <%= image_tag "default_avatar", width: 50, height: 50, crop: :fit, class: "message-avatar" %>
+   <% end %>
+ </div>
+ <div class="message-body">
+ <span class="message-user"><%= message.user.first_name %> </span><span class="message-time"> <%= message.created_at.strftime("%d/%m/%Y %H:%M") %> </span>
+   <div class="message-content"><%= message.content %></div>
+ </div>
 </div>

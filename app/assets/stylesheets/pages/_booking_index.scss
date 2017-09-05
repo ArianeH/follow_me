@@ -1,3 +1,19 @@
+.pending-booking-header {
+  margin: 10px;
+}
+
+.message-link:hover {
+  text-decoration: none !important;
+}
+
+.message-link:hover > .booking-tab {
+  background-color: #f9f9f9 !important;
+}
+
+.message-link:focus {
+  text-decoration: none !important;
+}
+
 .message-avatar {
   border-radius: 50px;
   max-height: 50px;
@@ -17,7 +33,7 @@
   text-decoration: none;
 }
 
-.booking_index {
+.booking-index {
   display: flex;
   font-family: "Open Sans", "Helvetica", "sans-serif";
   font-weight: lighter;
@@ -25,11 +41,124 @@
   color: #868686;
 }
 
-.booking_content:hover {
+.booking-tab {
+  padding: 10px 10px 10px 0px;
+}
+
+.booking-tab-active {
+  border-bottom: 1px solid #d6d6d6;
+  // box-shadow: 3px 0px 8px #d6d6d6;
+  background-color: #f9f9f9;
   text-decoration: none;
 }
 
-.tab-active {
-  border: 1px solid grey;
-  background-color: grey;
+.booking-content {
+  text-decoration: none;
+}
+
+.message-box {
+  border: 1px solid #d6d6d6;
+  margin: 30px 0px 10px 0px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 8px #d6d6d6;
+  background-color: white;
+  height: 80vh;
+}
+
+.message-content {
+  // background-color: #F7F7F7;
+  border-radius: 3px;
+  padding: 5px 0px 15px 0px;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-weight: lighter;
+  font-size: 17px;
+  color: #868686;
+}
+
+.message-user {
+  margin-top: 15px;
+  margin-right: 20px;
+  font-size: 17px;
+  color: #868686;
+}
+
+.message-time {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #868686;
+  font-weight: lighter;
+}
+
+.message-img {
+  flex: 0 0 10%;
+}
+
+.message-body {
+  flex: 1 1 90%;
+}
+
+.list-of-messages {
+  border-right: 1px solid #d6d6d6;
+  margin-left: 10px;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+#single-message {
+  padding: 0px 20px;
+}
+
+.chat-header {
+  margin: 10px;
+}
+
+.messages {
+    overflow-y: scroll;
+    height: 53vh;
+    padding-right: 20px;
+//   font-size: 15px;
+//   color: #868686;
+//   background-color: #ffffff;
+//   padding: 20px;
+//   border: 1px solid #ececec;
+//   border-top: none;
+//   border-bottom-width: 0;
+//   max-height: calc(100vh - 70px - 45px - 61px - 30px);
+
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+  &.right {
+    // flex-direction: row-reverse;
+    border-bottom: 1px solid #f7f7f7;
+    .message-content {
+    }
+  }
+}
+
+#create-message {
+  padding-right: 20px;
+//   background-color: #ffffff;
+//   margin-bottom: 20px;
+//   border: 1px solid #ececec;
+}
+
+#create-message > form {
+  margin-top: 5px !important;
+}
+
+.message-grey {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 2px 2px 8px #e4e4e4;
+}
+
+.message-white {
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 2px 2px 8px #e4e4e4;
 }
