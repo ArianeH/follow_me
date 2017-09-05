@@ -1,5 +1,18 @@
+#calendar{
+  margin-top: 100px;
+}
+
 .simple-calendar {
   text-align: center;
+
+.calendar-heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.visit-selector p {
+  font-size: 12px;
+}
 
   .calendar-title {
     font-family: "Open Sans", "Helvetica", "sans-serif";
@@ -62,12 +75,13 @@
   font-weight: lighter;
   font-size: 15px;
   background-color: white;
+  text-align: center;
 }
 
 .table-striped tbody tr td {
   font-family: "Open Sans", "Helvetica", "sans-serif";
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 6px;
   background-color: white;
   // min-width: 50px;
   // max-width: 60px;
@@ -90,4 +104,8 @@
 
 .visit-selector p {
   margin: 0 0 2px;
+}
+
+#button-b {
+  width: 100% !important;
 }
