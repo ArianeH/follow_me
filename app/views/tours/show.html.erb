@@ -63,25 +63,33 @@
                 </div>
                 <% end %>
               <% end %>
-                <%= f.input :visit_id, as: :hidden %>
-                <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary" %>
-            <% end %>
-            </br>
+            <%= f.input :visit_id, as: :hidden %>
+            <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary", id: "button-b" %>
+          <% end %>
+
+        </br>
         </div>
     </div>
   </div>
 
-<%= content_for(:after_js) do %>
-  <script>
-   $(document).ready(function() {
-    $(".visit-selector").on("click", function(){
-      $(".visit-selector").removeClass("selector-active")
-      $(this).addClass("selector-active")
-      var chosen_visit = $(this).data("id");
-      $("#booking_visit_id").val(chosen_visit);
-      console.log(chosen_visit);
-    });
-   });
 
-  </script>
-<% end %>
+    <%= content_for(:after_js) do %>
+      <script>
+        $(document).ready(function() {
+          $("#button-b").prop("disabled", true);
+
+          $(".visit-selector").on("click", function(){
+            $(".visit-selector").removeClass("selector-active")
+            $(this).addClass("selector-active")
+            var chosen_visit = $(this).data("id");
+            if (chosen_visit == null) {}
+            else {
+              $("#booking_visit_id").val(chosen_visit);
+              console.log(chosen_visit);
+              $("#button-b").prop("disabled", false);
+            }
+          });
+        });
+      </script>
+    <% end %>
+          
