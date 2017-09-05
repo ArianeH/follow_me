@@ -51,14 +51,19 @@ class BookingsController < ApplicationController
   end
 
   def check_participants
-    spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
+    if @booking.visit
+      spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
 
-    if spots_left >= @booking.participants
-      @booking.save
-      redirect_to booking_path(@booking)
+      if spots_left >= @booking.participants
+        @booking.save
+        redirect_to booking_path(@booking)
+      else
+        flash[:alert] = "The number of participants exceed the spots left"
+        redirect_to tour_path(@booking.visit.tour)
+      end
     else
-      flash[:alert] = "The number of participants exceed the spots left"
-      redirect_to tour_path(@booking.visit.tour)
+      flash[:alert] = "You need to pick a date"
+      redirect_to request.url
     end
   end
 end
