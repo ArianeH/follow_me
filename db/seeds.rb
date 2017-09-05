@@ -13,7 +13,7 @@ Interest.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user_1 = Guide.create(first_name: "John", last_name: "Anderson", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Infuriatingly humble problem solver. Student. Thinker. Gamer. Zombie maven. Music nerd. Creator. Introvert.", interest1: "beer", interest2: "music", interest3: "cutlery")
-user_1.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504101356/nwgh5wprsowblilixohb.jpg"
+user_1.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624752/pexels-photo-415326_bt2hav.jpg"
 
 user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Professional web lover. Lifelong tv scholar. Proud coffee expert. Pop culture specialist. Extreme beer enthusiast. Problem solver. Food trailblazer.")
 user_2.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504190750/matheus-ferrero-233592_o8ozda.jpg"
@@ -28,7 +28,7 @@ user_5 = Guide.create(first_name: "Maxi", last_name: "Baker", age: 24, email: "m
 user_5.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504190746/hunter-johnson-222001_cltuhy.jpg"
 
 user_6 = Guide.create(first_name: "Lisa", last_name: "Johnson", age: 31, email: "lisa@wagon.com", password: "hellohello", description: "Writer. Subtly charming organizer. Musicaholic. Twitter maven. Infuriatingly humble bacon expert. Lifelong travel trailblazer.")
-user_6.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504085323/3.jpg"
+user_6.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624860/girl-people-landscape-sun-38554_upgv26.jpg"
 
 user_7 = Guide.create(first_name: "Adam", last_name: "Lewis", age: 35, email: "lisa@wagon.com", password: "hellohello", description: "Reader. Professional alcohol buff. Devoted music guru. Award-winning coffee aficionado.")
 user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-211050_fshn6q.jpg"
@@ -40,13 +40,13 @@ user_9 = Guide.create(first_name: "Susan", last_name: "Adams", age: 23, email: "
 user_9.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-371168_wi4ih8.jpg"
 
 user_10 = Guide.create(first_name: "Carol", last_name: "Allen", age: 37, email: "carol@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
-user_10.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-295821_f5ajmd.jpg"
+user_10.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624898/author-jewellery-lipstick-eyelashes_avahcs.jpg"
 
 user_11 = Guide.create(first_name: "Katrin", last_name: "Miller", age: 34, email: "katrin@wagon.com", password: "hellohello", description: "Gamer. Social media nerd. Hipster-friendly entrepreneur. Travel expert and bitcoin enthusiast.")
-user_11.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-295564_dwvixc.jpg"
+user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624917/pexels-photo-301958_kkqezb.jpg"
 
 user_12 = Guide.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
-user_12.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537871/pexels-photo-227335_jwkpvq.jpg"
+user_12.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
 # user_13 = User.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
 # user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "lucas@wagon.com", password: "hellohello", description: "Text here")
@@ -72,6 +72,12 @@ visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_1.
 visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_1.id)
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_1.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_1.id)
+visit_10 = Visit.create(start_time: '2017-09-08 15:00:00 +0200', tour_id: tour_1.id)
+visit_11 = Visit.create(start_time: '2017-09-08 15:00:00 +0200', tour_id: tour_1.id)
+visit_12 = Visit.create(start_time: '2017-09-09 15:00:00 +0200', tour_id: tour_1.id)
+visit_13 = Visit.create(start_time: '2017-09-09 15:00:00 +0200', tour_id: tour_1.id)
+visit_14 = Visit.create(start_time: '2017-09-11 15:00:00 +0200', tour_id: tour_1.id)
+
 
 
 tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany",
@@ -91,6 +97,11 @@ visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_2.
 visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_2.id)
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_2.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_2.id)
+visit_10 = Visit.create(start_time: '2017-09-11 18:00:00 +0200', tour_id: tour_2.id)
+visit_11 = Visit.create(start_time: '2017-09-15 12:00:00 +0200', tour_id: tour_2.id)
+visit_12 = Visit.create(start_time: '2017-09-17 15:00:00 +0200', tour_id: tour_2.id)
+visit_13 = Visit.create(start_time: '2017-09-23 13:00:00 +0200', tour_id: tour_2.id)
+visit_14 = Visit.create(start_time: '2017-09-29 11:00:00 +0200', tour_id: tour_2.id)
 
 tour_3 = Tour.new(city: "Berlin", address: "Prenzlauer Allee 204 10405 Berlin, Germany",
   description: "Get to know the Street Art of Berlin with a musician, artist and professional tourist guide,
@@ -109,6 +120,12 @@ visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_3.
 visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_3.id)
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_3.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_3.id)
+visit_10 = Visit.create(start_time: '2017-09-21 18:00:00 +0200', tour_id: tour_3.id)
+visit_11 = Visit.create(start_time: '2017-09-22 18:00:00 +0200', tour_id: tour_3.id)
+visit_12 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_3.id)
+visit_13 = Visit.create(start_time: '2017-09-28 14:00:00 +0200', tour_id: tour_3.id)
+visit_14 = Visit.create(start_time: '2017-09-29 14:00:00 +0200', tour_id: tour_3.id)
+visit_15 = Visit.create(start_time: '2017-10-01 14:00:00 +0200', tour_id: tour_3.id)
 
 #Tours created by user_2
 tour_4 = Tour.new(city: "Berlin", address: "Oberbaumstr. 8 10997 Berlin, Germany",
