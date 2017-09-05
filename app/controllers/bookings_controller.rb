@@ -1,12 +1,11 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
 
-
   def index
     if current_user.type == "Guide"
-      @bookings = Booking.where(visit_id: Visit.select(:id).where(tour_id: Tour.select(:id).where(guide_id: current_user.id)))
+      @bookings = Booking.where(visit_id: Visit.select(:id).where(tour_id: Tour.select(:id).where(guide_id: current_user.id))).order(created_at: :DESC)
     else
-      @bookings = Booking.where(user_id: current_user.id)
+      @bookings = Booking.where(user_id: current_user.id).order(created_at: :DESC)
     end
   end
 
@@ -30,7 +29,7 @@ class BookingsController < ApplicationController
     spots_left = @booking.visit.tour.attendants - @booking.visit.bookings.where(confirmed: true).sum{|b| b.participants}
     if spots_left >= @booking.participants
       @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       too_many_participants
     end
@@ -50,6 +49,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+    redirect_to bookings_path
   end
 
   private

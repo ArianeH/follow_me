@@ -16,7 +16,8 @@
 
 .message-avatar {
   border-radius: 50px;
-  max-height: 50px;
+  min-height: 50px;
+  max-width: 50px;
 }
 
 .message-img {
@@ -42,7 +43,7 @@
 }
 
 .booking-tab {
-  padding: 10px 10px 10px 0px;
+  padding: 10px 10px 0px 5px;
 }
 
 .booking-tab-active {
@@ -84,7 +85,7 @@
 
 .message-time {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 12px;
   color: #868686;
   font-weight: lighter;
 }
@@ -109,7 +110,7 @@
 }
 
 .chat-header {
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 .messages {
@@ -153,12 +154,46 @@
   background-color: #f9f9f9;
   border-radius: 5px;
   padding: 8px;
-  box-shadow: 2px 2px 8px #e4e4e4;
+  box-shadow: 1px 1px 8px #e4e4e4;
 }
 
 .message-white {
   background-color: white;
   border-radius: 5px;
   padding: 8px;
-  box-shadow: 2px 2px 8px #e4e4e4;
+  box-shadow: 1px 1px 8px #e4e4e4;
+}
+
+.pending {
+  color: #da6868;
+  font-weight: bolder;
+}
+
+.accepted {
+  color: #69a96e;
+  font-weight: bolder;
+}
+
+#message_content {
+  border: 1px solid #dcdcdc;
+}
+
+#message_content:focus {
+  outline: 0 !important;
+}
+
+.cancel-booking {
+  margin: 0px 0px 10px 0px;
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.cancel-booking a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel-booking a {
+  color: #868686;
 }
