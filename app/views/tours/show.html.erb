@@ -5,7 +5,7 @@
         <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", gravity: :face %>
       </div>
       <div class="guide-information col-xs-6">
-          <h1 class="tour-guide-name padding-bottom"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
+          <h1 class="tour-guide-name padding-bottom"><strong>Meet your guide:</strong> <%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
           <p><%= @tour.guide.age %> years old | <%= @tour.city %></p>
           <h1 class="about-me padding-bottom margin-top">About Me</h1>
           <p><%= @tour.guide.description %></p>
