@@ -19,8 +19,8 @@
 
     <div class="row">
       <div class="col-xs-6" id="tour-information">
-        <h3 style="color:#00a19a;"><%= @tour.name %></h3>
-        <h5>
+        <h3 class="padding-bottom" style="color:#00a19a;"><%= @tour.name %></h3>
+        <h5 class="light-grey-color">
         <% if @tour.price == 0 %>
           Free tour
         <% else %>
@@ -28,11 +28,11 @@
         <% end %>
         </h5>
         </br>
-        <h4 style="color:#00a19a;">Description</h4>
-          <p><%= @tour.description %></p>
+        <h4 class="padding-bottom" style="color:#00a19a;">Description</h4>
+          <p class="light-grey-color"><%= @tour.description %></p>
         </br>
-        <p><b>Where we will meet</b></p>
-        <p>Click on the marker to know the exact location</p>
+        <p class="bluish-color">Where we will meet</p>
+        <p class="light-grey-color">Click on the marker to know the exact location</p>
   <!-- Map inserted here -->
    <div id="map" style="width: 100%; height: 400px;"></div>
           <%= content_for(:after_js) do %>
