@@ -17,7 +17,7 @@
             <div class="booking-index">
               <div class="message-img"> <%= cl_image_tag booking.visit.tour.guide.photo.path, width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %></div>
               <div class="booking-content">
-                <p class="booking-info">
+                <p id="booking-info-<%= booking.id %>" class="booking-info">
                   With <%= booking.visit.tour.guide.first_name + " " + booking.visit.tour.guide.last_name %> <br>
 
                   booking for <%= booking.visit.start_time.strftime("%A")  %> <br>
@@ -84,10 +84,16 @@
         { channel: 'BookingsChannel', booking_id: <%= booking.id %> },
         {
           received: (data) => {
-            if (document.getElementById("messages-<%= booking.id %>") != null && data.current_user_id !== <%= current_user.id %>) {
-              const messagesContainer = document.getElementById('messages-<%= booking.id %>');
-              messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-              scrollLastMessageIntoView();
+            if (data.current_user_id !== <%= current_user.id %>) {
+              // user is currently viewing the discussion
+              if (document.getElementById("messages-<%= booking.id %>") != null) {
+                const messagesContainer = document.getElementById('messages-<%= booking.id %>');
+                messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+                scrollLastMessageIntoView();
+              }
+              else { // we received a new message on another discussion
+                $("#booking-info-<%= booking.id %>").addClass("booking-info-new");
+              }
             }
           }
         });
