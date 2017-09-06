@@ -59,11 +59,11 @@
   <div class="col-xs-5" id="calendar">
         <h4 style="color:#00a19a;">Book this tour now!</h4>
           <%= simple_form_for @booking do |f| %>
-            <h5>Amount of travelers attending the tour:</h5>
+            <h5 class="light-grey-color">Amount of travelers attending the tour:</h5>
 
             <%= f.input :participants, label: false, selected: :participants, collection: 1..10 %>
             <br>
-            <h5>Select your preferred date below:</h5>
+            <h5 class="light-grey-color">Select your preferred date below:</h5>
               <%= month_calendar events: @available_visits do |date, tour_visits| %>
                 <div class="one-day"><%= date.day %></div>
                 <% tour_visits.each do |one_visit| %>
