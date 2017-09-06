@@ -24,9 +24,10 @@
         <% if @tour.price == 0 %>
           Free tour
         <% else %>
-          Price - $ <%= @tour.price %> per person <h5>
+          Price - $ <%= @tour.price %> per person
         <% end %>
-          </br>
+        </h5>
+        </br>
         <h4 style="color:#00a19a;">Description</h4>
           <p><%= @tour.description %></p>
         </br>
