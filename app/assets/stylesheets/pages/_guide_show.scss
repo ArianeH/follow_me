@@ -2,33 +2,28 @@
   background-color: white;
   margin: 10px 0px 50px 0px;
   padding-bottom: 50px;
+  padding-top: 30px;
+  padding-left: 60px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper-tour-guide-inner {
-  margin: auto;
-  width: 90%;
-  padding-top: 30px;
-  padding-left: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .wrapper-offered-tours {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .offered-tours-content {
-  flex: none;
+  flex: 1 0 auto;
   flex-wrap: wrap;
   padding: 10px;
 }
 
 .wrapper-details-link {
-  flex: none;
+  flex: 0 0 auto;
 }
 
 #tour-guide-name {
@@ -65,7 +60,7 @@
 }
 
 .tour-guide-text {
-  font-size: 13px;
+  font-size: 15px;
   color: #706f6f;
 }
 
