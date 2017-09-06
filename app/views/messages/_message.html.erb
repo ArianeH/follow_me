@@ -12,3 +12,16 @@
    <div class="message-content"><%= message.content %></div>
  </div>
 </div>
+
+
+<%= content_for(:after_js) do %>
+<!--   <script>
+    $(function(){
+      if (message) $(".booking-info").addClass("booking-info-new");
+
+      $(".booking-info-new").on("click", function(){
+      $(."booking-info-new").addClass(".booking-info")
+      });
+    })
+  </script> -->
+<% end %>
