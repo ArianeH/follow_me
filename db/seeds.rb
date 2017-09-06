@@ -48,55 +48,55 @@ user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v150462491
 user_12 = Guide.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
 user_12.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_13 = Guide.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
+user_13 = Guide.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Amateur bacon enthusiast. Devoted writer. Falls down a lot. Friend of animals everywhere.")
 user_13.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_14 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "a@wagon.com", password: "hellohello", description: "Text here")
+user_14 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "a@wagon.com", password: "hellohello", description: "Total zombie evangelist. Hipster-friendly internet buff. Award-winning bacon advocate. Explorer. Evil analyst. Devoted music maven. Writer.")
 user_14.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_15 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "b@wagon.com", password: "hellohello", description: "Text here")
+user_15 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "b@wagon.com", password: "hellohello", description: "General problem solver. Subtly charming beer trailblazer. Music guru. Incurable writer. Prone to fits of apathy.")
 user_15.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_16 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "c@wagon.com", password: "hellohello", description: "Text here")
+user_16 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "c@wagon.com", password: "hellohello", description: "Freelance reader. Troublemaker. Tv geek. Zombie buff. Creator. Amateur gamer. Falls down a lot.")
 user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_17 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "d@wagon.com", password: "hellohello", description: "Text here")
+user_17 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "d@wagon.com", password: "hellohello", description: "Coffee nerd. Total student. Incurable tv specialist. Bacon junkie. General introvert. Gamer. Devoted reader.")
 user_17.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_18 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "e@wagon.com", password: "hellohello", description: "Text here")
+user_18 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "e@wagon.com", password: "hellohello", description: "Total web advocate. Twitter ninja. Problem solver. Infuriatingly humble reader. Freelance explorer. Award-winning beer junkie. Creator.")
 user_18.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_19 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "f@wagon.com", password: "hellohello", description: "Text here")
+user_19 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "f@wagon.com", password: "hellohello", description: "Twitter fanatic. Hardcore social media fanatic. Hipster-friendly web expert. Total alcohol enthusiast. Coffee specialist.")
 user_19.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_20 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "g@wagon.com", password: "hellohello", description: "Text here")
+user_20 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "g@wagon.com", password: "hellohello", description: "Twitter maven. Tv scholar. Internet buff. Beer guru. Zombie fanatic. Organizer.")
 user_20.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_21 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "h@wagon.com", password: "hellohello", description: "Text here")
+user_21 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "h@wagon.com", password: "hellohello", description: "Explorer. Tv nerd. Infuriatingly humble organizer. Certified zombie scholar.")
 user_21.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_22 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "i@wagon.com", password: "hellohello", description: "Text here")
+user_22 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "i@wagon.com", password: "hellohello", description: "Gamer. Award-winning creator. Coffee fan. Typical alcoholaholic. Hipster-friendly student.")
 user_22.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_23 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "l@wagon.com", password: "hellohello", description: "Text here")
+user_23 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "l@wagon.com", password: "hellohello", description: "Tv geek. Student. General reader. Hardcore music lover. Freelance baconaholic. Proud web nerd.")
 user_23.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_24 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "m@wagon.com", password: "hellohello", description: "Text here")
+user_24 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "m@wagon.com", password: "hellohello", description: "Travel trailblazer. Social media aficionado. Internet expert. Tv junkie. Avid organizer.")
 user_24.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_25 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "n@wagon.com", password: "hellohello", description: "Text here")
+user_25 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "n@wagon.com", password: "hellohello", description: "Student. Alcohol practitioner. Zombie fanatic. Thinker. Avid entrepreneur.")
 user_25.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_26 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "o@wagon.com", password: "hellohello", description: "Text here")
+user_26 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "o@wagon.com", password: "hellohello", description: "Analyst. Award-winning gamer. Avid alcohol aficionado. Freelance tv fan. Subtly charming pop culture evangelist.")
 user_26.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_27 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "p@wagon.com", password: "hellohello", description: "Text here")
+user_27 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "p@wagon.com", password: "hellohello", description: "Alcohol fanatic. Proud communicator. Tv practitioner. Pop culture junkie. Infuriatingly humble rock music advocate.")
 user_27.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_28 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "q@wagon.com", password: "hellohello", description: "Text here")
+user_28 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "q@wagon.com", password: "hellohello", description: "Avid introvert. Troublemaker. Total pop culture maven. Reader. Certified web evangelist.")
 user_28.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_29 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "r@wagon.com", password: "hellohello", description: "Text here")
+user_29 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "r@wagon.com", password: "hellohello", description: "Internet junkie. Coffee ninja. General social media specialist.")
 user_29.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
 
@@ -630,7 +630,18 @@ visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_29
 visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_29.id)
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_29.id)
 
-
+tour_30 = Tour.new(city: "Berlin", address: "Rudolstädter Str. 90, 10713 Berlin, Germany",
+  description: "This is the perfect tour if you are looking for an adrenaline-rush.
+  We will go to MountMitte, where you can climb 6 different routes of different levels on
+  3 different heights. If climbing isn’t enough for you, there is also a huge swing, the SkySwing,
+  which allows you to hang 8 meters above the ground and enjoy the view. To release some
+  tension and feel like a kid again we will then go to JUMP, Berlin’s first Trampoline Park.
+  Experience an unusual work-out and a lot of fun.",
+  attendants: 3, price: 10,
+  name: "Adrenaline tour")
+tour_30.guide = user_28
+tour_30.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504705915/mm04_qe6axn.jpg"
+tour_30.save
 
 visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_15.id)
 visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_15.id)
@@ -683,6 +694,7 @@ interest_9 = Interest.create(name: "Music")
 tour_22.interests << interest_6
 tour_23.interests << interest_6
 tour_24.interests << interest_6
+tour_30.interests << interest_6
 
 #alternative
 tour_2.interests << interest_8
