@@ -1,98 +1,99 @@
-<div class="container">
-  <div class="row">
-    <div class="tour-guide-div">
-      <div class="guide-image">
-        <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", gravity: :face %>
-      </div>
-      <div class="guide-information col-xs-6">
-          <h1 class="tour-guide-name padding-bottom"><strong>Meet your guide:</strong></h1>
-          <h1 class="tour-guide-name padding-bottom"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
-          <p><%= @tour.guide.age %> years old | <%= @tour.city %></p>
-          <h1 class="about-me padding-bottom margin-top">About Me</h1>
-          <p><%= @tour.guide.description %></p>
-      </div>
-    </div>
-  </div>
-<hr>
-
-
-  <div class="row">
-    <div class="col-xs-6" id="tour-information">
-      <h3 style="color:#00a19a;"><%= @tour.name %></h3>
-      <h5>Price - $<%= @tour.price %> per person <h5>
-        </br>
-      <h4 style="color:#00a19a;">Description</h4>
-        <p><%= @tour.description %></p>
-      </br>
-      <p><b>Where we will meet</b></p>
-      <p>Click on the marker to know the exact location</p>
-<!-- Map inserted here -->
- <div id="map" style="width: 100%; height: 400px;"></div>
-        <%= content_for(:after_js) do %>
-          <script>
-            $(document).ready(function() {
-              var handler = Gmaps.build('Google');
-              handler.buildMap({ internal: { id: 'map' } }, function() {
-                markers = handler.addMarkers(<%= raw @hash.to_json %>);
-                handler.bounds.extendWith(markers);
-                handler.fitMapToBounds();
-                if (markers.length == 0) {
-                  handler.getMap().setZoom(2);
-                } else if (markers.length == 1) {
-                  handler.getMap().setZoom(14);
-                }
-              });
-            });
-          </script>
-        <% end %>
-  </div>
-<!-- Map ends here -->
-<!-- Calendar starts here -->
-<!-- Calendar ends here -->
-<div class="col-xs-5" id="calendar">
-      <h4 style="color:#00a19a;">Book this tour now!</h4>
-        <%= simple_form_for @booking do |f| %>
-          <h5>Amount of travelers attending the tour:</h5>
-
-          <%= f.input :participants, label: false, selected: :participants, collection: 1..10 %>
-          <br>
-          <h5>Select your preferred date below:</h5>
-            <%= month_calendar events: @available_visits do |date, tour_visits| %>
-              <div class="one-day"><%= date.day %></div>
-              <% tour_visits.each do |one_visit| %>
-                <div data-id="<%= one_visit.id %>" class="visit-selector">
-                  <p><%= one_visit.start_time.strftime("%H:%M") %></p>
-                  <p>Spots: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %></p>
-                </div>
-                <% end %>
-              <% end %>
-            <%= f.input :visit_id, as: :hidden %>
-            <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary", id: "button-b" %>
-          <% end %>
-
-        </br>
+<div class="white-background">
+  <div class="container">
+    <div class="row">
+      <div class="tour-guide-div">
+        <div class="guide-image">
+          <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", gravity: :face %>
         </div>
+        <div class="guide-information col-xs-6">
+            <h1 class="tour-guide-name padding-bottom"><strong>Meet your guide:</strong></h1>
+            <h1 class="tour-guide-name padding-bottom"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
+            <p><%= @tour.guide.age %> years old | <%= @tour.city %></p>
+            <h1 class="about-me padding-bottom margin-top">About Me</h1>
+            <p><%= @tour.guide.description %></p>
+        </div>
+      </div>
     </div>
-  </div>
+  <hr>
 
 
-    <%= content_for(:after_js) do %>
-      <script>
-        $(document).ready(function() {
-          $("#button-b").prop("disabled", true);
+    <div class="row">
+      <div class="col-xs-6" id="tour-information">
+        <h3 style="color:#00a19a;"><%= @tour.name %></h3>
+        <h5>Price - $<%= @tour.price %> per person <h5>
+          </br>
+        <h4 style="color:#00a19a;">Description</h4>
+          <p><%= @tour.description %></p>
+        </br>
+        <p><b>Where we will meet</b></p>
+        <p>Click on the marker to know the exact location</p>
+  <!-- Map inserted here -->
+   <div id="map" style="width: 100%; height: 400px;"></div>
+          <%= content_for(:after_js) do %>
+            <script>
+              $(document).ready(function() {
+                var handler = Gmaps.build('Google');
+                handler.buildMap({ internal: { id: 'map' } }, function() {
+                  markers = handler.addMarkers(<%= raw @hash.to_json %>);
+                  handler.bounds.extendWith(markers);
+                  handler.fitMapToBounds();
+                  if (markers.length == 0) {
+                    handler.getMap().setZoom(2);
+                  } else if (markers.length == 1) {
+                    handler.getMap().setZoom(14);
+                  }
+                });
+              });
+            </script>
+          <% end %>
+    </div>
+  <!-- Map ends here -->
+  <!-- Calendar starts here -->
+  <!-- Calendar ends here -->
+  <div class="col-xs-5" id="calendar">
+        <h4 style="color:#00a19a;">Book this tour now!</h4>
+          <%= simple_form_for @booking do |f| %>
+            <h5>Amount of travelers attending the tour:</h5>
 
-          $(".visit-selector").on("click", function(){
-            $(".visit-selector").removeClass("selector-active")
-            $(this).addClass("selector-active")
-            var chosen_visit = $(this).data("id");
-            if (chosen_visit == null) {}
-            else {
-              $("#booking_visit_id").val(chosen_visit);
-              console.log(chosen_visit);
-              $("#button-b").prop("disabled", false);
-            }
+            <%= f.input :participants, label: false, selected: :participants, collection: 1..10 %>
+            <br>
+            <h5>Select your preferred date below:</h5>
+              <%= month_calendar events: @available_visits do |date, tour_visits| %>
+                <div class="one-day"><%= date.day %></div>
+                <% tour_visits.each do |one_visit| %>
+                  <div data-id="<%= one_visit.id %>" class="visit-selector">
+                    <p><%= one_visit.start_time.strftime("%H:%M") %></p>
+                    <p>Spots: <%= @tour.attendants - one_visit.bookings.where(confirmed: true).sum{|b| b.participants} %></p>
+                  </div>
+                  <% end %>
+                <% end %>
+              <%= f.input :visit_id, as: :hidden %>
+              <%= f.button :submit, "Get in contact with " + @tour.guide.first_name, class: "btn-primary", id: "button-b" %>
+            <% end %>
+
+          </br>
+          </div>
+      </div>
+    </div>
+
+
+      <%= content_for(:after_js) do %>
+        <script>
+          $(document).ready(function() {
+            $("#button-b").prop("disabled", true);
+
+            $(".visit-selector").on("click", function(){
+              $(".visit-selector").removeClass("selector-active")
+              $(this).addClass("selector-active")
+              var chosen_visit = $(this).data("id");
+              if (chosen_visit == null) {}
+              else {
+                $("#booking_visit_id").val(chosen_visit);
+                console.log(chosen_visit);
+                $("#button-b").prop("disabled", false);
+              }
+            });
           });
-        });
-      </script>
-    <% end %>
-
+        </script>
+      <% end %>
+</div>
