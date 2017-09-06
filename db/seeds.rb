@@ -73,32 +73,32 @@ user_19.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v150408768
 user_20 = Guide.create(first_name: "Aline", last_name: "Blanchet", age: 23, email: "aline@wagon.com", password: "hellohello", description: "Twitter maven. Tv scholar. Internet buff. Beer guru. Zombie fanatic. Organizer.")
 user_20.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504166867/lyncjovfthuzl8bcyghq.jpg"
 
-user_21 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "h@wagon.com", password: "hellohello", description: "Explorer. Tv nerd. Infuriatingly humble organizer. Certified zombie scholar.")
-user_21.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_21 = Guide.create(first_name: "Mathias", last_name: "Busch", age: 32, email: "h@wagon.com", password: "hellohello", description: "Explorer. Tv nerd. Infuriatingly humble organizer. Certified zombie scholar.")
+user_21.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706512/544358212_delwbm.jpg"
 
-user_22 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "i@wagon.com", password: "hellohello", description: "Gamer. Award-winning creator. Coffee fan. Typical alcoholaholic. Hipster-friendly student.")
-user_22.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_22 = Guide.create(first_name: "Thomas", last_name: "Voigt", age: 43, email: "i@wagon.com", password: "hellohello", description: "Gamer. Award-winning creator. Coffee fan. Typical alcoholaholic. Hipster-friendly student.")
+user_22.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/507480872_jtjyip.jpg"
 
-user_23 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "l@wagon.com", password: "hellohello", description: "Tv geek. Student. General reader. Hardcore music lover. Freelance baconaholic. Proud web nerd.")
+user_23 = Guide.create(first_name: "Mario", last_name: "Kuhn", age: 28, email: "l@wagon.com", password: "hellohello", description: "Tv geek. Student. General reader. Hardcore music lover. Freelance baconaholic. Proud web nerd.")
 user_23.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_24 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "m@wagon.com", password: "hellohello", description: "Travel trailblazer. Social media aficionado. Internet expert. Tv junkie. Avid organizer.")
-user_24.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_24 = Guide.create(first_name: "Lara", last_name: "Schreiber", age: 24, email: "m@wagon.com", password: "hellohello", description: "Travel trailblazer. Social media aficionado. Internet expert. Tv junkie. Avid organizer.")
+user_24.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706512/Lindsay_Adler_distracting_background_0_hj24jr.jpg"
 
-user_25 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "n@wagon.com", password: "hellohello", description: "Student. Alcohol practitioner. Zombie fanatic. Thinker. Avid entrepreneur.")
-user_25.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_25 = Guide.create(first_name: "Marco", last_name: "Meneghini", age: 40, email: "n@wagon.com", password: "hellohello", description: "Student. Alcohol practitioner. Zombie fanatic. Thinker. Avid entrepreneur.")
+user_25.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/1-xJUXJgM3nBCSf3v9TWrOnA_wesd8k.jpg"
 
-user_26 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "o@wagon.com", password: "hellohello", description: "Analyst. Award-winning gamer. Avid alcohol aficionado. Freelance tv fan. Subtly charming pop culture evangelist.")
-user_26.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_26 = Guide.create(first_name: "Sophia", last_name: "Pohl", age: 40, email: "o@wagon.com", password: "hellohello", description: "Analyst. Award-winning gamer. Avid alcohol aficionado. Freelance tv fan. Subtly charming pop culture evangelist.")
+user_26.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706513/pexels-photo-61100-1024x683_nc1xnb.jpg"
 
-user_27 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "p@wagon.com", password: "hellohello", description: "Alcohol fanatic. Proud communicator. Tv practitioner. Pop culture junkie. Infuriatingly humble rock music advocate.")
-user_27.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_27 = Guide.create(first_name: "Tobias", last_name: "Martinez", age: 45, email: "p@wagon.com", password: "hellohello", description: "Alcohol fanatic. Proud communicator. Tv practitioner. Pop culture junkie. Infuriatingly humble rock music advocate.")
+user_27.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706513/IP7A4546-2_ludrsv.jpg"
 
-user_28 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "q@wagon.com", password: "hellohello", description: "Avid introvert. Troublemaker. Total pop culture maven. Reader. Certified web evangelist.")
+user_28 = Guide.create(first_name: "Agnes", last_name: "Haas", age: 21, email: "q@wagon.com", password: "hellohello", description: "Avid introvert. Troublemaker. Total pop culture maven. Reader. Certified web evangelist.")
 user_28.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-user_29 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "r@wagon.com", password: "hellohello", description: "Internet junkie. Coffee ninja. General social media specialist.")
-user_29.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_29 = Guide.create(first_name: "Tom", last_name: "Sommer", age: 26, email: "r@wagon.com", password: "hellohello", description: "Internet junkie. Coffee ninja. General social media specialist.")
+user_29.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706513/young-african-professional-smiling_dylnyx.jpg"
 
 
 #Tours created by user_1
@@ -749,6 +749,11 @@ tour_27.interests << interest_2
 tour_28.interests << interest_2
 tour_29.interests << interest_2
 
+#nature
+tour_16.interests << interest_7
+tour_25.interests << interest_7
+tour_26.interests << interest_7
+tour_2.interests << interest_7
 
 
 # # Examples:
