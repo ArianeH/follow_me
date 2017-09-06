@@ -1,36 +1,35 @@
 <div id="tour-guide-wrapper">
-  <div class="container wrapper-tour-guide-inner">
     <!-- <img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> -->
 
-    <div class="offered-tours-div">
-      <% guide.tours.each do |tour| %>
-        <div class="row wrapper-offered-tours">
-          <!-- Offered Tours -->
+  <% guide.tours.each do |tour| %>
+    <div class="row wrapper-offered-tours">
+      <!-- Tour -->
 
-            <div class="col-xs-8">
-              <div class="offered-tours-content">
-                <p class="guide-titles"><b><%= tour.name %></b></p>
-                <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
-                <p class="tour-guide-text"><%= tour.description %></p>
-                <p class="tour-guide-text">Price: <b>
-                <% if tour.price == 0 %>
-                  Free
-                <% else %>
-                  <%= tour.price %>$</b></p>
-                <% end %>
-                <p class="tour-guide-text">Max. number of attendants: <b><%= tour.attendants %></b></p>
-              </div>
-            </div>
-
-            <div class="col-xs-4 wrapper-details-link">
-
-              <%= link_to 'See more details', tour_path(tour), class: "btn btn-primary" %>
-
-          </div>
+      <div class="col-xs-8">
+        <div class="offered-tours-content">
+          <p class="guide-titles"><b><%= tour.name %></b></p>
+          <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
+          <p class="tour-guide-text"><%= tour.description %></p>
+          <p class="tour-guide-text"><b>Price: </b>
+            <% if tour.price == 0 %>
+                Free
+            <% else %>
+                <%= tour.price %> $
+            <% end %>
+          </p>
+          <p class="tour-guide-text"><b>Max. number of attendants: </b><%= tour.attendants %></p>
         </div>
-      <% end %>
+      </div>
+
+      <div class="col-xs-4 wrapper-details-link">
+
+        <%= link_to 'See more details', tour_path(tour), class: "btn btn-primary" %>
+
+      </div>
+
     </div>
-  </div>
+  <% end %>
+
 </div>
 
 
