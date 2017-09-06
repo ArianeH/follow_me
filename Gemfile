@@ -33,7 +33,6 @@ end
 gem "pundit"
 
 gem "simple_calendar", "~> 2.0"
-gem 'em-hiredis'
 gem 'redis'
 
 group :development, :test do
