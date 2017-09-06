@@ -1,5 +1,6 @@
 .pending-booking-header {
-  margin: 10px;
+  margin: 20px 0px 20px 15px;
+  color: #63bead;
 }
 
 .message-link:hover {
@@ -24,16 +25,6 @@
   margin-right: 20px;
 }
 
-.message-heading {
-  font-size: 18px;
-  font-weight: bolder;
-  color: #868686;
-}
-
-.message-heading {
-  text-decoration: none;
-}
-
 .booking-index {
   display: flex;
   font-family: "Open Sans", "Helvetica", "sans-serif";
@@ -43,7 +34,7 @@
 }
 
 .booking-tab {
-  padding: 10px 10px 0px 5px;
+  padding: 0px 10px 0px 5px;
 }
 
 .booking-tab-active {
@@ -58,10 +49,8 @@
 }
 
 .message-box {
-  border: 1px solid #d6d6d6;
   margin: 30px 0px 10px 0px;
   border-radius: 4px;
-  box-shadow: 3px 3px 8px #d6d6d6;
   background-color: white;
   height: 80vh;
 }
@@ -111,13 +100,14 @@
 }
 
 .chat-header {
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
+  color: #63bead;
 }
 
 .messages {
-    overflow-y: scroll;
-    height: 53vh;
-    padding-right: 20px;
+  overflow-y: scroll;
+  height: 55vh;
+  padding-right: 20px;
 //   font-size: 15px;
 //   color: #868686;
 //   background-color: #ffffff;
@@ -135,14 +125,19 @@
   &.right {
     // flex-direction: row-reverse;
     border-bottom: 1px solid #f7f7f7;
-    .message-content {
-    }
   }
+}
+
+.message_content > textarea {
+  height: 12vh !important;
+}
+
+.message_content > input {
+  height: 5vh !important;
 }
 
 #create-message {
   padding-right: 20px;
-  height: 15vh;
 //   background-color: #ffffff;
 //   margin-bottom: 20px;
 //   border: 1px solid #ececec;
@@ -150,6 +145,11 @@
 
 #create-message > form {
   margin-top: 5px !important;
+  // display: -webkit-box;
+}
+
+.send-btn {
+  text-align: right;
 }
 
 .message-grey {
@@ -185,7 +185,7 @@
 }
 
 .cancel-booking {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 20px 0px;
   font-size: 12px;
   text-align: right;
   margin-right: 30px;
@@ -201,9 +201,42 @@
 }
 
 .booking-info-new {
-  color: bolder !important;
+  // color: #63bead !important;
+  font-weight: bolder;
 }
 
-// .booking-info {
-//   font-weight: lighter;
-// }
+.original-message-heading {
+  font-size: 18px;
+  // font-weight: bolder;
+  color: #868686;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.message-heading-new {
+  color: #63bead;
+  font-weight: bolder;
+}
+
+
+#new_message {
+  display: flex;
+  align-items: flex-end;
+  // margin-bottom: 0px;
+}
+
+.message_content {
+  flex-grow: 1;
+}
+
+#message_content {
+  width: 100%;
+}
+
+#message_content > textarea {
+  height: 20vh;
+}
+
+.send-btn {
+  height: 40px;
+  margin-left: 10px;
+}
