@@ -13,7 +13,7 @@
           <%= link_to(booking_path(booking), remote: true, class: "message-link") do %>
 
           <div class="booking-list booking-tab">
-            <div class="message-heading"><%= booking.visit.tour.name %></div>
+            <div id="message-heading-<%= booking.id %>" class="message-heading original-message-heading"><%= booking.visit.tour.name %></div>
             <div class="booking-index">
               <div class="message-img"> <%= cl_image_tag booking.visit.tour.guide.photo.path, width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %></div>
               <div class="booking-content">
@@ -93,6 +93,7 @@
               }
               else { // we received a new message on another discussion
                 $("#booking-info-<%= booking.id %>").addClass("booking-info-new");
+                $("#message-heading-<%= booking.id %>").addClass("message-heading-new")
               }
             }
           }

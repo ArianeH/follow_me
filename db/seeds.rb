@@ -12,6 +12,7 @@ Interest.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 user_1 = Guide.create(first_name: "Jonas", last_name: "Schwimmer", age: 29, email: "jonas@wagon.com", password: "hellohello", description: "Infuriatingly humble problem solver. Student. Thinker. Gamer. Zombie maven. Music nerd. Creator. Introvert.", interest1: "beer", interest2: "music", interest3: "cutlery")
 user_1.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504189625/xrhm0mndd7v9g4fxrr2h.jpg"
 

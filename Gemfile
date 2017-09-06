@@ -7,7 +7,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'puma'
 gem 'rails', '5.0.5'
-gem 'redis'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -34,6 +33,7 @@ end
 gem "pundit"
 
 gem "simple_calendar", "~> 2.0"
+gem 'redis', "3.3.3"
 
 group :development, :test do
   gem 'pry-byebug'
