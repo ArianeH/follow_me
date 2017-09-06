@@ -48,9 +48,56 @@ user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v150462491
 user_12 = Guide.create(first_name: "Martha", last_name: "Smith", age: 29, email: "martha@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
 user_12.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
-# user_13 = User.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
-# user_14 = User.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "lucas@wagon.com", password: "hellohello", description: "Text here")
-# user_15 = User.create(first_name: "Emma", last_name: "Allen", age: 22, email: "emma@wagon.com", password: "hellohello", description: "Text here")
+user_13 = Guide.create(first_name: "George", last_name: "Thomson", age: 32, email: "george@wagon.com", password: "hellohello", description: "Text here")
+user_13.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_14 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "a@wagon.com", password: "hellohello", description: "Text here")
+user_14.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_15 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "b@wagon.com", password: "hellohello", description: "Text here")
+user_15.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_16 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "c@wagon.com", password: "hellohello", description: "Text here")
+user_16.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_17 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "d@wagon.com", password: "hellohello", description: "Text here")
+user_17.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_18 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "e@wagon.com", password: "hellohello", description: "Text here")
+user_18.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_19 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "f@wagon.com", password: "hellohello", description: "Text here")
+user_19.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_20 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "g@wagon.com", password: "hellohello", description: "Text here")
+user_20.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_21 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "h@wagon.com", password: "hellohello", description: "Text here")
+user_21.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_22 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "i@wagon.com", password: "hellohello", description: "Text here")
+user_22.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_23 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "l@wagon.com", password: "hellohello", description: "Text here")
+user_23.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_24 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "m@wagon.com", password: "hellohello", description: "Text here")
+user_24.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_25 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "n@wagon.com", password: "hellohello", description: "Text here")
+user_25.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_26 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "o@wagon.com", password: "hellohello", description: "Text here")
+user_26.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_27 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "p@wagon.com", password: "hellohello", description: "Text here")
+user_27.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_28 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "q@wagon.com", password: "hellohello", description: "Text here")
+user_28.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+
+user_29 = Guide.create(first_name: "Lucas", last_name: "Baker", age: 40, email: "r@wagon.com", password: "hellohello", description: "Text here")
+user_29.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
 
 #Tours created by user_1
@@ -309,6 +356,293 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_15
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15.id)
 
 
+tour_16 = Tour.new(city: "Berlin", address: "Oranienstraße 125, 10969 Berlin, Germany",
+  description: "Find out what Berlin´s local communities are doing about resourcing,
+  recycling and establishing networks to create a sustainable urban environment on this
+  fascinating and insightful tour. We´ll take a look at designated areas and projects
+  for sustainable living that are of vital importance to Berlin citizens who see both
+    the dangers and opportunities of unwanted space and community action to create,
+    preserve and revitalize the city landscape..", attendants: 3, price: 10,
+  name: "Green Berlin")
+tour_16.guide = user_13
+tour_16.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/Green_Berlin_hxl3c1.jpg"
+tour_16.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_16.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_16.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_16.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_16.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_16.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_16.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_16.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_16.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_16.id)
+
+tour_17 = Tour.new(city: "Berlin", address: "Landesvertretung Hamburg, Jägerstraße 1, 10117 Berlin, Germany",
+  description: "From alternative art spaces in Friedrichshain to underground bunkers in Mitte, Berlin boasts a thriving,
+  dynamic art scene rivaled by few other cities in the world. We will visit ten contemporary art galleries
+  in Berlin that represent the best of what the city’s art world has to offer.", attendants: 4, price: 7,
+  name: "Hidden Art Galleries")
+tour_17.guide = user_14
+tour_17.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696550/hidden_art_galleries_lpboi3.jpg"
+tour_17.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_17.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_17.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_17.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_17.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_17.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_17.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_17.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_17.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_17.id)
+
+tour_18 = Tour.new(city: "Berlin", address: "Französische Straße, 10117 Berlin, Germany",
+  description: "We will deep dive into the modern art scene in Berlin.
+  We will visit the best modern art galleries and museums in Germany's art capital
+  showcasing the most dynamic and diverse up-and-comers, mostly from in or around Berlin
+  but also from around the world", attendants: 2, price: 10,
+  name: "Modern Art")
+tour_18.guide = user_16
+tour_18.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/contemporary_art_wkcftu.jpg"
+tour_18.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_18.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_18.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_18.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_18.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_18.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_18.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_18.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_18.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_18.id)
+
+tour_19 = Tour.new(city: "Berlin", address: "Tieckstraße 1, 10115 Berlin, Germany",
+  description: "In a city so well known for its arts scene, it would only make sense that this
+  fact would be evident on the very streets of Berlin. Indeed, renowned sculptures can be found
+  throughout the city, many of which offer an aesthetic interpretation of the city’s distinct
+  character and history. During the tour we will discover the top eight most interesting ones.", attendants: 3, price: 8,
+  name: "Sculptures in Berlin")
+tour_19.guide = user_17
+tour_19.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696550/sculptures_in_berlin_z3uc38.jpg"
+tour_19.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_19.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_19.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_19.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_19.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_19.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_19.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_19.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_19.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_19.id)
+
+tour_20 = Tour.new(city: "Berlin", address: "Invalidenstraße 42, 10115 Berlin, Germany",
+  description: "Berlin is packed with WWII history and now, it is up to you to discover it.
+  Travel through time, listen to incredible stories and enjoy highlights and hidden gems.", attendants: 4, price: 20,
+  name: "WWII History")
+tour_20.guide = user_18
+tour_20.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696551/wwii_history_bxm9v7.jpg"
+tour_20.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_20.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_20.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_20.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_20.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_20.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_20.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_20.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_20.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_20.id)
+
+tour_21 = Tour.new(city: "Berlin", address: "Pasteurstraße 8, 10407 Berlin, Germany",
+  description: "Discover dozens of abandoned historical spots in Berlin that only locals know about and hear local stories against the backdrop of the stunning Humboldt University", attendants: 5, price: 0,
+  name: "Abandoned Historical Sites")
+tour_21.guide = user_19
+tour_21.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696551/Abandoned_Historical_Sites_ic5rh8.jpg"
+tour_21.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_21.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_21.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_21.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_21.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_21.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_21.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_21.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_21.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_21.id)
+
+tour_22 = Tour.new(city: "Berlin", address: "Tunnel Alexanderpl. 7, 10178 Berlin, Germany",
+  description: "If you are into action and adrenaline, this tour will definitely be a blast for you. Base Flying is a combination of bungee and base jumping.
+  We will take an elevator to the rooftop terrace of the 125 meter high Park Inn hotel, but we won’t stay there for long ;)", attendants: 1, price: 25,
+  name: "Base Flying")
+tour_22.guide = user_20
+tour_22.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/Base_flying_wkzr2x.jpg"
+tour_22.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_22.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_22.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_22.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_22.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_22.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_22.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_22.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_22.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_22.id)
+
+tour_23 = Tour.new(city: "Berlin", address: "Karl-Liebknecht-Str. 29, 10178 Berlin, Germany",
+  description: "If touring the city on a gourmet bus sounds too boring for you, this is one of the Berlin activities that might be an alternative. On a Hot Rod City-Tour you get to zip around Berlin with a small group of soap box cars.
+They might look a little slow but are incredibly powerful with their 14 horsepower motors. Don’t be fooled, the soap boxes will accelerate up to 88 km/h and can really send you flying.
+Driver’s license and good mood required.", attendants: 5, price: 6,
+  name: "Hot Rod Tour")
+tour_23.guide = user_21
+tour_23.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696550/Hot_rod_sszk4r.jpg"
+tour_23.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_23.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_23.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_23.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_23.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_23.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_23.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_23.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_23.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_23.id)
+
+tour_24 = Tour.new(city: "Berlin", address: "Eichendorffstraße 3-4, 10115 Berlin, Germany",
+  description: "In the middle of Berlin you will run the house wall of the Andel's Hotel
+  from an altitude of 40m, secured by an alpine abseil system.", attendants: 1, price: 20,
+  name: "House Running Berlin")
+tour_24.guide = user_22
+tour_24.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696550/House_running_t5wqyy.jpg"
+tour_24.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_24.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_24.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_24.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_24.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_24.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_24.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_24.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_24.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_24.id)
+
+tour_25 = Tour.new(city: "Berlin", address: "Rudolfstraße 10-11, 10245 Berlin, Germany",
+  description: "Berlin has many allotment gardens, with their picturesque,
+  countrified air as their quirky sense of design. Charlottenburg's 'Bahnlandwirtschaft' gardens feel particularly special;
+  improbably wedged between railway tracks and residential streets, they form an extensive yet secluded
+  enclave that's only accessible via a nondescript gate in a wall.", attendants: 3, price: 0,
+  name: "Country style gardens")
+tour_25.guide = user_23
+tour_25.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/country_style_gardens_a84oiv.jpg"
+tour_25.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_25.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_25.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_25.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_25.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_25.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_25.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_25.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_25.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_25.id)
+
+tour_26 = Tour.new(city: "Berlin", address: "Persiusstraße 7A, 10245 Berlin, Germany",
+  description: "Experience Berlin from a totally new perspective on this 1.5-hour tour by stand-up
+  paddle board. Discover the Osthafen and paddle along the River Spree between
+  the Oberbaum Bridge, the Media Spree, the Molecule Man, and Elsenbrücke.", attendants: 5, price: 25,
+  name: "Paddle Boarding Tour")
+tour_26.guide = user_24
+tour_26.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696550/stand-up-paddling_42887_m_n_fhbbwx.jpg"
+tour_26.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_26.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_26.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_26.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_26.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_26.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_26.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_26.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_26.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_26.id)
+
+tour_27 = Tour.new(city: "Berlin", address: "Forster Str. 39-40, 10999 Berlin, Germany",
+  description: "David Bowie and Berlin is a long and intense relationship.
+  Discovering the city in the early 1970’s Bowie finally started to work in the city back in 1976 at legendary Hansa Studios together with his mate Iggy Pop.
+  We start the Bowie Berlin Walk in front Martin-Gropius-Bau and go on to legendary Hansa Studios -
+  the musical center of Bowie’s Berlin universe. From there we check over to Potsdamer Platz and Brandenburg Gate, heading to Berlin Reichstag - here Bowie had a very
+  special live concert back in 1987 during his Glass Spider Tour - directly at the Berlin Wall. From Friedrichstrasse station we take the S-Bahn for a
+  short ride to Kleistpark area in Schöneberg where Bowie & Iggy used to live and end the tour with a free softdrink at Café Neues Ufer.",
+  attendants: 4, price: 9,
+  name: "David Bowie walk")
+tour_27.guide = user_25
+tour_27.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/david_bowie_ucwdge.jpg"
+tour_27.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_27.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_27.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_27.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_27.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_27.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_27.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_27.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_27.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_27.id)
+
+tour_28 = Tour.new(city: "Berlin", address: "Wrangelstraße 130-131, 10997 Berlin, Germany",
+  description: "Are you passionate about music? With this tour you will visit former and recent studio parts in the Hansa building.
+  Countless international and national artists and bands have streamed in and out here – David Bowie, Iggy Pop, Brian Eno, U2, Depeche Mode, Nick Cave, R.E.M.,
+  Snow Patrol, The Hives, Supergrass, Nils Landgren, David Byrne, Marillion, Killing Joke, Real Life, Bronski Beat, Crime & the City Solution, Siouxsie and the Banshees,
+  Japan, Paul Anka, Anne Clark, Alphaville, Tangerine Dream, Boney M., Nina Hagen, Einstürzende Neubauten (Collapsing new buildings) and many more… the list is really endless.",
+  attendants: 4, price: 13,
+  name: "Hansa Studio Tour")
+tour_28.guide = user_26
+tour_28.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/hansa_studios_ektmij.jpg"
+tour_28.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_28.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_28.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_28.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_28.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_28.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_28.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_28.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_28.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_28.id)
+
+tour_29 = Tour.new(city: "Berlin", address: "Schmollerpl. 22, 12435 Berlin, Germany",
+  description: "This tour visits the best hidden venues all over town, not just the
+  ones that are geographically convenient and changes depending on the events of the night.
+  So prepare yourself for a fun night of music and drinking in the city where music really comes to life.",
+  attendants: 5, price: 5,
+  name: "Alternative music")
+tour_29.guide = user_27
+tour_29.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504696549/alternative_music_pg0c9b.jpg"
+tour_29.save
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_29.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_29.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_29.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_29.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_29.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_29.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_29.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_29.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_29.id)
+
+
+
+visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_15.id)
+visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_15.id)
+visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_15.id)
+visit_4 = Visit.create(start_time: '2017-09-20 18:00:00 +0200', tour_id: tour_15.id)
+visit_5 = Visit.create(start_time: '2017-09-26 18:00:00 +0200', tour_id: tour_15.id)
+visit_6 = Visit.create(start_time: '2017-09-09 12:00:00 +0200', tour_id: tour_15.id)
+visit_7 = Visit.create(start_time: '2017-09-16 12:00:00 +0200', tour_id: tour_15.id)
+visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_15.id)
+visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15.id)
+
+
 # tour_17 = Tour.new(city: "London", address: "St John St London EC1V 4NR, United Kingdom", description: "3-hour afternoon walking tour, taking in London’s historical pubs. Visit four traditional London pubs in London Bridge, the City of London, Fleet Street, and Holborn", attendants: 2, price: 15, name: "The Spirit of London")
 # tour_17.guide = user_6
 # tour_17.photo_url = "https://static.pexels.com/photos/326807/pexels-photo-326807.jpeg"
@@ -334,37 +668,74 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15
 # visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_18.id)
 # visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_18.id)
 
-interest_1 = Interest.create(name: "Hiking")
-interest_2 = Interest.create(name: "Food and Drink")
-interest_3 = Interest.create(name: "Party")
-interest_4 = Interest.create(name: "Walking")
-interest_5 = Interest.create(name: "Sports")
-interest_6 =  Interest.create(name: "History")
-interest_7 = Interest.create(name: "Art")
-interest_8 = Interest.create(name: "Adventure")
-interest_9 = Interest.create(name: "Beach")
-interest_10 = Interest.create(name: "Nature")
-interest_11 = Interest.create(name: "Alternative")
-interest_12 = Interest.create(name: "Must-see")
+interest_1 = Interest.create(name: "Food and Drink")
+interest_2 = Interest.create(name: "Walking")
+interest_3 = Interest.create(name: "Sports")
+interest_4 =  Interest.create(name: "History")
+interest_5 = Interest.create(name: "Art")
+interest_6 = Interest.create(name: "Adventure")
+interest_7 = Interest.create(name: "Nature")
+interest_8 = Interest.create(name: "Alternative")
+interest_9 = Interest.create(name: "Music")
 
-tour_1.interests << interest_2
-tour_2.interests << interest_4
-tour_2.interests << interest_11
-tour_3.interests << interest_4
-tour_4.interests << interest_2
-tour_4.interests << interest_3
-tour_6.interests << interest_5
-tour_7.interests << interest_5
-tour_8.interests << interest_5
-tour_9.interests << interest_2
-tour_11.interests << interest_6
+
+#adventure
+tour_22.interests << interest_6
+tour_23.interests << interest_6
+tour_24.interests << interest_6
+
+#alternative
+tour_2.interests << interest_8
+tour_3.interests << interest_8
+tour_7.interests << interest_8
+tour_8.interests << interest_8
+tour_11.interests << interest_8
+tour_12.interests << interest_8
+tour_15.interests << interest_8
+tour_16.interests << interest_8
+
+#art
+tour_3.interests << interest_5
+tour_17.interests << interest_5
+tour_18.interests << interest_5
+tour_19.interests << interest_5
+
+#food and drink
+tour_1.interests << interest_1
+tour_4.interests << interest_1
+tour_9.interests << interest_1
+tour_12.interests << interest_1
+tour_15.interests << interest_1
+
+#history
 tour_11.interests << interest_4
-tour_12.interests << interest_11
-tour_13.interests << interest_6
-tour_15.interests << interest_12
+tour_13.interests << interest_4
+tour_20.interests << interest_4
+tour_21.interests << interest_4
 
-# interest_2.tours << tour_1
-# interest_2.tours << tour_5
+#sport
+tour_22.interests << interest_3
+tour_24.interests << interest_3
+tour_26.interests << interest_3
+
+#music
+tour_7.interests << interest_9
+tour_27.interests << interest_9
+tour_28.interests << interest_9
+tour_29.interests << interest_9
+
+#walking
+tour_3.interests << interest_2
+tour_8.interests << interest_2
+tour_11.interests << interest_2
+tour_16.interests << interest_2
+tour_19.interests << interest_2
+tour_21.interests << interest_2
+tour_7.interests << interest_2
+tour_27.interests << interest_2
+tour_28.interests << interest_2
+tour_29.interests << interest_2
+
 
 
 # # Examples:
