@@ -33,7 +33,7 @@ end
 gem "pundit"
 
 gem "simple_calendar", "~> 2.0"
-gem 'redis'
+gem 'redis', "3.3.3"
 
 group :development, :test do
   gem 'pry-byebug'
