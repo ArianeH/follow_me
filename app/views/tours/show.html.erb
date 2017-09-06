@@ -8,9 +8,9 @@
         <div class="guide-information col-xs-6">
             <h1 class="tour-guide-name padding-bottom"><strong>Meet your guide:</strong></h1>
             <h1 class="tour-guide-name padding-bottom"><%= @tour.guide.first_name %> <%= @tour.guide.last_name %></h1>
-            <p><%= @tour.guide.age %> years old | <%= @tour.city %></p>
+            <p class="tour-guide-name-and-description"><%= @tour.guide.age %> years old | <%= @tour.city %></p>
             <h1 class="about-me padding-bottom margin-top">About Me</h1>
-            <p><%= @tour.guide.description %></p>
+            <p class="tour-guide-name-and-description"><%= @tour.guide.description %></p>
         </div>
       </div>
     </div>
