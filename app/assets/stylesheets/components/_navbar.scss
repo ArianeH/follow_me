@@ -16,6 +16,7 @@
 .navbar-wagon-brand img {
   height: 32px;
   margin-left: 20px;
+  margin-right: 50px;
 }
 
 /* User Avatar */
@@ -44,7 +45,7 @@
 /* Left section */
 .left-aligned-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 350px;
 }
 
@@ -52,6 +53,10 @@
 .navbar-left.navbar-wagon-link {
   cursor: pointer;
   padding: 0 20px;
+}
+
+.about-us-link {
+  padding-right: 20px;
 }
 
 /* Navbar link */
