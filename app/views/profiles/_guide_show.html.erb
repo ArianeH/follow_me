@@ -9,13 +9,14 @@
 
             <div class="col-xs-8">
               <div class="offered-tours-content">
-                <p class="tour-guide-text"><b><%= tour.name %></b></p>
+                <p class="guide-titles"><b><%= tour.name %></b></p>
+                <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
                 <p class="tour-guide-text"><%= tour.description %></p>
                 <p class="tour-guide-text">Price: <b>
                 <% if tour.price == 0 %>
                   Free
                 <% else %>
-                  <%= tour.price %></b></p>
+                  <%= tour.price %>$</b></p>
                 <% end %>
                 <p class="tour-guide-text">Max. number of attendants: <b><%= tour.attendants %></b></p>
               </div>
@@ -23,7 +24,7 @@
 
             <div class="col-xs-4 wrapper-details-link">
 
-              <%= link_to 'See more details', tour_path(tour), class: "btn-secondary" %>
+              <%= link_to 'See more details', tour_path(tour), class: "btn btn-primary" %>
 
           </div>
         </div>
