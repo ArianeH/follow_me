@@ -12,6 +12,9 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.guide-information {
+  margin-top: 45px !important;
+}
 
 .wrapper-offered-tours {
   display: flex;
@@ -36,6 +39,11 @@
   font-size: 20px;
   font-family: 'Raleway', regular;
   text-transform: uppercase;
+}
+
+.tour-guide-name-and-description {
+  font-size: 13px !important;
+  color: #00a19a !important;
 }
 
 #offered-tours-heading {
