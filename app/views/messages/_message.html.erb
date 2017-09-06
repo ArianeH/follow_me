@@ -4,7 +4,7 @@
    <% if message.user.photo? %>
    <%= cl_image_tag message.user.photo.path, width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %>
    <% else %>
-   <%= image_tag "images/default_avatar", width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %>
+   <%= image_tag "images/default_avatar.png", width: 50, height: 50, crop: :fill, quality: 100, class: "message-avatar" %>
    <% end %>
  </div>
  <div class="message-body">
