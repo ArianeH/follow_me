@@ -12,7 +12,7 @@ Interest.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_1 = Guide.create(first_name: "John", last_name: "Anderson", age: 21, email: "chris@wagon.com", password: "hellohello", description: "Infuriatingly humble problem solver. Student. Thinker. Gamer. Zombie maven. Music nerd. Creator. Introvert.", interest1: "beer", interest2: "music", interest3: "cutlery")
+user_1 = Guide.create(first_name: "John", last_name: "Anderson", age: 21, email: "john@wagon.com", password: "hellohello", description: "Infuriatingly humble problem solver. Student. Thinker. Gamer. Zombie maven. Music nerd. Creator. Introvert.", interest1: "beer", interest2: "music", interest3: "cutlery")
 user_1.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624752/pexels-photo-415326_bt2hav.jpg"
 
 user_2 = Guide.create(first_name: "Maria", last_name: "Smith", age: 28, email: "maria@wagon.com", password: "hellohello", description: "Professional web lover. Lifelong tv scholar. Proud coffee expert. Pop culture specialist. Extreme beer enthusiast. Problem solver. Food trailblazer.")
