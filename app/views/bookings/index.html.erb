@@ -2,6 +2,7 @@
 <div class="container">
   <div class="message-box">
     <div class="row">
+    <% if @bookings.present? %>
       <div class="col-xs-4">
 
         <h1 class="pending-booking-header">PENDING BOOKINGS</h1>
@@ -56,6 +57,11 @@
           <%= render "message_show", booking: @bookings.first %>
         </div>
       </div>
+      <% else %>
+        <div class="col-xs-12">
+          <h1>No bookings yet</h1>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
