@@ -1,18 +1,16 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
+
 Message.destroy_all
 Booking.destroy_all
 User.destroy_all
 Guide.destroy_all
 Tour.destroy_all
 Interest.destroy_all
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 
+# Guides
 user_1 = Guide.create(first_name: "Jonas", last_name: "Schwimmer", age: 29, email: "jonas@wagon.com", password: "hellohello", description: "Infuriatingly humble problem solver. Student. Thinker. Gamer. Zombie maven. Music nerd. Creator. Introvert.", interest1: "beer", interest2: "music", interest3: "cutlery")
 user_1.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504189625/xrhm0mndd7v9g4fxrr2h.jpg"
 
@@ -37,16 +35,16 @@ user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v150453729
 user_8 = Guide.create(first_name: "Michael", last_name: "Schulz", age: 32, email: "michael@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
 user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-220453_c45gah.jpg"
 
-user_9 = Guide.create(first_name: "Katharina", last_name: "Meier", age: 33, email: "katarina@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
+user_9 = Guide.create(first_name: "Vanessa", last_name: "Maier", age: 33, email: "katarina@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
 user_9.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/483316835_jh7qsj.jpg"
 
 user_10 = Guide.create(first_name: "Carolin", last_name: "Schmidt", age: 26, email: "carolin@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
 user_10.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504442085/kaci-baum-266663_bcoayr.jpg"
 
-user_11 = Guide.create(first_name: "Katrin", last_name: "Maier", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Gamer. Social media nerd. Hipster-friendly entrepreneur. Travel expert and bitcoin enthusiast.")
+user_11 = Guide.create(first_name: "Katrin", last_name: "Fischer", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Born and raised in Berlin. Animal friend. Coffee enthusiast and Wine lover. Passion for travelling")
 user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504087684/1.jpg"
 
-user_12 = Guide.create(first_name: "Jenny", last_name: "Brandt", age: 24, email: "jenny@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Coffee enthusiast.")
+user_12 = Guide.create(first_name: "Jenny", last_name: "Brandt", age: 24, email: "jenny@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Beer enthusiast.")
 user_12.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
 
 user_13 = Guide.create(first_name: "Emilia", last_name: "Warren", age: 29, email: "emilia@wagon.com", password: "hellohello", description: "Amateur bacon enthusiast. Devoted writer. Falls down a lot. Friend of animals everywhere.")
@@ -100,6 +98,8 @@ user_28.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v150462493
 user_29 = Guide.create(first_name: "Tom", last_name: "Sommer", age: 26, email: "r@wagon.com", password: "hellohello", description: "Internet junkie. Coffee ninja. General social media specialist.")
 user_29.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706513/young-african-professional-smiling_dylnyx.jpg"
 
+# Demo User
+user_30 = User.create(first_name: "Kajsa", last_name: "K", email: "k@wagon.com", password: "hello1", photo_url: "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504773698/avatar_k_ww8p9s.jpg")
 
 #Tours created by user_1
 tour_1 = Tour.new(city: "Berlin", address: "Danziger Str. 61 10435 Berlin, Germany",
@@ -655,11 +655,6 @@ visit_8 = Visit.create(start_time: '2017-09-23 12:00:00 +0200', tour_id: tour_15
 visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_15.id)
 
 
-# tour_17 = Tour.new(city: "London", address: "St John St London EC1V 4NR, United Kingdom", description: "3-hour afternoon walking tour, taking in London’s historical pubs. Visit four traditional London pubs in London Bridge, the City of London, Fleet Street, and Holborn", attendants: 2, price: 15, name: "The Spirit of London")
-# tour_17.guide = user_6
-# tour_17.photo_url = "https://static.pexels.com/photos/326807/pexels-photo-326807.jpeg"
-# tour_17.save
-
 # visit_1 = Visit.create(start_time: '2017-09-02 11:00:00 +0200', tour_id: tour_17.id)
 # visit_2 = Visit.create(start_time: '2017-09-05 18:00:00 +0200', tour_id: tour_17.id)
 # visit_3 = Visit.create(start_time: '2017-09-13 18:00:00 +0200', tour_id: tour_17.id)
@@ -756,8 +751,4 @@ tour_26.interests << interest_7
 tour_2.interests << interest_7
 
 
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
 
