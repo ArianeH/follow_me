@@ -188,16 +188,28 @@
   margin: 0px 0px 20px 0px;
   font-size: 12px;
   text-align: right;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .cancel-booking a:hover {
   text-decoration: none;
   cursor: pointer;
+  color: #868686;
 }
 
 .cancel-booking a {
-  color: #868686;
+  color: #989898;
+}
+
+.cancel-booking-link {
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  padding: 3px 6px;
+}
+
+.cancel-booking-link:hover {
+  border: 1px solid #b3b2b2;
+  border-radius: 5px;
 }
 
 .booking-info-new {
