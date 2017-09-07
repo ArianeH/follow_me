@@ -131,7 +131,7 @@ visit_14 = Visit.create(start_time: '2017-09-11 15:00:00 +0200', tour_id: tour_1
 tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germany",
   description: "Follow the route of the Berlin Wall and hear the history of it on this private biking tour.
   Explore the less known districts and get a glimpse of daily life of Berliners.",
-  attendants: 5, price: 15, name: "Berlin's Secret Districts")
+  attendants: 5, price: 5, name: "Berlin's Secret Districts")
 tour_2.guide = user_9
 tour_2.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453515/af8c5eada08428f6cdc514915eefeb18_zknijn.jpg"
 tour_2.save
