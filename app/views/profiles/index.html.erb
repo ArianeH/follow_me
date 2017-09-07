@@ -54,17 +54,18 @@
       </div>
     </div>
   <% end %>
-</div>
 
-<% if @guides.any? %>
-  <div id="guide-info">
-    <div class="row">
-      <div class="col-xs-12">
-        <%= render "guide_show", guide: @guides.first %>
+  <% if @guides.any? %>
+    <div id="guide-info">
+      <div class="row">
+        <div class="col-xs-12">
+          <%= render "guide_show", guide: @guides.first %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
 
 <%= content_for :after_js do %>
   <script>
