@@ -59,7 +59,8 @@
       </div>
       <% else %>
         <div class="col-xs-12">
-          <h1>No bookings yet</h1>
+          <h1>No bookings yet, you can go back to the home page to start booking a tour</h1>
+          <%= link_to "Go back to home page", root_path, class: "btn btn-primary button-margin-left" %>
         </div>
       <% end %>
     </div>
