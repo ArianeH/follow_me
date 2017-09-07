@@ -1,14 +1,16 @@
 <div id="tour-guide-wrapper">
-    <!-- <img class="profile-image" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> -->
-
   <% guide.tours.each do |tour| %>
-    <div class="row wrapper-offered-tours">
-      <!-- Tour -->
+    <div class="wrapper-offered-tours">
 
-      <div class="col-xs-8">
+      <div class="tour-illustration" style="background-image: url('<%= cl_image_path tour.photo.path %>')"></div>
+
+      <div class="tour-details">
         <div class="offered-tours-content">
           <p class="guide-titles"><%= tour.name %></p>
-          <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
+          <div class="tour-guide-details">
+            <%= cl_image_tag guide.photo.path, width: 200, height: 200, crop: :fill, quality: 100, class: "card-user avatar" %>
+            <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
+          </div>
           <p class="tour-guide-text"><%= tour.description %></p>
           <p class="tour-guide-text"><b>Price: </b>
             <% if tour.price == 0 %>
@@ -19,17 +21,12 @@
           </p>
           <p class="tour-guide-text"><b>Max. number of attendants: </b><%= tour.attendants %></p>
         </div>
+        <div class="wrapper-details-link">
+          <%= link_to 'See more details', tour_path(tour), class: "btn btn-primary tour-cta" %>
+        </div>
       </div>
-
-      <div class="col-xs-4 wrapper-details-link">
-
-        <%= link_to 'See more details', tour_path(tour), class: "btn btn-primary" %>
-
-      </div>
-
     </div>
   <% end %>
-
 </div>
 
 
