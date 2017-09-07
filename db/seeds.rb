@@ -35,7 +35,7 @@ user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v150453729
 user_8 = Guide.create(first_name: "Michael", last_name: "Schulz", age: 32, email: "michael@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
 user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-220453_c45gah.jpg"
 
-user_9 = Guide.create(first_name: "Katrin", last_name: "Fischer", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Born and raised in Berlin. Animal friend. Coffee enthusiast and Wine lover. Passion for travelling")
+user_9 = Guide.create(first_name: "Katrin", last_name: "Fischer", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Traveller. Born and raised in Berlin. Animal friend. Coffee enthusiast and Wine lover.")
 user_9.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504087684/1.jpg"
 
 user_10 = Guide.create(first_name: "Carolin", last_name: "Schmidt", age: 26, email: "carolin@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
@@ -132,7 +132,7 @@ tour_2 = Tour.new(city: "Berlin", address: "Panorama Str. 1a 10178 Berlin, Germa
   description: "Follow the route of the Berlin Wall and hear the history of it on this private biking tour.
   Explore the less known districts and get a glimpse of daily life of Berliners.",
   attendants: 5, price: 15, name: "Berlin's Secret Districts")
-tour_2.guide = user_2
+tour_2.guide = user_9
 tour_2.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504453515/af8c5eada08428f6cdc514915eefeb18_zknijn.jpg"
 tour_2.save
 
@@ -281,7 +281,7 @@ tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany"
   description: "Did you know that Berlin is filled with beautiful metro stations? Let's hop on the
   subway and explore the amazing history and vibe of one of the worlds most puzzling subway systems.", attendants: 5, price: 5,
   name: "Metro Tour")
-tour_11.guide = user_9
+tour_11.guide = user_2
 tour_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504453511/40574921_2cfbfcaaca-1_sc0fhu.jpg"
 tour_11.save
 
