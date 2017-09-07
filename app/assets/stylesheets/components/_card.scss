@@ -39,38 +39,44 @@
 // Carousel styles
 
 .card.card-carousel {
+  display: flex;
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
-  position: relative;
-}
-.card-user {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  // width: 40px;
-  // height: 40px;
-  border-radius: 50%;
-  background: transparent;
-  &.avatar {
-    width: 50px !important;
-    height: 50px !important;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  img {
+    border: 2px solid #fff;
   }
 }
-.card-description {
-    position: absolute;
-    bottom: 30%;
-    left: 30%;
-    width: 60px;
+
+.card-user {
+  margin-right: 10px;
+  border-radius: 50%;
+  background: transparent;
+
+  &.avatar {
+    width: 37px !important;
+    height: 37px !important;
+  }
 }
+
 .card-description h2 {
   font-size: 24px;
   font-family: "Raleway", regular;
 }
-.card-link:hover {
+.card-link:hover, .card-link:focus {
   color: white !important;
+  text-decoration: none;
 }
 .card-link {
   color: white !important;
