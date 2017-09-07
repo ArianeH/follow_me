@@ -108,6 +108,12 @@
 
 #button-b {
   width: 100% !important;
-  background-color: #60af3f;
+  background-color: rgba(255, 126, 51, 0.82);
+  border: none;
+}
+
+#button-b:hover {
+  width: 100% !important;
+  background-color: rgba(255, 94, 0, 0.78);
   border: none;
 }
