@@ -78,7 +78,7 @@ user_22 = Guide.create(first_name: "Thomas", last_name: "Voigt", age: 43, email:
 user_22.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/507480872_jtjyip.jpg"
 
 user_23 = Guide.create(first_name: "Mario", last_name: "Kuhn", age: 28, email: "l@wagon.com", password: "hellohello", description: "Tv geek. Student. General reader. Hardcore music lover. Freelance baconaholic. Proud web nerd.")
-user_23.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
+user_23.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504781716/tour_guide1_frf9pc.jpg"
 
 user_24 = Guide.create(first_name: "Lara", last_name: "Schreiber", age: 24, email: "m@wagon.com", password: "hellohello", description: "Travel trailblazer. Social media aficionado. Internet expert. Tv junkie. Avid organizer.")
 user_24.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504706512/Lindsay_Adler_distracting_background_0_hj24jr.jpg"
@@ -279,7 +279,7 @@ visit_9 = Visit.create(start_time: '2017-09-30 11:00:00 +0200', tour_id: tour_9.
 #tour_10.save
 tour_11 = Tour.new(city: "Berlin", address: "Meinekestr. 4 10719 Berlin,Germany",
   description: "Did you know that Berlin is filled with beautiful metro stations? Let's hop on the
-  subway and explore the amazing history and vibe of one of the worlds most puzzling subway systems.", attendants: 5, price: 15,
+  subway and explore the amazing history and vibe of one of the worlds most puzzling subway systems.", attendants: 5, price: 5,
   name: "Metro Tour")
 tour_11.guide = user_9
 tour_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504453511/40574921_2cfbfcaaca-1_sc0fhu.jpg"
