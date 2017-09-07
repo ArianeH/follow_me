@@ -35,14 +35,14 @@ user_7.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v150453729
 user_8 = Guide.create(first_name: "Michael", last_name: "Schulz", age: 32, email: "michael@wagon.com", password: "hellohello", description: "Music scholar. Bacon fan. Coffee lover. Pop culture maven. Web aficionado. Friendly creator.")
 user_8.photo_url = "https://res.cloudinary.com/dswtxtxqj/image/upload/v1504537297/pexels-photo-220453_c45gah.jpg"
 
-user_9 = Guide.create(first_name: "Vanessa", last_name: "Maier", age: 33, email: "katarina@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
-user_9.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/483316835_jh7qsj.jpg"
+user_9 = Guide.create(first_name: "Katrin", last_name: "Fischer", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Born and raised in Berlin. Animal friend. Coffee enthusiast and Wine lover. Passion for travelling")
+user_9.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504087684/1.jpg"
 
 user_10 = Guide.create(first_name: "Carolin", last_name: "Schmidt", age: 26, email: "carolin@wagon.com", password: "hellohello", description: "Thinker. Zombie evangelist. Web specialist. General travel scholar. Proud alcohol guru. Avid introvert. Food buff. Bacon enthusiast.")
 user_10.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504442085/kaci-baum-266663_bcoayr.jpg"
 
-user_11 = Guide.create(first_name: "Katrin", last_name: "Fischer", age: 28, email: "katrin@wagon.com", password: "hellohello", description: "Born and raised in Berlin. Animal friend. Coffee enthusiast and Wine lover. Passion for travelling")
-user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504087684/1.jpg"
+user_11 = Guide.create(first_name: "Vanessa", last_name: "Maier", age: 33, email: "katarina@wagon.com", password: "hellohello", description: "Travel ninja. Typical entrepreneur. Lifelong pop culture advocate. Twitter fanatic. Organizer. Zombie junkie.")
+user_11.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504706511/483316835_jh7qsj.jpg"
 
 user_12 = Guide.create(first_name: "Jenny", last_name: "Brandt", age: 24, email: "jenny@wagon.com", password: "hellohello", description: "Wannabe communicator. Salsa dancer. Food nerd. Beer enthusiast.")
 user_12.photo_url = "http://res.cloudinary.com/dswtxtxqj/image/upload/v1504624931/pexels-photo-137757_glphci.jpg"
