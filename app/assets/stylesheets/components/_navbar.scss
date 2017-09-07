@@ -55,14 +55,19 @@
   padding: 0 20px;
 }
 
-.about-us-link {
-  padding-right: 40px;
+.item-link {
+  margin-top: 0px;
+  color: white;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  margin-right: 40px;
+  padding-bottom: 8px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 12px;
   font-family: 'Raleway', sans-serif;
 }
@@ -102,13 +107,6 @@
   border-top: 1px solid #E6E6E6;
 }
 
-#bookings {
-  color: white;
-  font-size: 12px;
-  margin-top: 12px;
-  font-family: 'Raleway', sans-serif;
-  margin-right: 20px;
-}
 
 .avatardropdown-toggle {
   border-radius: 50%;
