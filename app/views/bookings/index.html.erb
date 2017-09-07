@@ -28,15 +28,13 @@
 
                 <p class="booking_index">
                   <% if booking.confirmed == false %>
+                    <span>Confirmation: </span><span id="booking_status_<%= booking.id %>" class="pending">Pending</span>
 
-                  <span>Confirmation: </span><span class="pending">Pending</span>
-
-                  <% if current_user.type == "Guide" %>
-                  <%= link_to "Accept", booking_path(booking), method: :patch %>
-                  <% end %>
-
+                    <% if current_user.type == "Guide" %>
+                      <%= link_to "Accept", booking_path(booking), method: :patch %>
+                    <% end %>
                   <% else %>
-                  <span>Confirmation: </span><span class="accepted">Accepted</span>
+                    <span>Confirmation: </span><span class="accepted">Accepted</span>
                   <% end %>
                 </p>
 
@@ -103,7 +101,23 @@
               }
             }
           }
-        });
+        }
+      );
+
+      App['booking_status_<%= booking.id %>'] = App.cable.subscriptions.create(
+        { channel: 'BookingStatusChannel', booking_id: <%= booking.id %> },
+        {
+          received: (data) => {
+            if ("<%= current_user.type %>" !== "Guide" && data.confirmed == true) {
+              bookingStatusTag = $("#booking_status_" + data.booking_id);
+              $(bookingStatusTag).html("Accepted");
+              $(bookingStatusTag).removeClass("pending");
+              $(bookingStatusTag).addClass("accepted");
+              $(bookingStatusTag).addClass("new");
+            }
+          }
+        }
+      );
     <% end %>
   </script>
 <% end %>
