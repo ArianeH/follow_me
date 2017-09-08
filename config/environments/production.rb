@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-  config.action_cable.url = "wss://www.followme.website/cable"
+  config.action_cable.url = "ws://www.followme.website/cable"
   config.action_cable.allowed_request_origins = [ "http://www.followme.website", "www.followme.website" ]
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
