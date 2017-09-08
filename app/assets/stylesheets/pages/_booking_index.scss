@@ -111,6 +111,8 @@
 
     textarea {
       resize: none;
+      min-height: 80px;
+      max-height: 80px;
       border-radius: 2px 0 0 2px;
     }
 
@@ -199,8 +201,8 @@
 }
 
 .send-btn {
-  height: 100%;
-  padding: 27px;
+  height: 80px;
+  padding: 0 27px;
   border-radius: 0 2px 2px 0;
 }
 
