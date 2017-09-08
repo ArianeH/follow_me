@@ -29,7 +29,7 @@
     bottom: 0;
     transform: translateX(-50%);
     width: 1px;
-    height: 873px;
+    height: 860px;
     background-color: #00a19a;
   }
 
@@ -116,8 +116,19 @@
     border-radius: 50%;
   }
 
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 400px;
+    background-color: #00a19a;
+  }
+
   @media (max-width: 991px) {
-    &:before {
+    &:before, &:after {
       display: none;
     }
   }
