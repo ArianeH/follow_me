@@ -49,14 +49,79 @@
 
 .booking-content {
   text-decoration: none;
+  font-size: 14px;
+
+  p {
+    margin-bottom: 8px;
+  }
 }
 
+/* MESSAGES *******************************************************************/
+
+
 .message-box {
-  padding: 23px;
+  display: flex;
+  width: 100%;
+  height: 100%;
   margin: 30px auto 80px;
   border-radius: 4px;
   background-color: white;
-  height: 80vh;
+  box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.17);
+
+  h1 {
+    padding: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    background: #56d1c8;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .messages-index {
+    padding-bottom: 20px;
+    width: 33.33333%;
+    border-right: 1px solid #d6d6d6;
+
+    h1 {
+      border-radius: 4px 0 0 0;
+    }
+
+    .list-of-messages {
+      height: 100%;
+      max-height: 456px;
+      overflow: scroll;
+
+      .booking-tab {
+        position: relative;
+        padding: 10px 20px;
+        border-bottom: 1px solid #f8f8f8;
+      }
+    }
+  }
+
+  .messages-content {
+    width: 66.66666%;
+
+    h1 {
+      border-radius: 0 4px 0 0;
+    }
+
+    textarea {
+      resize: none;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .messages {
+      overflow-y: scroll;
+      height: 100%;
+      padding: 20px;
+      min-height: 370px;
+      max-height: 370px;
+    }
+  }
 }
 
 .message-content {
@@ -71,56 +136,29 @@
 }
 
 .message-user {
-  margin-top: 15px;
   margin-right: 20px;
   font-size: 17px;
-  color: #868686;
+  color: #56d1c8;
 }
 
 .message-time {
-  margin-top: 15px;
   font-size: 12px;
   color: #868686;
   font-weight: lighter;
 }
 
-.message-img {
-  flex: 0 0 10%;
-}
-
 .message-body {
-  flex: 1 1 90%;
-}
-
-.list-of-messages {
-  border-right: 1px solid #d6d6d6;
-  margin-left: 10px;
-  height: 67vh;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 #one-chat {
-  padding: 0px 20px;
+  border-radius: 0 4px 0 0;
 }
 
 .chat-header {
   margin: 20px 0px 20px 0px;
   color: #63bead;
-}
-
-.messages {
-  overflow-y: scroll;
-  height: 55vh;
-  padding-right: 20px;
-//   font-size: 15px;
-//   color: #868686;
-//   background-color: #ffffff;
-//   padding: 20px;
-//   border: 1px solid #ececec;
-//   border-top: none;
-//   border-bottom-width: 0;
-//   max-height: calc(100vh - 70px - 45px - 61px - 30px);
-
 }
 
 .message {
@@ -141,10 +179,18 @@
 }
 
 #create-message {
-  padding-right: 20px;
-//   background-color: #ffffff;
-//   margin-bottom: 20px;
-//   border: 1px solid #ececec;
+  position: relative;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #d6d6d6;
+
+  .fa-paper-plane {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
 }
 
 #create-message > form {
@@ -153,21 +199,21 @@
 }
 
 .send-btn {
-  text-align: right;
+  height: 100%;
+  padding: 27px;
+  border-radius: 0 2px 2px 0;
 }
 
 .message-grey {
   background-color: #f9f9f9;
   border-radius: 5px;
-  padding: 8px;
-  box-shadow: 1px 1px 8px #e4e4e4;
+  padding: 15px;
 }
 
 .message-white {
-  background-color: white;
+  background-color: #51d8b3;
   border-radius: 5px;
-  padding: 8px;
-  box-shadow: 1px 1px 8px #e4e4e4;
+  padding: 15px;
 }
 
 .pending {
@@ -189,10 +235,10 @@
 }
 
 .cancel-booking {
-  margin: 0px 0px 20px 0px;
-  font-size: 12px;
-  text-align: right;
-  margin-right: 40px;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  font-size: 10px;
 }
 
 .cancel-booking a:hover {
@@ -205,17 +251,6 @@
   color: #989898;
 }
 
-.cancel-booking-link {
-  border: 1px solid #d8d8d8;
-  border-radius: 5px;
-  padding: 3px 6px;
-}
-
-.cancel-booking-link:hover {
-  border: 1px solid #b3b2b2;
-  border-radius: 5px;
-}
-
 .booking-info-new {
   // color: #63bead !important;
   font-weight: bolder;
@@ -223,7 +258,6 @@
 
 .original-message-heading {
   font-size: 18px;
-  // font-weight: bolder;
   color: #868686;
   margin-bottom: 10px;
   text-decoration: none;
@@ -250,9 +284,4 @@
 
 #message_content > textarea {
   height: 20vh;
-}
-
-.send-btn {
-  height: 40px;
-  margin-left: 10px;
 }

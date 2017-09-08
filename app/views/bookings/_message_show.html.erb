@@ -1,16 +1,15 @@
-<h1 class="chat-header">YOUR MESSAGES WITH <%= booking.visit.tour.guide.first_name.upcase %></h1>
-
+<h1 class="chat-header">Your messages with <%= booking.visit.tour.guide.first_name.upcase %></h1>
 <div id="messages-<%= booking.id %>" class="messages">
   <% booking.messages.each do |message| %>
-  <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
+    <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
   <% end %>
 </div>
 <div id="create-message">
   <%= simple_form_for [ booking, Message.new ], wrapper: :inline_form, html: { class: 'form-inline' }, remote: true do |f| %>
   <%= f.input :content, label: false %>
-  <%= f.submit "Send!", class: "btn btn-primary send-btn" %>
+  <%= f.submit "", class: "btn btn-primary send-btn" %>
   <% end %>
-
+  <i class="fa fa-paper-plane" aria-hidden="true"></i>
 </div>
 
 
