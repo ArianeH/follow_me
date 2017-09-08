@@ -1,5 +1,5 @@
 <div class="container tour-show-container">
-  <div class="tour-show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @tour.photo.path %>')">
+  <div class="tour-show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @tour.photo.path, height: 320, crop: :fill %>')">
     <h1><%= @tour.name %></h1>
     <%= cl_image_tag @tour.guide.photo.path, class: "avatar-guide", gravity: :face, width: 160, height: 160, crop: :thumb %>
   </div>

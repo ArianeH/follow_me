@@ -28,7 +28,7 @@
                   <div class="item <%= "active" if index == 0 %>">
                     <div class="col-xs-3 small-padding no-margin">
                       <%= link_to profile_path(guide), class: "card-link", remote: true do %>
-                        <div class="<%= "card-active" if index == 0 %> card card-carousel" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("<%= cl_image_path guide.tours.first.photo.path %>");'>
+                        <div class="<%= "card-active" if index == 0 %> card card-carousel" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("<%= cl_image_path guide.tours.first.photo.path, height: 240, crop: :fill %>;");'>
                             <h2><% guide_tours = @guide_tours.present? ? @guide_tours[guide.id] : guide.tours %>
                               <% guide_tours.each do |tour| %>
                                 <%= tour.name %>
