@@ -2,7 +2,7 @@
   <% guide.tours.each do |tour| %>
     <div class="wrapper-offered-tours">
 
-      <div class="tour-illustration" style="background-image: url('<%= cl_image_path tour.photo.path %>')"></div>
+      <div class="tour-illustration" style="background-image: url('<%= cl_image_path tour.photo.path, height: 350, crop: :fill %>')"></div>
 
       <div class="tour-details">
         <div class="offered-tours-content">
@@ -11,7 +11,7 @@
             <%= cl_image_tag guide.photo.path, width: 200, height: 200, crop: :fill, quality: 100, class: "card-user avatar" %>
             <p class="tour-guide-text"><b>with <%=tour.guide.first_name %> <%=tour.guide.last_name %></b></p>
           </div>
-          <p class="tour-guide-text"><%= tour.description %></p>
+          <p class="tour-guide-text"><%= truncate(tour.description, length: 320) %></p>
           <p class="tour-guide-text"><b>Price: </b>
             <% if tour.price == 0 %>
                 Free
